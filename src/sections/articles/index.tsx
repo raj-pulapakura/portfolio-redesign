@@ -7,8 +7,10 @@ import { articlesData } from "@/data/articles";
 
 export default function Articles() {
   return (
-    <div className="bg-blue-400 pt-10 pb-10">
-      <h1 className={`${rockSalt.className} text-5xl text-center mb-10`}>
+    <div className="bg-black pt-10 pb-10">
+      <h1
+        className={`${rockSalt.className} text-5xl text-center mb-10 text-white`}
+      >
         ARTICLES
       </h1>
       <EmblaCarousel showDotButtons={false}>
