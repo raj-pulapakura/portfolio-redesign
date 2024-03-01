@@ -16,7 +16,7 @@ export default function EmblaCarouselItem({
         paddingRight: "1rem",
       }}
     >
-      <h1>{children}</h1>
+      {children}
     </div>
   );
 }

@@ -4,6 +4,7 @@ import React from "react";
 import ProjectItem from "./components/ProjectItem";
 import EmblaCarousel from "@/shared/EmblaCarousel";
 import EmblaCarouselItem from "@/shared/EmblaCarouselItem";
+import { PrevButton } from "@/shared/EmblaCarouselArrowButtons";
 
 export default function Projects() {
   return (

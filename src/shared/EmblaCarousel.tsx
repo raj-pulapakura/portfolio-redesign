@@ -9,7 +9,17 @@ import {
 } from "./EmblaCarouselArrowButtons";
 import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
 
-export default function EmblaCarousel({ children }: { children?: ReactNode }) {
+export type EmblaCarouselProps = {
+  showArrowButtons?: boolean;
+  showDotButtons?: boolean;
+  children?: ReactNode;
+};
+
+export default function EmblaCarousel({
+  showArrowButtons = true,
+  showDotButtons = true,
+  children,
+}: EmblaCarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
@@ -23,27 +33,22 @@ export default function EmblaCarousel({ children }: { children?: ReactNode }) {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <section>
-      <div className="mx-4 mb-3 flex justify-between items-center">
-        <div className="flex gap-2">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-        </div>
-
-        <div className="flex gap-1">
-          {scrollSnaps.map((_, index) => (
-            <DotButton
-              key={index}
-              onClick={() => onDotButtonClick(index)}
-              selected={index === selectedIndex}
-            />
-          ))}
-        </div>
-      </div>
-
-      <div className="overflow-hidden" ref={emblaRef}>
+    <section className="relative ">
+      <div className="z-20 overflow-hidden" ref={emblaRef}>
         <div className="flex touch-pan-y">{children}</div>
       </div>
+      {!prevBtnDisabled && (
+        <PrevButton
+          className="z-50 absolute top-1/2 left-2 -translate-y-1/2"
+          onClick={onPrevButtonClick}
+        />
+      )}
+      {!nextBtnDisabled && (
+        <NextButton
+          className="z-50 absolute top-1/2 right-2 -translate-y-1/2"
+          onClick={onNextButtonClick}
+        />
+      )}
     </section>
   );
 }

@@ -1,3 +1,4 @@
+import Articles from "@/sections/articles";
 import Intro from "@/sections/intro";
 import Journey from "@/sections/journey";
 import Prelude from "@/sections/prelude";
@@ -12,6 +13,7 @@ export default function Home() {
       <Journey />
       <Prelude />
       <Projects />
+      <Articles />
     </main>
   );
 }

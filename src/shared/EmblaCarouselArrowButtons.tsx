@@ -1,20 +1,13 @@
-import React, {
-  PropsWithChildren,
-  useCallback,
-  useEffect,
-  useState,
-} from "react";
-import { EmblaCarouselType } from "embla-carousel";
+import React, { useCallback, useEffect, useState } from "react";
 import {
   FontAwesomeIcon,
   FontAwesomeIconProps,
 } from "@fortawesome/react-fontawesome";
 import {
-  faArrowCircleLeft,
-  faArrowCircleRight,
-  faArrowLeft,
-  faArrowRight,
+  faChevronRight,
+  faChevronLeft,
 } from "@fortawesome/free-solid-svg-icons";
+import { EmblaCarouselType } from "embla-carousel";
 
 type UsePrevNextButtonsType = {
   prevBtnDisabled: boolean;
@@ -60,36 +53,32 @@ export const usePrevNextButtons = (
   };
 };
 
-type ArrowButtonProps = Omit<FontAwesomeIconProps, "icon"> & {
-  disabled?: boolean;
-};
-
-export function PrevButton({ disabled, ...props }: ArrowButtonProps) {
-  return disabled === undefined ? (
-    <FontAwesomeIcon icon={faArrowCircleLeft} size="2x" {...props} />
-  ) : disabled ? (
-    <FontAwesomeIcon
-      icon={faArrowCircleLeft}
-      size="2x"
+export function PrevButton({
+  className,
+  ...props
+}: JSX.IntrinsicElements["div"]) {
+  return (
+    <div
+      style={{ boxShadow: "8px 8px 12px 0 rgba(0, 0, 0, 0.3)" }}
+      className={`${className} bg-white aspect-square rounded-full p-2`}
       {...props}
-      color="rgb(50, 50, 50)"
-    />
-  ) : (
-    <FontAwesomeIcon icon={faArrowCircleLeft} size="2x" {...props} />
+    >
+      <FontAwesomeIcon icon={faChevronLeft} size="2x" />
+    </div>
   );
 }
 
-export function NextButton({ disabled, ...props }: ArrowButtonProps) {
-  return disabled === undefined ? (
-    <FontAwesomeIcon icon={faArrowCircleRight} size="2x" {...props} />
-  ) : disabled ? (
-    <FontAwesomeIcon
-      icon={faArrowCircleRight}
-      size="2x"
+export function NextButton({
+  className,
+  ...props
+}: JSX.IntrinsicElements["div"]) {
+  return (
+    <div
+      style={{ boxShadow: "8px 8px 12px 0 rgba(0, 0, 0, 0.3)" }}
+      className={`${className} bg-white aspect-square rounded-full p-2`}
       {...props}
-      color="rgb(50, 50, 50)"
-    />
-  ) : (
-    <FontAwesomeIcon icon={faArrowCircleRight} size="2x" {...props} />
+    >
+      <FontAwesomeIcon icon={faChevronRight} size="2x" />
+    </div>
   );
 }
