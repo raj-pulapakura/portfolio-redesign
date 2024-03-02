@@ -2,6 +2,7 @@ import { timelineData } from "@/data/timeline";
 import React from "react";
 import TimelineItem from "./vertical/TimelineItem";
 import VerticalConnector from "./vertical/VerticalConnector";
+import { numColors, timelineItemColours } from "..";
 
 const dateColumnWidth = "20%";
 const circleWidth = "2rem";
@@ -14,6 +15,8 @@ export default function VerticalTimeline({
   className,
   ...props
 }: JSX.IntrinsicElements["div"]) {
+  let colourIndex = 0;
+
   return (
     <div className={`relative ${className}`} {...props}>
       <VerticalConnector
@@ -26,6 +29,7 @@ export default function VerticalTimeline({
           dateColumnWidth={dateColumnWidth}
           circleWidth={circleWidth}
           circleHeight={circleHeight}
+          circleColour={timelineItemColours[colourIndex++ % numColors]}
           circleToTextConnectorHeight={circleToTextConnectorHeight}
           circleToTextConnectorWidth={circleToTextConnectorWidth}
           timelineDataPoint={tdp}

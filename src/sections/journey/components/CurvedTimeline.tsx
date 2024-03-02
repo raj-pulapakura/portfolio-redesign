@@ -3,15 +3,7 @@ import React from "react";
 import TimelineItem from "./curved/TimelineItem";
 import TimelineRow from "./curved/TimelineRow";
 import TimelineEndNode from "./curved/TimelineEndNode";
-
-const timelineItemColours = [
-  "bg-lime-400",
-  "bg-indigo-400",
-  "bg-yellow-400",
-  "bg-blue-400",
-  "bg-red-400",
-];
-const numColors = timelineItemColours.length;
+import { timelineItemColours, numColors } from "..";
 
 type CurvedTimelineProps = JSX.IntrinsicElements["div"] & {
   rowGap: number;
@@ -54,7 +46,7 @@ export default function CurvedTimeline({
               key={tdp.title}
               {...timelineItemProps}
               bubbleColour={timelineItemColours[colourIndex++ % numColors]}
-              timelineDataPoint={tdp}
+              timelineDataPoint={JSON.parse(JSON.stringify(tdp))}
             />
           ))}
         </TimelineRow>
@@ -71,7 +63,7 @@ export default function CurvedTimeline({
               key={tdp.title}
               {...timelineItemProps}
               bubbleColour={timelineItemColours[colourIndex++ % numColors]}
-              timelineDataPoint={tdp}
+              timelineDataPoint={JSON.parse(JSON.stringify(tdp))}
             />
           ))}
           <TimelineEndNode {...timelineEndNodeProps}>End</TimelineEndNode>
@@ -89,7 +81,7 @@ export default function CurvedTimeline({
               key={tdp.title}
               {...timelineItemProps}
               bubbleColour={timelineItemColours[colourIndex++ % numColors]}
-              timelineDataPoint={tdp}
+              timelineDataPoint={JSON.parse(JSON.stringify(tdp))}
             />
           ))}
         </TimelineRow>

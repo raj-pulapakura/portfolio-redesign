@@ -71,7 +71,7 @@ export const timelineData = [
     date: "Jan 2023",
     title: "Dived into Deep Learning",
     extraInformation:
-      "I'm a sucker for visual programming, so my interested was piqued with object detection and computer vision.",
+      "I learned about neural networks, back propagation and activation functions. I also took an interest in computer vision technologies including object detection and siamese networks.",
     technologies: ["TensorFlow", "PyTorch", "NumPy", "Pandas", "OpenCV"],
   }),
   new TimelineDataPoint({

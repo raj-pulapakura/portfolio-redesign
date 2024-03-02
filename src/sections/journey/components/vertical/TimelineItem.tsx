@@ -6,6 +6,7 @@ export type TimelineItemProps = JSX.IntrinsicElements["div"] & {
   dateColumnWidth?: string;
   circleWidth?: string;
   circleHeight?: string;
+  circleColour?: string;
   circleToTextConnectorWidth?: string;
   circleToTextConnectorHeight?: string;
   timelineDataPoint: TimelineDataPoint;
@@ -16,14 +17,15 @@ export default function TimelineItem({
   dateColumnWidth = "w-1/5",
   circleWidth = "2rem",
   circleHeight = "2rem",
+  circleColour = "bg-lime-400",
   circleToTextConnectorHeight = "0.25rem",
   circleToTextConnectorWidth = "1.25rem",
   className,
   ...props
 }: TimelineItemProps) {
   const containerStyle = `flex items-center ${className}`;
-  const dateStyle = `text-white text-sm my-auto`;
-  const circleStyle = `z-10 rounded-full bg-lime-400`;
+  const dateStyle = `text-white text-sm  text-center`;
+  const circleStyle = `z-10 rounded-full ${circleColour}`;
   const connectorStyle = `bg-white`;
 
   return (

@@ -1,5 +1,8 @@
+"use client";
+
 import { TimelineDataPoint } from "@/data/timeline";
-import React from "react";
+import React, { useState } from "react";
+import TimelineItemInfoModal from "./TimelineItemInfoModal";
 
 export type TimelineItemProps = JSX.IntrinsicElements["div"] & {
   bubbleHeight: number;
@@ -18,18 +21,34 @@ export default function TimelineItem({
   bubbleColour = "bg-lime-400",
   ...props
 }: TimelineItemProps) {
+  const [onModal, setOnModal] = useState(false);
+
   return (
     <div
       style={{ height: bubbleHeight + "px" }}
       className={`relative w-full `}
       {...props}
     >
+      {/* bubble */}
       <div
         style={{ height: bubbleHeight + "px", width: bubbleHeight + "px" }}
-        className={`${bubbleColour} rounded-full absolute left-1/2 -translate-x-1/2`}
-      ></div>
-      <div className="absolute left-1/2 -translate-x-1/2 -translate-y-full w-full">
-        <div className="flex flex-col items-center">
+        className={`${bubbleColour} z-30  ${
+          onModal ? "rounded-b-full" : "rounded-full"
+        } absolute left-1/2 -translate-x-1/2`}
+        onMouseEnter={() => setOnModal(true)}
+        onMouseLeave={() => setOnModal(false)}
+      >
+        {onModal && (
+          <TimelineItemInfoModal
+            timelineDataPoint={tdp}
+            className={`${bubbleColour}`}
+          />
+        )}
+      </div>
+
+      {/* top content */}
+      <div className="z-20 absolute left-1/2 -translate-x-1/2 -translate-y-full w-full">
+        <div className="flex  flex-col items-center">
           <h1 className="text-white text-center font-bold text-xl">
             {tdp.date}
           </h1>
@@ -40,6 +59,7 @@ export default function TimelineItem({
         </div>
       </div>
 
+      {/* bottom content */}
       <div
         style={{ top: bubbleHeight + "px" }}
         className="absolute left-1/2 -translate-x-1/2 w-full"
