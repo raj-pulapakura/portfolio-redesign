@@ -30,7 +30,6 @@ export const dataskills = [
   "MySQL",
   "PostgreSQL",
   "MongoDB",
-  "Firebase",
 ];
 
 export const fullstackskills = [

@@ -1,7 +1,7 @@
 import { technologies } from "@/data/technologies";
 import React from "react";
 
-const RotatingCircle = ({
+export default function IconCircle({
   radiusInPixels,
   itemSizeInPixels,
   className,
@@ -9,7 +9,7 @@ const RotatingCircle = ({
 }: {
   radiusInPixels: number;
   itemSizeInPixels: number;
-} & JSX.IntrinsicElements["div"]) => {
+} & JSX.IntrinsicElements["div"]) {
   const items = technologies.map((tech, index) => {
     // Calculate angle for this item
     const angle = (index / technologies.length) * (2 * Math.PI);
@@ -32,7 +32,7 @@ const RotatingCircle = ({
       height: itemSizeInPixels + "px",
     } as React.CSSProperties;
 
-    return <img style={style} src={"/icons/" + tech + ".svg"} />;
+    return <img key={tech} style={style} src={"/icons/" + tech + ".svg"} />;
   });
 
   return (
@@ -47,6 +47,4 @@ const RotatingCircle = ({
       {items}
     </div>
   );
-};
-
-export default RotatingCircle;
+}

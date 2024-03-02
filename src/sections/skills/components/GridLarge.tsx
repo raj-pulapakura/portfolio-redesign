@@ -1,6 +1,6 @@
 import { mlskills, dataskills, fullstackskills } from "@/data/skills";
 import React from "react";
-import RotatingCircle from "./IconCircle";
+import IconCircle from "./IconCircle";
 import SkillSection from "./SkillSection";
 
 export default function GridLarge() {
@@ -10,7 +10,7 @@ export default function GridLarge() {
         I love using Machine Learning and Full Stack technologies to solve
         complex problems.
       </h1>
-      <RotatingCircle
+      <IconCircle
         className="col-start-2 col-end-3 row-start-1 row-end-3 m-auto "
         radiusInPixels={200}
         itemSizeInPixels={40}

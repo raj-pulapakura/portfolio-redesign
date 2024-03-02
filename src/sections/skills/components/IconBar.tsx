@@ -10,6 +10,7 @@ export default function IconBar({ ...props }: JSX.IntrinsicElements["div"]) {
       <Marquee>
         {technologies.map((tech) => (
           <img
+            key={tech}
             src={`/icons/${tech}.svg`}
             className={`w-${width} h-${height} mx-2`}
           />

@@ -1,26 +1,34 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
-type TimelineRowProps = JSX.IntrinsicElements["div"] & {
-  rowGap?: number;
+type TimelineRowProps = {
+  rowGap: number;
+  bubbleGap: number;
   bubbleHeight: number;
+  leftToRight: boolean;
   connectOnSide: "left" | "right" | "none";
+  children?: ReactNode;
 };
 
 export default function TimelineRow({
-  className,
-  children,
-  rowGap = 0,
+  rowGap,
+  bubbleGap,
   bubbleHeight,
+  leftToRight,
   connectOnSide,
-  ...props
+  children,
 }: TimelineRowProps) {
+  const flexDirection = leftToRight ? "row" : "row-reverse";
+
   return (
     <div className="relative">
       <HorizontalConnector />
       <div
-        style={{ marginBottom: rowGap + "px" }}
-        className={`z-20 flex justify-between items-center gap-10 ${className}`}
-        {...props}
+        style={{
+          marginBottom: rowGap + "px",
+          gap: bubbleGap + "px",
+          flexDirection,
+        }}
+        className="z-20 flex justify-between items-center"
       >
         {children}
       </div>
@@ -52,7 +60,7 @@ function EndConnector({
     return;
   }
 
-  const connectorHeight = rowGap + bubbleHeight;
+  const connectorHeight = rowGap + bubbleHeight + 4;
   const connectorWidth = connectorHeight / 2;
 
   return connectOnSide === "left" ? (
@@ -60,22 +68,22 @@ function EndConnector({
       style={{
         width: connectorWidth + "px",
         height: connectorHeight + "px",
-        top: bubbleHeight / 2,
-        transform: `translateX(-${connectorWidth + 1}px)`,
+        top: bubbleHeight / 2 - 2,
+        transform: `translateX(-${connectorWidth - 2}px)`,
         left: 0,
       }}
-      className="absolute border-t-4 border-l-4 border-b-4 rounded-l-full border-white"
+      className="absolute border-t-4 border-b-4 rounded-l-full border-white"
     ></div>
   ) : (
     <div
       style={{
         width: connectorWidth,
         height: connectorHeight,
-        top: bubbleHeight / 2,
-        transform: `translateX(${connectorWidth - 1}px)`,
+        top: bubbleHeight / 2 - 2,
+        transform: `translateX(${connectorWidth - 2}px)`,
         right: 0,
       }}
-      className="absolute border-t-4 border-r-4 border-b-4 rounded-r-full border-white"
+      className="absolute border-t-4 border-b-4 rounded-r-full border-white"
     ></div>
   );
 }

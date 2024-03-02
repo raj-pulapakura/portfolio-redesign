@@ -16,7 +16,7 @@ export default function TimelineEndNode({
       className={`z-0 px-8 uppercase align-middle bg-indigo-600 rounded-full flex ${className}`}
       {...props}
     >
-      <h1 className="text-3xl font-bold text-white m-auto">{children}</h1>
+      <h1 className="text-xl font-bold text-white m-auto">{children}</h1>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { mlskills, dataskills, fullstackskills } from "@/data/skills";
 import React from "react";
-import RotatingCircle from "./IconCircle";
+import IconCircle from "./IconCircle";
 import SkillSection from "./SkillSection";
 
 export default function GridXLarge() {
@@ -29,7 +29,7 @@ export default function GridXLarge() {
         align="text-left"
       />
 
-      <RotatingCircle
+      <IconCircle
         className="col-start-3 col-end-4 row-start-1 row-end-3 m-auto "
         radiusInPixels={250}
         itemSizeInPixels={40}

@@ -25,14 +25,14 @@ export class TimelineDataPoint {
 export const timelineData = [
   new TimelineDataPoint({
     date: "Jan 2021",
-    title: "Wrote my first line of code in Python",
+    title: "Wrote my first line of code",
     extraInformation:
-      "Discovered programming, and fell in love with it because it gave me the ability to BUILD.",
+      "Discovered Python, and fell in love with it because it gave me the ability to BUILD.",
     technologies: ["Python", "Django"],
   }),
   new TimelineDataPoint({
     date: "Jun 2021",
-    title: "Published my first app on the Google Play Store",
+    title: "Published my first app",
     extraInformation:
       "My first app was a simple and fun number guessing game. Check it out on the Play Store: ",
     technologies: ["Kotlin"],
@@ -55,35 +55,35 @@ export const timelineData = [
   }),
   new TimelineDataPoint({
     date: "Mar 2022",
-    title: "Rebuilt my first app using Flutter and Dart",
+    title: "Rebuilt my first app",
     extraInformation:
       "With the power of a cross-platform framework, I rekindled my mobile development fire and rebuilt my first app with a new refershed look.",
     technologies: ["Flutter", "Dart"],
   }),
   new TimelineDataPoint({
     date: "Jun 2022",
-    title: "Discovering Machine Learning",
+    title: "Discovered Machine Learning",
     extraInformation:
       "With the potential for AI to transform the world, I decided to focus my efforts on Machine Learnings",
     technologies: ["TensorFlow", "PyTorch", "NumPy", "Pandas", "OpenCV"],
   }),
   new TimelineDataPoint({
     date: "Jan 2023",
-    title: "Dived into Deep Learning and Computer Vision",
+    title: "Dived into Deep Learning",
     extraInformation:
       "I'm a sucker for visual programming, so my interested was piqued with object detection and computer vision.",
     technologies: ["TensorFlow", "PyTorch", "NumPy", "Pandas", "OpenCV"],
   }),
   new TimelineDataPoint({
     date: "Jul 2023",
-    title: "Taught myself Differential Calculus",
+    title: "Taught myself Calculus",
     extraInformation:
       "Realizing that calculus, linear algebra and probability were powering some of the fundamental algorithms of ML and DL, I invested a month into learning the mathematics of ML. Using Khan Academy courses and YouTube videos, I taught myself calculus, derivatives and the backprop algorithm. Then I implemented a neural network from scratch.",
     technologies: ["TensorFlow", "NumPy"],
   }),
   new TimelineDataPoint({
     date: "Aug 2023",
-    title: "Passed the TensorFlow Developer Exam",
+    title: "TensorFlow Developer Exam",
     extraInformation:
       "After learning calculus and mastering TensorFlow, I thought I was ready to pass the TensorFlow Developer Exam, which is a 5 hour examination accredited by TensorFlow, to validate your skills in Machine Learning. I submitted my exam after 4 hours of starting, and a few minutes later, I received an email that I had passed!",
     technologies: ["TensorFlow"],
