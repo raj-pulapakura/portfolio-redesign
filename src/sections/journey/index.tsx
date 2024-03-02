@@ -1,15 +1,7 @@
-import { rockSalt } from "@/app/layout";
-import { timelineData } from "@/data/timeline";
 import React from "react";
-import TimelineItem from "./components/TimelineItem";
-import VerticalConnector from "./components/VerticalConnector";
-
-const dateColumnWidth = "20%";
-const circleWidth = "2rem";
-const circleHeight = "2rem";
-const circleToTextConnectorWidth = "1.25rem";
-const circleToTextConnectorHeight = "0.25rem";
-const verticalBarWidth = "0.25rem";
+import { rockSalt } from "@/app/layout";
+import VerticalTimeline from "./components/VerticalTimeline";
+import CurvedTimeline from "./components/CurvedTimeline";
 
 export default function Journey() {
   return (
@@ -17,23 +9,25 @@ export default function Journey() {
       <h1 className={`${rockSalt.className} text-5xl text-white text-center`}>
         JOURNEY
       </h1>
-      <div className="m-4 mt-16 relative ">
-        <VerticalConnector
-          circleWidth={circleWidth}
-          dateColumnWidth={dateColumnWidth}
-          verticalBarWidth={verticalBarWidth}
+
+      <div className="visible lg:hidden">
+        <VerticalTimeline className="m-4 mt-20" />
+      </div>
+
+      <div className="hidden lg:block xl:hidden">
+        <CurvedTimeline
+          rowGap={200}
+          bubbleHeight={40}
+          className="mx-40 mt-32"
         />
-        {timelineData.map((tdp) => (
-          <TimelineItem
-            dateColumnWidth={dateColumnWidth}
-            circleWidth={circleWidth}
-            circleHeight={circleHeight}
-            circleToTextConnectorHeight={circleToTextConnectorHeight}
-            circleToTextConnectorWidth={circleToTextConnectorWidth}
-            timelineDataPoint={tdp}
-            className="mb-3"
-          />
-        ))}
+      </div>
+
+      <div className="hidden xl:block">
+        <CurvedTimeline
+          rowGap={150}
+          bubbleHeight={50}
+          className="mx-40 mt-32"
+        />
       </div>
     </section>
   );
