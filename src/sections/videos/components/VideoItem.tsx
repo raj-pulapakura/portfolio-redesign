@@ -14,7 +14,7 @@ export default function VideoItem({
   });
 
   return (
-    <div className="bg-white rounded-lg h-full">
+    <div className="bg-white rounded-lg h-full overflow-scroll">
       <img
         className="rounded-t-lg h-48 w-full object-cover"
         src={pis.thumbnails.high.url}
