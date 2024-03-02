@@ -1,4 +1,5 @@
 import { PlaylistItemSnippet } from "@/data/videos";
+import PaddedFlexContainer from "@/shared/PaddedFlexContainer";
 import React from "react";
 
 export default function VideoItem({
@@ -14,15 +15,19 @@ export default function VideoItem({
   });
 
   return (
-    <div className="bg-white rounded-lg h-full overflow-scroll">
+    <div className="bg-white rounded-lg h-full">
       <img
-        className="rounded-t-lg h-48 w-full object-cover"
+        className="rounded-t-lg h-48 md:h-56 lg:h-64 xl:h-72 2xl:h-80 w-full object-cover"
         src={pis.thumbnails.high.url}
       />
-      <div className="px-7 py-5">
-        <p className="text-sm mb-2 tracking-widest text-indigo-600">{date}</p>
-        <h1 className="text-sm font-bold mb-2">{pis.title}</h1>
-      </div>
+      <PaddedFlexContainer>
+        <p className="text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl tracking-widest text-indigo-600">
+          {date}
+        </p>
+        <h1 className="text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold">
+          {pis.title}
+        </h1>
+      </PaddedFlexContainer>
     </div>
   );
 }
