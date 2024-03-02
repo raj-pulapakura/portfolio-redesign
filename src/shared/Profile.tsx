@@ -12,7 +12,7 @@ export default function Profile({
   return (
     <img
       src={src}
-      className={`max-h-52 max-w-52 md:max-h-72 md:max-w-72 ${className}`}
+      className={`max-h-52 max-w-52 md:max-h-72 md:max-w-72 lg:max-h-80 lg:max-w-80 xl:max-h-88 xl:max-w-88 2xl:max-h-96 2xl:max-w-96 ${className}`}
       {...props}
     />
   );

@@ -39,13 +39,13 @@ export default function EmblaCarousel({
       </div>
       {!prevBtnDisabled && (
         <PrevButton
-          className="z-50 absolute top-1/2  -left-10 -translate-y-1/2"
+          className="z-50 absolute top-1/2 -left-3 md:-left-5 lg:-left-7 xl:-left-9 2xl:-left-11 -translate-y-1/2"
           onClick={onPrevButtonClick}
         />
       )}
       {!nextBtnDisabled && (
         <NextButton
-          className="z-50 absolute top-1/2 -right-10 -translate-y-1/2"
+          className="z-50 absolute top-1/2 -right-3 md:-right-5 lg:-right-7 xl:-right-9 2xl:-right-11 -translate-y-1/2"
           onClick={onNextButtonClick}
         />
       )}

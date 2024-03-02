@@ -66,7 +66,7 @@ export default function CurvedTimeline({
               timelineDataPoint={JSON.parse(JSON.stringify(tdp))}
             />
           ))}
-          <TimelineEndNode {...timelineEndNodeProps}>End</TimelineEndNode>
+          <TimelineEndNode {...timelineEndNodeProps}>1/03/2024</TimelineEndNode>
         </TimelineRow>
       );
     } else {
