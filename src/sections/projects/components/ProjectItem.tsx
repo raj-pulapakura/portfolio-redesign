@@ -8,17 +8,25 @@ export default function ProjectItem({
   projectDataPoint: ProjectDataPoint;
 }) {
   return (
-    <div className="bg-white rounded-lg h-full overflow-scroll">
+    <div className="bg-white rounded-lg h-full">
       <img
-        className="rounded-t-lg h-1/2 w-full object-cover"
+        className="rounded-t-lg w-full object-cover"
         src={pdp.thumbnailURL}
       />
-      <div className="px-5 py-7">
-        <h1 className="text-md font-bold mb-2">{pdp.title}</h1>
-        <p className="text-sm mb-3">{pdp.description}</p>
-        {pdp.technologiesUsed.map((tech) => (
-          <Chip className="text-xs">{tech}</Chip>
-        ))}
+      <div className="p-5 md:p-7 lg:p-9 xl:p-11 2xl:p-14 flex flex-col gap-2 md:gap-4 lg:gap-6 xl:gap-8 2xl:gap-10">
+        <h1 className="text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold">
+          {pdp.title}
+        </h1>
+        <p className="text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl mb-1">
+          {pdp.description}
+        </p>
+        <div>
+          {pdp.technologiesUsed.map((tech) => (
+            <Chip className="text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl mb-1 mr-1 md:mb-2 md:mr-2 lg:mb-4 lg:mr-4 lg:border-2">
+              {tech}
+            </Chip>
+          ))}
+        </div>
       </div>
     </div>
   );

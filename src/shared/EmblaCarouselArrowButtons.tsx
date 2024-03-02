@@ -61,7 +61,7 @@ export function PrevButton({
   return (
     <IconButton
       style={{ boxShadow: "8px 8px 12px 0 rgba(0, 0, 0, 0.3)" }}
-      className={`p-2 w-8 h-8  ${className}`}
+      className={`p-2 md:p-4 lg:p-6 xl:p-8 2xl:p-10 w-8 h-8 md:w-10 md:h-10 lg:w-14 lg:h-14 xl:w-18 xl:h-18 2xl:w-20 2xl:h-20  ${className}`}
       icon={faChevronLeft}
       {...props}
     />
@@ -75,7 +75,7 @@ export function NextButton({
   return (
     <IconButton
       style={{ boxShadow: "8px 8px 12px 0 rgba(0, 0, 0, 0.3)" }}
-      className={`p-2 w-8 h-8 ${className}`}
+      className={`p-2 w-8 h-8 md:w-10 md:h-10 lg:w-14 lg:h-14 xl:w-18 xl:h-18 2xl:w-20 2xl:h-20 ${className}`}
       icon={faChevronRight}
       {...props}
     />
