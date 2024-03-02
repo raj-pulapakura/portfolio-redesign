@@ -1,25 +1,28 @@
+import Chip from "@/shared/Chip";
 import React from "react";
 
 export type SkillSectionProps = JSX.IntrinsicElements["div"] & {
   title: string;
   skills: string[];
+  align?: string;
 };
 
 export default function SkillSection({
   title,
   skills,
+  align = "text-center",
   className,
 }: SkillSectionProps) {
   return (
     <div className={`${className}`}>
-      <h1 className="text-center tracking-widest uppercase text-blue-600 font-bold mb-4">
+      <h1
+        className={`${align} tracking-widest uppercase text-blue-600 font-bold mb-4`}
+      >
         {title}
       </h1>
-      <div className="text-center">
+      <div className={align}>
         {skills.map((skill) => (
-          <div className="inline-block border-2 border-blue-600 text-blue-600 py-1 px-3 w-fit rounded-full mr-1 mb-1">
-            {skill}
-          </div>
+          <Chip>{skill}</Chip>
         ))}
       </div>
     </div>
