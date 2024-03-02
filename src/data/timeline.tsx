@@ -64,7 +64,7 @@ export const timelineData = [
     date: "Jun 2022",
     title: "Discovered Machine Learning",
     extraInformation:
-      "With the potential for AI to transform the world, I decided to focus my efforts on Machine Learnings",
+      "With the potential for AI to transform the world, I decided to focus my efforts on Machine Learning",
     technologies: ["TensorFlow", "PyTorch", "NumPy", "Pandas", "OpenCV"],
   }),
   new TimelineDataPoint({
