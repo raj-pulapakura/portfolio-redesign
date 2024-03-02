@@ -8,6 +8,7 @@ import {
   faChevronLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import { EmblaCarouselType } from "embla-carousel";
+import IconButton from "./IconButton";
 
 type UsePrevNextButtonsType = {
   prevBtnDisabled: boolean;
@@ -56,29 +57,27 @@ export const usePrevNextButtons = (
 export function PrevButton({
   className,
   ...props
-}: JSX.IntrinsicElements["div"]) {
+}: Parameters<typeof IconButton>[0]) {
   return (
-    <div
+    <IconButton
       style={{ boxShadow: "8px 8px 12px 0 rgba(0, 0, 0, 0.3)" }}
-      className={`${className} bg-white aspect-square rounded-full p-2`}
+      className={`p-2 w-8 h-8  ${className}`}
+      icon={faChevronLeft}
       {...props}
-    >
-      <FontAwesomeIcon icon={faChevronLeft} size="2x" />
-    </div>
+    />
   );
 }
 
 export function NextButton({
   className,
   ...props
-}: JSX.IntrinsicElements["div"]) {
+}: Parameters<typeof IconButton>[0]) {
   return (
-    <div
+    <IconButton
       style={{ boxShadow: "8px 8px 12px 0 rgba(0, 0, 0, 0.3)" }}
-      className={`${className} bg-white aspect-square rounded-full p-2`}
+      className={`p-2 w-8 h-8 ${className}`}
+      icon={faChevronRight}
       {...props}
-    >
-      <FontAwesomeIcon icon={faChevronRight} size="2x" />
-    </div>
+    />
   );
 }

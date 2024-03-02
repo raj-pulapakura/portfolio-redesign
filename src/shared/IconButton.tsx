@@ -1,22 +1,23 @@
-import {
-  faArrowAltCircleDown,
-  faArrowCircleDown,
-  faArrowDown,
-} from "@fortawesome/free-solid-svg-icons";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import {
   FontAwesomeIcon,
   FontAwesomeIconProps,
 } from "@fortawesome/react-fontawesome";
 import React from "react";
 
-export default function Arrow({
+type OptionalIcon = Omit<FontAwesomeIconProps, "icon"> & {
+  icon?: FontAwesomeIconProps["icon"];
+};
+
+export default function IconButton({
+  icon = faArrowDown,
   className,
   ...props
-}: Omit<FontAwesomeIconProps, "icon">) {
+}: OptionalIcon) {
   return (
     <FontAwesomeIcon
       className={`bg-white rounded-full  ${className}`}
-      icon={faArrowDown}
+      icon={icon}
       {...props}
     />
   );

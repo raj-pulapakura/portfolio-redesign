@@ -1,4 +1,4 @@
-import Arrow from "@/shared/Arrow";
+import IconButton from "@/shared/IconButton";
 import React from "react";
 // h-lvh w-full object-cover
 export default function Prelude() {
@@ -15,7 +15,7 @@ export default function Prelude() {
         </h2>
       </div>
 
-      <Arrow className="p-2 w-10 h-10 absolute bottom-2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+      <IconButton className="p-2 w-10 h-10 absolute bottom-2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
     </section>
   );
 }
