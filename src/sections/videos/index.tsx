@@ -11,7 +11,7 @@ export default async function Videos() {
   const videos = await getVideos();
 
   return (
-    <PaddedContainer className="bg-fuchsia-400">
+    <PaddedContainer style={{ backgroundColor: "rgb(141,192,235)" }}>
       <TitleSubtitleFlex
         title="VIDEOS"
         subtitle="Tech & project demos, and positive vibes."
