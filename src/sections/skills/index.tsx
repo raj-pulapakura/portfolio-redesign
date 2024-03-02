@@ -1,5 +1,4 @@
-import Profile from "@/shared/Profile";
-import React from "react";
+import React, { MutableRefObject } from "react";
 import SkillSection from "./components/SkillSection";
 import { dataskills, fullstackskills, mlskills } from "@/data/skills";
 import { rockSalt } from "@/app/layout";
@@ -7,7 +6,6 @@ import { rockSalt } from "@/app/layout";
 export default function Skills() {
   return (
     <section>
-      <Profile />
       <h1 className={`${rockSalt.className} text-5xl text-center mt-16 mb-16`}>
         SKILLS
       </h1>

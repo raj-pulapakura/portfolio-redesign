@@ -1,5 +1,9 @@
 import React from "react";
 
-export default function Profile(props: JSX.IntrinsicElements["img"]) {
-  return <img src="/photos/profile.jpg" {...props} />;
+type ProfileProps = { useCircle?: boolean } & JSX.IntrinsicElements["img"];
+
+export default function Profile({ useCircle = false, ...props }: ProfileProps) {
+  const src = useCircle ? "/photos/profile_circle.png" : "/photos/profile.jpg";
+
+  return <img src={src} {...props} />;
 }
