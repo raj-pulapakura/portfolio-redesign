@@ -1,4 +1,5 @@
 import { ProjectDataPoint } from "@/data/projects";
+import Card from "@/shared/Card";
 import Chip from "@/shared/Chip";
 import React from "react";
 
@@ -13,7 +14,7 @@ export default function ProjectItem({
         className="rounded-t-lg w-full object-cover"
         src={pdp.thumbnailURL}
       />
-      <div className="p-5 md:p-7 lg:p-9 xl:p-11 2xl:p-14 flex flex-col gap-2 md:gap-4 lg:gap-6 xl:gap-8 2xl:gap-10">
+      <Card>
         <h1 className="text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold">
           {pdp.title}
         </h1>
@@ -27,7 +28,7 @@ export default function ProjectItem({
             </Chip>
           ))}
         </div>
-      </div>
+      </Card>
     </div>
   );
 }
