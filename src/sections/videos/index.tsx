@@ -1,4 +1,4 @@
-import { rockSalt } from "@/app/layout";
+import { rockSalt } from "@/app/fonts";
 import React from "react";
 import EmblaCarousel from "@/shared/EmblaCarousel";
 import EmblaCarouselItem from "@/shared/EmblaCarouselItem";

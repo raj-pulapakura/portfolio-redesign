@@ -1,4 +1,4 @@
-import { rockSalt } from "@/app/layout";
+import { rockSalt } from "@/app/fonts";
 import { projectsData } from "@/data/projects";
 import React from "react";
 import ProjectItem from "./components/ProjectItem";

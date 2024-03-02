@@ -1,5 +1,5 @@
 import React from "react";
-import { rockSalt } from "@/app/layout";
+import { rockSalt } from "@/app/fonts";
 import VerticalTimeline from "./components/VerticalTimeline";
 import CurvedTimeline from "./components/CurvedTimeline";
 import { timelineData } from "@/data/timeline";

@@ -1,5 +1,4 @@
-import { rockSalt } from "@/app/layout";
-import Profile from "@/shared/Profile";
+import { rockSalt } from "@/app/fonts";
 import React from "react";
 import Social from "./components/Social";
 import {
