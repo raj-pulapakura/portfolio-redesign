@@ -7,9 +7,17 @@ import { timelineData } from "@/data/timeline";
 export default function Journey() {
   return (
     <section className="bg-black py-20">
-      <h1 className={`${rockSalt.className} text-5xl text-white text-center`}>
-        JOURNEY
-      </h1>
+      <div className="flex gap-10 justify-center lg:justify-normal items-center">
+        <h1
+          className={`${rockSalt.className} text-5xl text-white text-center lg:text-left mx-20`}
+        >
+          JOURNEY
+        </h1>
+        <h2 className="hidden lg:block text-white text-2xl">
+          Hover over a <span className="before:content-['🟢']">circle</span> to
+          see more info for that event
+        </h2>
+      </div>
 
       <div className="visible lg:hidden">
         <VerticalTimeline className="m-4 mt-20" />
