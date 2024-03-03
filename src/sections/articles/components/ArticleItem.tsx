@@ -20,7 +20,7 @@ export default function ArticleItem({
         <h1 className="text-md xl:text-lg 2xl:text-xl font-bold mb-3 md:mb-4 lg:mb-5">
           {adp.title}
         </h1>
-        <p className="relative fade-out-text text-sm xl:text-md mb-1">
+        <p className="relative fade-out-text text-md xl:text-lg mb-1">
           {adp.firstPara.slice(0, 120) + "..."}
         </p>
       </PaddedFlexContainer>
