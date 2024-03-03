@@ -5,10 +5,15 @@ import ScrollDownIconButton from "@/shared/ScrollDownIconButton";
 
 export default function Prelude() {
   return (
-    <section className="relative">
-      <BackgroundImage />
+    <section
+      style={{
+        backgroundImage: "url('/photos/landscape2.jpg')",
+        backgroundSize: "cover",
+      }}
+      className="relative min-h-screen max-h-fit w-full"
+    >
       <HeroSection />
-      <ScrollDownIconButton className="my-16 relative left-1/2 -translate-x-1/2" />
+      <ScrollDownIconButton className="absolute bottom-10 left-1/2 -translate-x-1/2" />
     </section>
   );
 }

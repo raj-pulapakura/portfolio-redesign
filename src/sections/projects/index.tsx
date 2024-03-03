@@ -9,10 +9,11 @@ import TitleSubtitleFlex from "@/shared/TitleSubtitleFlex";
 
 export default function Projects() {
   return (
-    <PaddedContainer className="bg-lime-400">
+    <PaddedContainer className="bg-black">
       <TitleSubtitleFlex
         title="PROJECTS"
         subtitle="I like building cool stuff."
+        className="text-white"
       />
       <EmblaCarousel className="visible md:hidden">
         {projectsData.map((pdp) => (
