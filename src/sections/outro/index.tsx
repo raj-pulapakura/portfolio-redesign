@@ -18,11 +18,11 @@ export default function Outro() {
     <section className="bg-black py-20 lg:py-28 flex flex-col gap-10 px-10 relative">
       <div className="text-white text-center flex gap-5 lg:gap-10 2xl:gap-16 flex-col">
         <h1
-          className={`${rockSalt.className} text-5xl lg:text-6xl 2xl:text-7xl leading-loose`}
+          className={`${rockSalt.className} text-2xl lg:text-3xl 2xl:text-5xl leading-loose`}
         >
           LET'S CONNECT!
         </h1>
-        <h2 className="text-3xl">
+        <h2 className="text-2xl">
           If you're a technologist based in Melbourne, let's meet IRL!
         </h2>
       </div>

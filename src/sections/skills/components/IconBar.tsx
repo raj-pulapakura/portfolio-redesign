@@ -3,7 +3,7 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 
 export default function IconBar({ ...props }: JSX.IntrinsicElements["div"]) {
-  const width = 12;
+  const width = 10;
   const height = 10;
   return (
     <div {...props}>
