@@ -1,6 +1,6 @@
 "use client";
 
-import { TimelineDataPoint } from "@/data/timeline";
+import { timelineData } from "@/data/timeline";
 import React, { useState } from "react";
 import TimelineItemInfoModal from "./TimelineItemInfoModal";
 
@@ -10,31 +10,37 @@ export type TimelineItemProps = JSX.IntrinsicElements["div"] & {
   useRandomColour?: boolean;
   connectorHeight: number;
   connectorWidth: number;
-  timelineDataPoint: TimelineDataPoint;
+  timelineDataPointTitle: string;
 };
 
 export default function TimelineItem({
-  timelineDataPoint: tdp,
+  timelineDataPointTitle: tdpTitle,
   bubbleHeight,
   connectorHeight,
   connectorWidth,
   bubbleColour = "bg-lime-400",
+  className,
+  style,
   ...props
 }: TimelineItemProps) {
   const [onModal, setOnModal] = useState(false);
 
+  const tdp = timelineData.find((tdp) => tdp.title === tdpTitle);
+
+  if (!tdp) {
+    return;
+  }
+
   return (
     <div
-      style={{ height: bubbleHeight + "px" }}
-      className={`relative w-full `}
+      style={{ height: bubbleHeight + "px", ...style }}
+      className={`relative w-full ${className}`}
       {...props}
     >
       {/* bubble */}
       <div
         style={{ height: bubbleHeight + "px", width: bubbleHeight + "px" }}
-        className={`${bubbleColour} z-30  ${
-          onModal ? "rounded-b-full" : "rounded-full"
-        } absolute left-1/2 -translate-x-1/2`}
+        className={`${bubbleColour} z-30  rounded-full absolute left-1/2 -translate-x-1/2`}
         onMouseEnter={() => setOnModal(true)}
         onMouseLeave={() => setOnModal(false)}
       >

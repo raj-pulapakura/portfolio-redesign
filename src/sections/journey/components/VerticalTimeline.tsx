@@ -1,3 +1,5 @@
+"use client";
+
 import { timelineData } from "@/data/timeline";
 import React from "react";
 import TimelineItem from "./vertical/TimelineItem";
@@ -26,13 +28,14 @@ export default function VerticalTimeline({
       />
       {timelineData.map((tdp) => (
         <TimelineItem
+          key={tdp.title}
           dateColumnWidth={dateColumnWidth}
           circleWidth={circleWidth}
           circleHeight={circleHeight}
           circleColour={timelineItemColours[colourIndex++ % numColors]}
           circleToTextConnectorHeight={circleToTextConnectorHeight}
           circleToTextConnectorWidth={circleToTextConnectorWidth}
-          timelineDataPoint={tdp}
+          timelineDataPoint={JSON.parse(JSON.stringify(tdp))}
           className="mb-3"
         />
       ))}

@@ -1,3 +1,5 @@
+"use client";
+
 import { TimelineDataPoint, timelineData } from "@/data/timeline";
 import React from "react";
 import TimelineItem from "./curved/TimelineItem";
@@ -41,12 +43,11 @@ export default function CurvedTimeline({
           connectOnSide="right"
         >
           <TimelineEndNode {...timelineEndNodeProps}>Start</TimelineEndNode>
-          {dataRow.map((tdp) => (
+          {dataRow.map((tdp, index) => (
             <TimelineItem
-              key={tdp.title}
-              {...timelineItemProps}
               bubbleColour={timelineItemColours[colourIndex++ % numColors]}
-              timelineDataPoint={JSON.parse(JSON.stringify(tdp))}
+              timelineDataPointTitle={tdp.title}
+              {...timelineItemProps}
             />
           ))}
         </TimelineRow>
@@ -63,7 +64,7 @@ export default function CurvedTimeline({
               key={tdp.title}
               {...timelineItemProps}
               bubbleColour={timelineItemColours[colourIndex++ % numColors]}
-              timelineDataPoint={JSON.parse(JSON.stringify(tdp))}
+              timelineDataPointTitle={tdp.title}
             />
           ))}
           <TimelineEndNode {...timelineEndNodeProps}>1/03/2024</TimelineEndNode>
@@ -81,7 +82,7 @@ export default function CurvedTimeline({
               key={tdp.title}
               {...timelineItemProps}
               bubbleColour={timelineItemColours[colourIndex++ % numColors]}
-              timelineDataPoint={JSON.parse(JSON.stringify(tdp))}
+              timelineDataPointTitle={tdp.title}
             />
           ))}
         </TimelineRow>

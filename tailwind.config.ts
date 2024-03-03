@@ -29,10 +29,15 @@ const config: Config = {
           "64%": { transform: "scale(1, 1) translateY(0)" },
           "100%": { transform: "scale(1, 1) translateY(0)" },
         },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
       },
       animation: {
         "spin-slow": "spin 30s linear infinite",
         "super-bounce": "bounce 2s ease infinite",
+        "fade-in": "fade-in 2s",
       },
     },
   },

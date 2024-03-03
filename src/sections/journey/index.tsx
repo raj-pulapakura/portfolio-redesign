@@ -1,6 +1,7 @@
+"use client";
+
 import React from "react";
 import { rockSalt } from "@/app/fonts";
-import VerticalTimeline from "./components/VerticalTimeline";
 import CurvedTimeline from "./components/CurvedTimeline";
 import { timelineData } from "@/data/timeline";
 
@@ -19,9 +20,9 @@ export default function Journey() {
         </h2>
       </div>
 
-      <div className="visible lg:hidden">
+      {/* <div className="visible lg:hidden">
         <VerticalTimeline className="m-4 mt-20" />
-      </div>
+      </div> */}
 
       <div className="hidden lg:block xl:hidden">
         <CurvedTimeline

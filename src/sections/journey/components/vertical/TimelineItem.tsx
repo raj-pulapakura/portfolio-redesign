@@ -1,3 +1,5 @@
+"use client";
+
 import { TimelineDataPoint } from "@/data/timeline";
 import React from "react";
 import TimelineItemInfo from "./TimelineItemInfo";
