@@ -99,7 +99,7 @@ export const timelineData = [
     date: "Dec 2023",
     title: "Dropped out of school",
     extraInformation:
-      "Having learned programming and machine learning for over 2 years, I was ready to start adding value to a company. With the support of my parents, I decided to drop out of school after finishing my Year 10 exams. Now the real journey begins.",
+      "Having learned programming and machine learning for over 3 years, I was ready to start adding value to a company. With the support of my parents, I decided to drop out of school after finishing my Year 10 exams. Now the real journey begins.",
   }),
   new TimelineDataPoint({
     date: "Jan 2024",

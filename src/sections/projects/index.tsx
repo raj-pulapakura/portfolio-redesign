@@ -12,7 +12,7 @@ export default function Projects() {
     <PaddedContainer className="bg-lime-400">
       <TitleSubtitleFlex
         title="PROJECTS"
-        subtitle="I like building cool shit."
+        subtitle="I like building cool stuff."
       />
       <EmblaCarousel className="visible md:hidden">
         {projectsData.map((pdp) => (
@@ -28,16 +28,9 @@ export default function Projects() {
           </EmblaCarouselItem>
         ))}
       </EmblaCarousel>
-      <EmblaCarousel className="hidden xl:block 2xl:hidden">
+      <EmblaCarousel className="hidden xl:block">
         {projectsData.map((pdp) => (
           <EmblaCarouselItem itemPctWidth="33.33%" key={pdp.description}>
-            <ProjectItem projectDataPoint={pdp} />
-          </EmblaCarouselItem>
-        ))}
-      </EmblaCarousel>
-      <EmblaCarousel className="hidden 2xl:block">
-        {projectsData.map((pdp) => (
-          <EmblaCarouselItem itemPctWidth="25%" key={pdp.description}>
             <ProjectItem projectDataPoint={pdp} />
           </EmblaCarouselItem>
         ))}

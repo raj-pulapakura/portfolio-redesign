@@ -21,7 +21,7 @@ export default function VideoItem({
         src={pis.thumbnails.high.url}
       />
       <PaddedFlexContainer>
-        <p className="text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl tracking-widest text-indigo-600">
+        <p className="text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl tracking-widest text-indigo-600 mb-2 lg:mb-4 xl:mb-5 2xl:mb-6">
           {date}
         </p>
         <h1 className="text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold">

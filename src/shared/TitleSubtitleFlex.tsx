@@ -16,7 +16,7 @@ export default function TitleSubtitleFlex({
       >
         {title}
       </h1>
-      <p className="hidden md:block font-bold text-2xl lg:text-3xl 3xl:text-4xl">
+      <p className="hidden md:block font-bold text-2xl lg:text-3xl 3xl:text-4xl max-w-[50%]">
         {subtitle}
       </p>
     </div>

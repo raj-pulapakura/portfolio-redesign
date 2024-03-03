@@ -15,10 +15,10 @@ export default function ArticleItem({
         src={adp.thumbnailURL}
       />
       <PaddedFlexContainer>
-        <p className="text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl tracking-widest text-indigo-600">
+        <p className="text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl tracking-widest text-indigo-600 mb-2 md:mb-3 lg:mb-4 xl:mb-5 2xl:mb-6">
           {adp.datePublished}
         </p>
-        <h1 className="text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold">
+        <h1 className="text-xl xl:text-2xl 2xl:text-3xl font-bold mb-3 md:mb-4 lg:mb-8">
           {adp.title}
         </h1>
         <p className="text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl mb-1">

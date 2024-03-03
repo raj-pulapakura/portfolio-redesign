@@ -28,16 +28,9 @@ export default function Articles() {
           </EmblaCarouselItem>
         ))}
       </EmblaCarousel>
-      <EmblaCarousel className="hidden xl:block 2xl:hidden">
+      <EmblaCarousel className="hidden xl:block">
         {articlesData.map((adp) => (
           <EmblaCarouselItem itemPctWidth="33.33%" key={adp.title}>
-            <ArticleItem articleDataPoint={adp} />
-          </EmblaCarouselItem>
-        ))}
-      </EmblaCarousel>
-      <EmblaCarousel className="hidden 2xl:block">
-        {articlesData.map((adp) => (
-          <EmblaCarouselItem itemPctWidth="25%" key={adp.title}>
             <ArticleItem articleDataPoint={adp} />
           </EmblaCarouselItem>
         ))}

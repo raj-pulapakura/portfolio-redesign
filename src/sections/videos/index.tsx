@@ -30,16 +30,9 @@ export default async function Videos() {
           </EmblaCarouselItem>
         ))}
       </EmblaCarousel>
-      <EmblaCarousel className="hidden xl:block 2xl:hidden">
+      <EmblaCarousel className="hidden xl:block">
         {videos.map((pis) => (
           <EmblaCarouselItem itemPctWidth="33.33%" key={pis.snippet.title}>
-            <VideoItem playlistItemSnippet={pis.snippet} />
-          </EmblaCarouselItem>
-        ))}
-      </EmblaCarousel>
-      <EmblaCarousel className="hidden 2xl:block">
-        {videos.map((pis) => (
-          <EmblaCarouselItem itemPctWidth="25%" key={pis.snippet.title}>
             <VideoItem playlistItemSnippet={pis.snippet} />
           </EmblaCarouselItem>
         ))}
