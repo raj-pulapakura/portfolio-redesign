@@ -1,6 +1,5 @@
 import { ArticleDataPoint } from "@/data/articles";
 import PaddedFlexContainer from "@/shared/PaddedFlexContainer";
-import Chip from "@/shared/Chip";
 import React from "react";
 
 export default function ArticleItem({
@@ -21,8 +20,8 @@ export default function ArticleItem({
         <h1 className="text-xl xl:text-2xl 2xl:text-3xl font-bold mb-3 md:mb-4 lg:mb-8">
           {adp.title}
         </h1>
-        <p className="text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl mb-1">
-          {adp.firstPara.slice(0, 100)}
+        <p className="relative fade-out-text text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl mb-1">
+          {adp.firstPara.slice(0, 120) + "..."}
         </p>
       </PaddedFlexContainer>
     </div>
