@@ -3,8 +3,8 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 
 export default function IconBar({ ...props }: JSX.IntrinsicElements["div"]) {
-  const width = 10;
-  const height = 10;
+  const width = 35;
+  const height = 35;
   return (
     <div {...props}>
       <Marquee>
@@ -12,7 +12,9 @@ export default function IconBar({ ...props }: JSX.IntrinsicElements["div"]) {
           <img
             key={tech}
             src={`/icons/${tech}.svg`}
-            className={`w-${width} h-${height} mx-2`}
+            width={width + "px"}
+            height={height + "px"}
+            className="mx-2"
           />
         ))}
       </Marquee>

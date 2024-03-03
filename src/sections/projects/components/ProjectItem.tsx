@@ -21,7 +21,10 @@ export default function ProjectItem({
         <p className="text-md xl:text-lg mb-5 lg:mb-7">{pdp.description}</p>
         <div>
           {pdp.technologiesUsed.map((tech) => (
-            <Chip className="text-xs lg:text-sm mb-1 mr-1 lg:mb-2 lg:mr-2 lg:border-2">
+            <Chip
+              key={tech}
+              className="text-xs lg:text-sm mb-1 mr-1 lg:mb-2 lg:mr-2 lg:border-2"
+            >
               {tech}
             </Chip>
           ))}
