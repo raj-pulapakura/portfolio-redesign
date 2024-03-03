@@ -12,11 +12,11 @@ export default function TitleSubtitleFlex({
       className={`flex justify-center md:justify-between items-baseline mb-16 md:mb-18 lg:mb-20 xl:mb-24 ${className}`}
     >
       <h1
-        className={`${rockSalt.className} text-5xl lg:text-5xl 2xl:text-7xl text-center md:text-left `}
+        className={`${rockSalt.className} text-3xl lg:text-4xl 2xl:text-5xl text-center md:text-left `}
       >
         {title}
       </h1>
-      <p className="hidden md:block font-bold text-2xl lg:text-3xl 3xl:text-4xl max-w-[50%]">
+      <p className="hidden md:block font-bold text-xl lg:text-2xl max-w-[50%]">
         {subtitle}
       </p>
     </div>

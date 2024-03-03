@@ -62,7 +62,7 @@ export function PrevButton({
   return (
     <IconButton
       style={{ boxShadow: "8px 8px 12px 0 rgba(0, 0, 0, 0.3)" }}
-      className={`p-2 md:p-4 lg:p-6 xl:p-8 2xl:p-10 w-6 h-6 md:w-10 md:h-10 lg:w-14 lg:h-14 xl:w-18 xl:h-18 2xl:w-20 2xl:h-20 hover:cursor-pointer ${className}`}
+      className={`p-2 md:p-3 lg:p-4 xl:p-5 2xl:p-6 w-6 h-6 md:w-8 md:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 hover:cursor-pointer ${className}`}
       icon={faChevronLeft}
       {...props}
     />
@@ -78,7 +78,7 @@ export function NextButton({
       style={{
         boxShadow: iconButtonBoxShadow,
       }}
-      className={`p-2 md:p-4 lg:p-6 xl:p-8 2xl:p-10 w-6 h-6 md:w-10 md:h-10 lg:w-14 lg:h-14 xl:w-18 xl:h-18 2xl:w-20 2xl:h-20 hover:cursor-pointer  ${className}`}
+      className={`p-2 md:p-3 lg:p-4 xl:p-5 2xl:p-6 w-6 h-6 md:w-8 md:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 hover:cursor-pointer  ${className}`}
       icon={faChevronRight}
       {...props}
     />

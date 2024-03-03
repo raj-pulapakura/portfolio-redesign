@@ -7,7 +7,7 @@ export default function PaddedFlexContainer({
 }: JSX.IntrinsicElements["div"]) {
   return (
     <div
-      className={`p-5 md:p-7 lg:p-9 xl:p-11 2xl:p-14 flex flex-col ${className}`}
+      className={`p-5 md:p-6 lg:p-7 xl:p-8 2xl:p-10 flex flex-col ${className}`}
       {...props}
     >
       {children}
