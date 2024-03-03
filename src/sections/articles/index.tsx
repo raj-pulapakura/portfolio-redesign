@@ -17,21 +17,21 @@ export default function Articles() {
       <EmblaCarousel className="visible md:hidden">
         {articlesData.map((adp) => (
           <EmblaCarouselItem key={adp.title}>
-            <ArticleItem articleDataPoint={adp} />
+            <ArticleItem articleDataPoint={JSON.parse(JSON.stringify(adp))} />
           </EmblaCarouselItem>
         ))}
       </EmblaCarousel>
       <EmblaCarousel className="hidden md:block xl:hidden">
         {articlesData.map((adp) => (
           <EmblaCarouselItem itemPctWidth="50%" key={adp.title}>
-            <ArticleItem articleDataPoint={adp} />
+            <ArticleItem articleDataPoint={JSON.parse(JSON.stringify(adp))} />
           </EmblaCarouselItem>
         ))}
       </EmblaCarousel>
       <EmblaCarousel className="hidden xl:block">
         {articlesData.map((adp) => (
           <EmblaCarouselItem itemPctWidth="33.33%" key={adp.title}>
-            <ArticleItem articleDataPoint={adp} />
+            <ArticleItem articleDataPoint={JSON.parse(JSON.stringify(adp))} />
           </EmblaCarouselItem>
         ))}
       </EmblaCarousel>
