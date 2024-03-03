@@ -9,12 +9,13 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PaddedFlexContainer from "@/shared/PaddedFlexContainer";
+import UpButton from "./components/UpButton";
 
 export default function Outro() {
   const iconSize = "3x";
 
   return (
-    <section className="bg-black py-20 lg:py-28 flex flex-col gap-10 px-10">
+    <section className="bg-black py-20 lg:py-28 flex flex-col gap-10 px-10 relative">
       <div className="text-white text-center flex gap-5 lg:gap-10 2xl:gap-16 flex-col">
         <h1
           className={`${rockSalt.className} text-5xl lg:text-6xl 2xl:text-7xl leading-loose`}
@@ -59,6 +60,7 @@ export default function Outro() {
           url="https://github.com/raj-pulapakura"
         />
       </div>
+      <UpButton />
     </section>
   );
 }

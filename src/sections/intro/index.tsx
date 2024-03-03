@@ -1,6 +1,6 @@
 import React from "react";
 import BackgroundImage from "./components/BackgroundImage";
-import HeroSection from "./components/HeroSection";
+import HeroSection from "./components/hero/HeroSection";
 import DownButton from "./components/DownButton";
 
 export default function Intro() {
