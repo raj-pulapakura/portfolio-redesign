@@ -41,7 +41,7 @@ export default function IconCircle({
         width: radiusInPixels * 2 + "px",
         height: radiusInPixels * 2 + "px",
       }}
-      className={`relative w-[radiusInPixels] h-[radiusInPixels] animate-spin-slow ${className}`}
+      className={`relative w-[radiusInPixels] h-[radiusInPixels] animate-spin-slow rounded-full ${className}`}
       {...props}
     >
       {items}

@@ -22,10 +22,7 @@ export default function SkillSection({
       </h1>
       <div className={align}>
         {skills.map((skill) => (
-          <Chip
-            key={skill}
-            className="text-md lg:text-lg xl:text-xl 2xl:text-2xl mb-1 mr-1 xl:mb-2 xl:mr-2"
-          >
+          <Chip key={skill} className="text-sm mb-1 mr-1 xl:mb-2 xl:mr-2">
             {skill}
           </Chip>
         ))}

@@ -5,8 +5,8 @@ import SkillSection from "./SkillSection";
 
 export default function GridXLarge() {
   return (
-    <div className="grid grid-cols-3 grid-rows-2 gap-10">
-      <h1 className="text-left col-start-1 col-end-2 row-start-1 row-end-2 text-4xl xl:text-5xl font-bold">
+    <div className="grid grid-cols-3 grid-rows-2 gap-x-8 gap-y-0">
+      <h1 className="text-left col-start-1 col-end-2 row-start-1 row-end-2 text-3xl font-bold  h-fit">
         I love using Machine Learning and Full Stack technologies to solve
         complex problems.
       </h1>
@@ -19,7 +19,7 @@ export default function GridXLarge() {
       <SkillSection
         title="Data, Cloud and Infra"
         skills={dataskills}
-        className="col-start-2 col-end-3 row-start-1 row-end-2"
+        className="col-start-2 col-end-3 row-start-1 row-end-2 "
         align="text-left"
       />
       <SkillSection
@@ -29,11 +29,11 @@ export default function GridXLarge() {
         align="text-left"
       />
 
-      {/* <IconCircle
+      <IconCircle
         className="col-start-3 col-end-4 row-start-1 row-end-3 m-auto "
-        radiusInPixels={250}
+        radiusInPixels={180}
         itemSizeInPixels={40}
-      /> */}
+      />
     </div>
   );
 }

@@ -6,7 +6,7 @@ import SkillSection from "./SkillSection";
 export default function GridSmall() {
   return (
     <>
-      <h1 className="text-3xl font-bold mx-3 text-center">
+      <h1 className="text-2xl font-bold mx-3 text-center">
         I love using Machine Learning and Full Stack technologies to solve
         complex problems.
       </h1>

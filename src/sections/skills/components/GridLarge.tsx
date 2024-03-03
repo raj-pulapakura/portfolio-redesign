@@ -6,7 +6,7 @@ import SkillSection from "./SkillSection";
 export default function GridLarge() {
   return (
     <div className="grid grid-cols-2 grid-rows-3 gap-5">
-      <h1 className=" text-left col-start-1 col-end-2 row-start-1 row-end-2 text-4xl xl:text-5xl font-bold">
+      <h1 className=" text-left col-start-1 col-end-2 row-start-1 row-end-2 text-3xl font-bold">
         I love using Machine Learning and Full Stack technologies to solve
         complex problems.
       </h1>
