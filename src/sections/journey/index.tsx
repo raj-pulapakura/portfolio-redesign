@@ -11,14 +11,10 @@ export default function Journey() {
     <section className="bg-black py-20">
       <div className="flex gap-10 justify-center lg:justify-normal items-center">
         <h1
-          className={`${rockSalt.className} text-5xl text-white text-center lg:text-left mx-20`}
+          className={`${rockSalt.className} text-5xl text-white text-center lg:text-left mx-20 leading-loose`}
         >
-          JOURNEY
+          MY JOURNEY
         </h1>
-        <h2 className="hidden lg:block text-white text-2xl">
-          Hover over a <span className="before:content-['🟢']">circle</span> to
-          see more info for that event
-        </h2>
       </div>
 
       <div className="visible lg:hidden">
@@ -33,7 +29,7 @@ export default function Journey() {
             timelineData.slice(8, timelineData.length),
           ]}
           rowGap={200}
-          bubbleGap={60}
+          bubbleGap={40}
           bubbleHeight={40}
           className="mx-40 mt-32"
         />
@@ -47,7 +43,7 @@ export default function Journey() {
             timelineData.slice(8, timelineData.length),
           ]}
           rowGap={170}
-          bubbleGap={100}
+          bubbleGap={60}
           bubbleHeight={50}
           className="mx-40 mt-32"
         />
@@ -61,7 +57,7 @@ export default function Journey() {
             timelineData.slice(8, timelineData.length),
           ]}
           rowGap={180}
-          bubbleGap={200}
+          bubbleGap={100}
           bubbleHeight={60}
           className="mx-40 mt-32"
         />

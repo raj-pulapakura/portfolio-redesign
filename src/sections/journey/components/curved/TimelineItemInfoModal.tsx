@@ -12,10 +12,10 @@ export default function TimelineItemInfoModal({
 }: TimelineItemInfoModalProps) {
   return (
     <div
-      className={`z-30 p-5 absolute w-72 xl:w-96 left-1/2 -translate-x-1/2 -translate-y-full rounded-md ${className}`}
+      className={`z-30 p-5 relative w-72 xl:w-96 left-1/2 -translate-x-1/2 -translate-y-[calc(100%+1rem)] rounded-md animate-[fade-in_250ms] ${className}`}
       {...props}
     >
-      <p className="text-lg">{tdp.extraInformation}</p>
+      <p className="text-sm">{tdp.extraInformation}</p>
     </div>
   );
 }

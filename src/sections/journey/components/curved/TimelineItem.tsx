@@ -75,7 +75,7 @@ export default function TimelineItem({
             style={{ height: connectorHeight, width: connectorWidth }}
             className="bg-white mb-1"
           ></div>
-          <h1 className="text-white text-center leading-5 text-md lg:text-lg xl:text-xl">
+          <h1 className="text-white text-center leading-5 text-xs lg:text-sm xl:text-md">
             {tdp.title}
           </h1>
         </div>
