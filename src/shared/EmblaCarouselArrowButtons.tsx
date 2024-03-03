@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { EmblaCarouselType } from "embla-carousel";
 import IconButton from "./IconButton";
+import { iconButtonBoxShadow } from "@/app/styles";
 
 type UsePrevNextButtonsType = {
   prevBtnDisabled: boolean;
@@ -74,7 +75,9 @@ export function NextButton({
 }: Parameters<typeof IconButton>[0]) {
   return (
     <IconButton
-      style={{ boxShadow: "8px 8px 12px 0 rgba(0, 0, 0, 0.3)" }}
+      style={{
+        boxShadow: iconButtonBoxShadow,
+      }}
       className={`p-2 md:p-4 lg:p-6 xl:p-8 2xl:p-10 w-6 h-6 md:w-10 md:h-10 lg:w-14 lg:h-14 xl:w-18 xl:h-18 2xl:w-20 2xl:h-20 hover:cursor-pointer  ${className}`}
       icon={faChevronRight}
       {...props}

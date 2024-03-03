@@ -10,7 +10,7 @@ import SocialItem from "../SocialItem";
 
 export default function HeroLinks() {
   return (
-    <div className="w-fit flex flex-col gap-2 md:gap-4 lg:gap-6 xl:gap-8 2xl:gap-10">
+    <div className="w-fit flex flex-col gap-2 md:gap-3 lg:gap-4 xl:gap-5 2xl:gap-6">
       <SocialItem icon={faEnvelope} text="raj.pulapakura@gmail.com" />
       <SocialItem
         icon={faLinkedin}

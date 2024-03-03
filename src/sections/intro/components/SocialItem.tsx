@@ -20,8 +20,8 @@ export default function SocialItem({
         className="hidden md:block 2xl:hidden"
         size="xl"
       />
-      <FontAwesomeIcon icon={icon} className="hidden 2xl:block" size="2x" />
-      <p className="text-md lg:text-lg xl:text-xl 2xl:text-2xl">{text}</p>
+      <FontAwesomeIcon icon={icon} className="hidden 2xl:block" size="xl" />
+      <p className="text-md xl:text-lg">{text}</p>
     </div>
   );
 

@@ -21,7 +21,7 @@ export default function DownloadResumeButton({
 
   return (
     <button
-      className={` rounded-lg bg-indigo-300 active:bg-indigo-400 text-black font-bold text-lg lg:text-xl px-5 py-3 mb-2 w-fit ${className}`}
+      className={` rounded-lg border-2 border-indigo-400 active:bg-indigo-300 text-black font-bold text-lg px-5 py-3 mb-2 w-fit ${className}`}
       onClick={handleClick}
       {...props}
     >

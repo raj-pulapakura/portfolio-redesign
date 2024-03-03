@@ -29,11 +29,11 @@ export default function GridXLarge() {
         align="text-left"
       />
 
-      <IconCircle
+      {/* <IconCircle
         className="col-start-3 col-end-4 row-start-1 row-end-3 m-auto "
         radiusInPixels={250}
         itemSizeInPixels={40}
-      />
+      /> */}
     </div>
   );
 }
