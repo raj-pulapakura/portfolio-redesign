@@ -35,7 +35,7 @@ export default function VerticalTimeline({
           circleColour={timelineItemColours[colourIndex++ % numColors]}
           circleToTextConnectorHeight={circleToTextConnectorHeight}
           circleToTextConnectorWidth={circleToTextConnectorWidth}
-          timelineDataPoint={JSON.parse(JSON.stringify(tdp))}
+          timelineDataPointTitle={tdp.title}
           className="mb-3"
         />
       ))}

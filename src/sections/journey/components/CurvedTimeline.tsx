@@ -67,7 +67,6 @@ export default function CurvedTimeline({
               timelineDataPointTitle={tdp.title}
             />
           ))}
-          <TimelineEndNode {...timelineEndNodeProps}>1/03/2024</TimelineEndNode>
         </TimelineRow>
       );
     } else {

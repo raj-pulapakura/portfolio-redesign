@@ -1,7 +1,10 @@
+import Link from "next/link";
+import { ReactNode } from "react";
+
 export class TimelineDataPoint {
   date: string;
   title: string;
-  extraInformation: string;
+  extraInformation: string | ReactNode;
   technologies?: string[];
 
   constructor({
@@ -12,7 +15,7 @@ export class TimelineDataPoint {
   }: {
     date: string;
     title: string;
-    extraInformation: string;
+    extraInformation: string | ReactNode;
     technologies?: string[];
   }) {
     this.date = date;
@@ -27,21 +30,35 @@ export const timelineData = [
     date: "Jan 2021",
     title: "Wrote my first line of code",
     extraInformation:
-      "Discovered Python, and fell in love with it because it gave me the ability to BUILD.",
+      "Discovered Python, and fell in love with programming because it enabled me to create.",
     technologies: ["Python", "Django"],
   }),
   new TimelineDataPoint({
     date: "Jun 2021",
     title: "Published my first app",
-    extraInformation:
-      "My first app was a simple and fun number guessing game. Check it out on the Play Store: ",
+    extraInformation: (
+      <p>
+        My first app was a simple and fun number guessing game. Check it out on
+        the Play Store:{" "}
+        <Link
+          className="underline underline-offset-2 font-bold"
+          href="https://play.google.com/store/apps/details?id=com.numberpredictor.joyapps"
+        >
+          Number Predictor
+        </Link>
+      </p>
+    ),
     technologies: ["Kotlin"],
   }),
   new TimelineDataPoint({
     date: "Sep 2021",
     title: "Built my first website",
-    extraInformation:
-      "Discovering the wonderful world of web dev, I learned HTML, CSS, JavaScript, React.js, Docker, SQL, MongoDB, and Docker.",
+    extraInformation: (
+      <p>
+        Eager to continue building, I tapped into web development, learning
+        HTML, CSS, JavaScript, React.js, Docker, SQL, MongoDB, and Docker.
+      </p>
+    ),
     technologies: [
       "HTML",
       "CSS",
@@ -56,60 +73,152 @@ export const timelineData = [
   new TimelineDataPoint({
     date: "Mar 2022",
     title: "Rebuilt my first app",
-    extraInformation:
-      "With the power of a cross-platform framework, I rekindled my mobile development fire and rebuilt my first app with a new refershed look.",
+    extraInformation: (
+      <p>
+        With the power of a Flutter, I rebuilt my first app with a new refershed
+        look, incoporating a simple design language for optimal user experience.
+      </p>
+    ),
     technologies: ["Flutter", "Dart"],
   }),
   new TimelineDataPoint({
     date: "Jun 2022",
     title: "Discovered Machine Learning",
-    extraInformation:
-      "With the potential for AI to transform the world, I decided to focus my efforts on Machine Learning",
+    extraInformation: (
+      <div className="flex flex-col gap-2">
+        <p>
+          With the potential for AI to transform the world, I decided to focus
+          my efforts on Machine Learning.
+        </p>
+        <p>
+          Through online courses and tutorials, I discovered and learned core ML
+          technologies including TensorFlow, PyTorch, NumPy, Pandas and OpenCV.
+        </p>
+      </div>
+    ),
     technologies: ["TensorFlow", "PyTorch", "NumPy", "Pandas", "OpenCV"],
   }),
   new TimelineDataPoint({
     date: "Jan 2023",
     title: "Dived into Deep Learning",
-    extraInformation:
-      "I learned about neural networks, back propagation and activation functions. I also took an interest in computer vision technologies including object detection and siamese networks.",
+    extraInformation: (
+      <p>
+        Going deeper (pun intended) into Machine Learning, I learned about
+        neural networks, back propagation, activation functions and various
+        other DL topics. I also took an interest in computer vision technologies
+        including object detection and siamese networks.
+      </p>
+    ),
     technologies: ["TensorFlow", "PyTorch", "NumPy", "Pandas", "OpenCV"],
   }),
   new TimelineDataPoint({
     date: "Jul 2023",
     title: "Taught myself Calculus",
-    extraInformation:
-      "Realizing that calculus, linear algebra and probability were powering some of the fundamental algorithms of ML and DL, I invested a month into learning the mathematics of ML. Using Khan Academy courses and YouTube videos, I taught myself calculus, derivatives and the backprop algorithm. Then I implemented a neural network from scratch.",
+    extraInformation: (
+      <div className="flex flex-col gap-2">
+        <p>
+          Realizing that a solid knowledge of calculus, linear algebra and
+          probability was necessary to truly understand machine learning, I
+          invested a month into learning the mathematics of ML.
+        </p>
+        <p>
+          Fuelled by my love for maths and desire for deep understanding, I
+          utilized Khan Academy courses and YouTube tutorials to teach myself
+          calculus, derivatives and the backprop algorithm. Then I implemented a
+          neural network from scratch.
+        </p>
+      </div>
+    ),
     technologies: ["TensorFlow", "NumPy"],
   }),
   new TimelineDataPoint({
     date: "Aug 2023",
     title: "TensorFlow Developer Exam",
-    extraInformation:
-      "After learning calculus and mastering TensorFlow, I thought I was ready to pass the TensorFlow Developer Exam, which is a 5 hour examination accredited by TensorFlow, to validate your skills in Machine Learning. I submitted my exam after 4 hours of starting, and a few minutes later, I received an email that I had passed!",
+    extraInformation: (
+      <div className="flex flex-col gap-2">
+        <p>
+          After learning calculus and TensorFlow, I knew I was ready to pass the
+          TensorFlow Developer Exam, which is a 5 hour examination accredited by
+          TensorFlow, to validate your skills in Machine Learning.
+        </p>
+        <p>
+          I submitted my exam after 4 hours of starting, and a few minutes
+          later, I received an email that I had passed!
+        </p>
+      </div>
+    ),
     technologies: ["TensorFlow"],
   }),
   new TimelineDataPoint({
     date: "Sep 2023",
     title: "Course and Certs",
-    extraInformation:
-      "Improving my skills and knowledge by taking 4 courses. 1) IBM Machine Learning Professional Certificate, 2) Advanced Machine Learning on Google Cloud Certificate, 3) Deep Learning Specialization Certificate, 4) Databases and SQL for Data Science with Python",
+    extraInformation: (
+      <div className="flex flex-col gap-2">
+        <p>Improving my skills and knowledge by taking 4 courses:</p>
+        <ul>
+          <li>• IBM Machine Learning Professional Certificate</li>
+          <li>• Advanced Machine Learning on Google Cloud Certificate</li>
+          <li>• Deep Learning Specialization</li>
+          <li>• IBM Databases and SQL for Data Science with Python</li>
+        </ul>
+      </div>
+    ),
     technologies: ["IBM", "TensorFlow", "NumPy", "Google Cloud", "MySQL"],
   }),
   new TimelineDataPoint({
     date: "Dec 2023",
     title: "Dropped out of school",
-    extraInformation:
-      "Having learned programming and machine learning for over 3 years, I was ready to start adding value to a company. With the support of my parents, I decided to drop out of school after finishing my Year 10 exams. Now the real journey begins.",
+    extraInformation: (
+      <div className="flex flex-col gap-2">
+        <p>
+          Having taught myself programming and machine learning for over 3
+          years, I am ready to get out into the market and add value to a tech
+          company with my skills.
+        </p>
+        <p>
+          With the support of my parents, I dropped about of high school after
+          topping my Year 10 exams.
+        </p>
+        <p>Now the real journey begins.</p>
+      </div>
+    ),
   }),
   new TimelineDataPoint({
     date: "Jan 2024",
     title: "Landed my first internship!",
-    extraInformation: `For this internship, my primary focus was building A.I.GORITHM's Property Report Tool.
-
-• Developed and deployed a Property Report Generation Tool which enables farmers to get detailed agricultural reports pertaining to their geographical AOI (area of interest).
-• Pooled and organized geospatial data from several APIs and data sources to provide agricultural analytics to farmers.
-• Employed microservices architecture to develop APIs/services and a user-facing website.
-• Automated deployment via GitHub Actions CI/CD pipeline and Terraform IaC (Infrastructure as Code), to provision AWS resources.`,
+    extraInformation: (
+      <div>
+        <p className="mb-3">
+          For this internship, I worked for an{" "}
+          <span className="font-bold">Agritech</span> climate risk and analysis
+          startup called <span>A.I.GORITHM</span>, where my primary focus was
+          building A.I.GORITHM's Property Report Tool:
+        </p>
+        <ul className="flex flex-col gap-2">
+          <li>
+            • Developed and deployed a Property Report Generation Tool which
+            enables farmers to get detailed{" "}
+            <span className="font-bold">agricultural reports</span> pertaining
+            to their geographical AOI (area of interest).
+          </li>
+          <li>
+            • Pooled and organized{" "}
+            <span className="font-bold">geospatial data</span> from several APIs
+            and data sources to provide agricultural analytics to farmers.
+          </li>
+          <li>
+            • Employed{" "}
+            <span className="font-bold">microservices architecture</span> to
+            develop APIs/services and a user-facing website.
+          </li>
+          <li>
+            • Automated deployment via GitHub Actions{" "}
+            <span className="font-bold">CI/CD pipeline</span> and Terraform IaC
+            (Infrastructure as Code), to provision AWS resources.
+          </li>
+        </ul>
+      </div>
+    ),
     technologies: [
       "Next.JS",
       "TypeScript",
@@ -123,5 +232,30 @@ export const timelineData = [
       "Docker",
       "AWS",
     ],
+  }),
+  new TimelineDataPoint({
+    date: "Mar 2024",
+    title: "Finished my internship",
+    extraInformation: (
+      <div className="flex flex-col gap-2">
+        <p>
+          Finished my first internship and learned lots about the agricultural
+          space and geospatial data. Check out my full write-up of all the
+          lessons I learned{" "}
+          <Link
+            className="font-bold"
+            href="https://medium.com/@raj.pulapakura/3-lessons-from-my-swe-internship-at-a-startup-1896ad469555"
+          >
+            here.
+          </Link>
+        </p>
+        <p>
+          As of now, I am going to continue upskilling myself and work on my
+          personal projects. Also currently working towards the AWS Machine
+          Learning Specialty Certificate.
+        </p>
+        <p>🔥 Let's keep grinding.</p>
+      </div>
+    ),
   }),
 ];

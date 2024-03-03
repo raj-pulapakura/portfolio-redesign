@@ -1,6 +1,6 @@
 "use client";
 
-import { TimelineDataPoint } from "@/data/timeline";
+import { TimelineDataPoint, timelineData } from "@/data/timeline";
 import React from "react";
 import TimelineItemInfo from "./TimelineItemInfo";
 
@@ -11,11 +11,11 @@ export type TimelineItemProps = JSX.IntrinsicElements["div"] & {
   circleColour?: string;
   circleToTextConnectorWidth?: string;
   circleToTextConnectorHeight?: string;
-  timelineDataPoint: TimelineDataPoint;
+  timelineDataPointTitle: string;
 };
 
 export default function TimelineItem({
-  timelineDataPoint: tdp,
+  timelineDataPointTitle: tdpTitle,
   dateColumnWidth = "w-1/5",
   circleWidth = "2rem",
   circleHeight = "2rem",
@@ -29,6 +29,12 @@ export default function TimelineItem({
   const dateStyle = `text-white text-sm  text-center`;
   const circleStyle = `z-10 rounded-full ${circleColour}`;
   const connectorStyle = `bg-white`;
+
+  const tdp = timelineData.find((tdp) => tdp.title === tdpTitle);
+
+  if (!tdp) {
+    return;
+  }
 
   return (
     <div className={containerStyle} {...props}>
@@ -46,7 +52,7 @@ export default function TimelineItem({
         }}
         className={connectorStyle}
       ></div>
-      <TimelineItemInfo timelineDataPoint={JSON.parse(JSON.stringify(tdp))} />
+      <TimelineItemInfo timelineDataPointTitle={tdpTitle} />
     </div>
   );
 }
