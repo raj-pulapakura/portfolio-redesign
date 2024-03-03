@@ -25,7 +25,7 @@ export default function TimelineItem({
   className,
   ...props
 }: TimelineItemProps) {
-  const containerStyle = `flex items-center ${className}`;
+  const containerStyle = `hover:cursor-pointer flex items-center ${className}`;
   const dateStyle = `text-white text-sm  text-center`;
   const circleStyle = `z-10 rounded-full ${circleColour}`;
   const connectorStyle = `bg-white`;

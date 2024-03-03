@@ -34,7 +34,10 @@ export default function TimelineItem({
   return (
     <div
       style={{ height: bubbleHeight + "px", ...style }}
-      className={`relative w-full ${className}`}
+      className={`hover:cursor-zoom-in relative w-full ${className}`}
+      onClick={() => setOnModal(true)}
+      onMouseEnter={() => setOnModal(true)}
+      onMouseLeave={() => setOnModal(false)}
       {...props}
     >
       {/* bubble */}
