@@ -10,17 +10,17 @@ export default function ArticleItem({
   return (
     <div className="bg-white rounded-lg h-full">
       <img
-        className="rounded-t-lg h-48 md:h-56 lg:h-64 xl:h-72 2xl:h-80 w-full object-cover"
+        className="rounded-t-lg h-48 md:h-52 lg:h-56 xl:h-60 2xl:h-64 w-full object-cover"
         src={adp.thumbnailURL}
       />
       <PaddedFlexContainer>
-        <p className="text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl tracking-widest text-indigo-600 mb-2 md:mb-3 lg:mb-4 xl:mb-5 2xl:mb-6">
+        <p className="text-sm lg:text-md tracking-widest text-indigo-600 mb-2 md:mb-3 lg:mb-4 2xl:mb-5">
           {adp.datePublished}
         </p>
-        <h1 className="text-xl xl:text-2xl 2xl:text-3xl font-bold mb-3 md:mb-4 lg:mb-8">
+        <h1 className="text-md xl:text-lg 2xl:text-xl font-bold mb-3 md:mb-4 lg:mb-5">
           {adp.title}
         </h1>
-        <p className="relative fade-out-text text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl mb-1">
+        <p className="relative fade-out-text text-sm xl:text-md mb-1">
           {adp.firstPara.slice(0, 120) + "..."}
         </p>
       </PaddedFlexContainer>

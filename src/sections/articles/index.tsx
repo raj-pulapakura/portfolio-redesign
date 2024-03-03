@@ -8,11 +8,11 @@ import TitleSubtitleFlex from "@/shared/TitleSubtitleFlex";
 
 export default function Articles() {
   return (
-    <PaddedContainer className="bg-lime-400">
+    <PaddedContainer className="bg-slate-900">
       <TitleSubtitleFlex
         title="ARTICLES"
         subtitle="Documenting my journey and cool tech."
-        className="flex-row-reverse"
+        className="flex-row-reverse text-white"
       />
       <EmblaCarousel className="visible md:hidden">
         {articlesData.map((adp) => (
