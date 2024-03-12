@@ -1,6 +1,6 @@
 "use client";
 
-import IconButton from "@/shared/IconButton";
+import IconButton from "@/shared/buttons/IconButton";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 

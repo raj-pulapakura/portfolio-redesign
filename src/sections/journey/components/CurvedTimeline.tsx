@@ -45,6 +45,7 @@ export default function CurvedTimeline({
           <TimelineEndNode {...timelineEndNodeProps}>Start</TimelineEndNode>
           {dataRow.map((tdp) => (
             <TimelineItem
+              key={tdp.title}
               bubbleColour={timelineItemColours[colourIndex++ % numColors]}
               timelineDataPointTitle={tdp.title}
               {...timelineItemProps}

@@ -1,6 +1,6 @@
 "use client";
 
-import Profile from "@/shared/Profile";
+import Profile from "@/shared/ui/Profile";
 import React from "react";
 import HeroTitle from "./HeroTitle";
 import HeroLinks from "./HeroLinks";

@@ -1,11 +1,11 @@
 import { rockSalt } from "@/app/fonts";
 import React from "react";
-import EmblaCarousel from "@/shared/EmblaCarousel";
-import EmblaCarouselItem from "@/shared/EmblaCarouselItem";
+import EmblaCarousel from "@/shared/carousel/EmblaCarousel";
+import EmblaCarouselItem from "@/shared/carousel/EmblaCarouselItem";
 import VideoItem from "./components/VideoItem";
 import { getVideos } from "@/data/videos";
-import PaddedContainer from "@/shared/PaddedContainer";
-import TitleSubtitleFlex from "@/shared/TitleSubtitleFlex";
+import PaddedContainer from "@/shared/containers/PaddedContainer";
+import TitleSubtitleFlex from "@/shared/containers/TitleSubtitleFlex";
 
 export default async function Videos() {
   const videos = await getVideos();

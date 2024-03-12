@@ -8,7 +8,7 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import PaddedFlexContainer from "@/shared/PaddedFlexContainer";
+import PaddedFlexContainer from "@/shared/containers/PaddedFlexContainer";
 import UpButton from "./components/UpButton";
 
 export default function Outro() {

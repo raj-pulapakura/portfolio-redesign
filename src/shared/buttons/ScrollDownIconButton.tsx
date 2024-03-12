@@ -1,7 +1,7 @@
 "use client";
 
 import { iconButtonBoxShadow } from "@/app/styles";
-import IconButton, { IconButtonProps } from "@/shared/IconButton";
+import IconButton, { IconButtonProps } from "@/shared/buttons/IconButton";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 

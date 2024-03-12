@@ -1,11 +1,12 @@
 import { ProjectDataPoint } from "@/data/projects";
-import PaddedFlexContainer from "@/shared/PaddedFlexContainer";
-import Chip from "@/shared/Chip";
+import PaddedFlexContainer from "@/shared/containers/PaddedFlexContainer";
+import Chip from "@/shared/ui/Chip";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import IconLink from "./IconLink";
 
 export default function ProjectItem({
   projectDataPoint: pdp,
@@ -36,32 +37,17 @@ export default function ProjectItem({
         <div className="flex gap-5">
           {pdp.githubURL && (
             <Link href={pdp.githubURL}>
-              <FontAwesomeIcon
-                className="hover:scale-110 transition duration-200"
-                color="grey"
-                icon={faGithub}
-                size="2x"
-              />
+              <IconLink icon={faGithub} />
             </Link>
           )}
           {pdp.webURL && (
             <Link href={pdp.webURL}>
-              <FontAwesomeIcon
-                className="hover:scale-110 transition duration-200"
-                color="grey"
-                icon={faLink}
-                size="2x"
-              />
+              <IconLink icon={faLink} />
             </Link>
           )}
           {pdp.videoURL && (
             <Link href={pdp.videoURL}>
-              <FontAwesomeIcon
-                className="hover:scale-110 transition duration-200"
-                color="grey"
-                icon={faYoutube}
-                size="2x"
-              />
+              <IconLink icon={faYoutube} />
             </Link>
           )}
         </div>

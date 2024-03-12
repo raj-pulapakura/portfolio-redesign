@@ -1,4 +1,4 @@
-import Chip from "@/shared/Chip";
+import Chip from "@/shared/ui/Chip";
 import React from "react";
 
 export type SkillSectionProps = JSX.IntrinsicElements["div"] & {

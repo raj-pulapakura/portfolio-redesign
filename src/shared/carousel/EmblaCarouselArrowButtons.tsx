@@ -8,7 +8,7 @@ import {
   faChevronLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import { EmblaCarouselType } from "embla-carousel";
-import IconButton from "./IconButton";
+import IconButton from "../buttons/IconButton";
 import { iconButtonBoxShadow } from "@/app/styles";
 
 type UsePrevNextButtonsType = {

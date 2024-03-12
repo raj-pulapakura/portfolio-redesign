@@ -1,3 +1,4 @@
+import UnderlinedLink from "@/shared/ui/UnderlinedLink";
 import Link from "next/link";
 import { ReactNode } from "react";
 
@@ -40,12 +41,9 @@ export const timelineData = [
       <p>
         My first app was a simple and fun number guessing game. Check it out on
         the Play Store:{" "}
-        <Link
-          className="underline underline-offset-2 font-bold"
-          href="https://play.google.com/store/apps/details?id=com.numberpredictor.joyapps"
-        >
+        <UnderlinedLink href="https://play.google.com/store/apps/details?id=com.numberpredictor.joyapps">
           Number Predictor
-        </Link>
+        </UnderlinedLink>
       </p>
     ),
     technologies: ["Kotlin"],
@@ -234,14 +232,14 @@ export const timelineData = [
     ],
   }),
   new TimelineDataPoint({
-    date: "Mar 2024",
+    date: "Feb 2024",
     title: "Finished my internship",
     extraInformation: (
       <div className="flex flex-col gap-2">
         <p>
           Finished my first internship and learned lots about the agricultural
           space and geospatial data. Check out my full write-up of all the
-          lessons I learned{" "}
+          lessons I learned
           <Link
             className="font-bold"
             href="https://medium.com/@raj.pulapakura/3-lessons-from-my-swe-internship-at-a-startup-1896ad469555"
@@ -255,6 +253,51 @@ export const timelineData = [
           Learning Specialty Certificate.
         </p>
         <p>🔥 Let's keep grinding.</p>
+      </div>
+    ),
+  }),
+  new TimelineDataPoint({
+    date: "Mar 2024",
+    title: "ClarityScan: Medical Deep Learning",
+    extraInformation: (
+      <div className="flex flex-col gap-5">
+        <p>
+          For the past month, I have been building{" "}
+          <UnderlinedLink href="http://clarityscan-447069715.us-east-1.elb.amazonaws.com/">
+            <em>ClarityScan</em>
+          </UnderlinedLink>
+          , which is an app that enables radiologists to enhance brain MRI
+          scans, and easily identify glioma tumors in the scans.
+        </p>
+        <section>
+          <p>📚 Here are all the resources for the project:</p>
+          <ul>
+            <li>
+              • 🔗{" "}
+              <UnderlinedLink href="http://clarityscan-447069715.us-east-1.elb.amazonaws.com/">
+                ClarityScan website
+              </UnderlinedLink>
+            </li>
+            <li>
+              • 📽️{" "}
+              <UnderlinedLink href="https://www.youtube.com/watch?v=v9OmIxve9Zs">
+                YT Project demo
+              </UnderlinedLink>
+            </li>
+            <li>
+              • 📽️{" "}
+              <UnderlinedLink href="https://www.youtube.com/watch?v=SvfRLuvJyn8">
+                YT Technical walkthrough
+              </UnderlinedLink>
+            </li>
+            <li>
+              • 📝{" "}
+              <UnderlinedLink href="https://medium.com/@raj.pulapakura/how-to-build-an-end-to-end-medical-deep-learning-project-11ad932b5a8f">
+                Project write-up
+              </UnderlinedLink>
+            </li>
+          </ul>
+        </section>
       </div>
     ),
   }),

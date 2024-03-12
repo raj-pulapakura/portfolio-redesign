@@ -1,7 +1,7 @@
 "use client";
 
 import { ArticleDataPoint } from "@/data/articles";
-import PaddedFlexContainer from "@/shared/PaddedFlexContainer";
+import PaddedFlexContainer from "@/shared/containers/PaddedFlexContainer";
 import Link from "next/link";
 import React, { useState } from "react";
 

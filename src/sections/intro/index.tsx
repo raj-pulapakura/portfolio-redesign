@@ -1,6 +1,6 @@
 import React from "react";
 import HeroSection from "./components/hero/HeroSection";
-import ScrollDownIconButton from "../../shared/ScrollDownIconButton";
+import ScrollDownIconButton from "../../shared/buttons/ScrollDownIconButton";
 
 export default function Intro() {
   return (

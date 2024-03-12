@@ -1,10 +1,10 @@
 import React from "react";
 import ArticleItem from "./components/ArticleItem";
-import EmblaCarousel from "@/shared/EmblaCarousel";
-import EmblaCarouselItem from "@/shared/EmblaCarouselItem";
+import EmblaCarousel from "@/shared/carousel/EmblaCarousel";
+import EmblaCarouselItem from "@/shared/carousel/EmblaCarouselItem";
 import { articlesData } from "@/data/articles";
-import PaddedContainer from "@/shared/PaddedContainer";
-import TitleSubtitleFlex from "@/shared/TitleSubtitleFlex";
+import PaddedContainer from "@/shared/containers/PaddedContainer";
+import TitleSubtitleFlex from "@/shared/containers/TitleSubtitleFlex";
 
 export default function Articles() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import { PlaylistItemSnippet } from "@/data/videos";
-import PaddedFlexContainer from "@/shared/PaddedFlexContainer";
+import PaddedFlexContainer from "@/shared/containers/PaddedFlexContainer";
 import Link from "next/link";
 import React, { useState } from "react";
 
