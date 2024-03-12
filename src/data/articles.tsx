@@ -36,6 +36,24 @@ export class ArticleDataPoint {
 
 export const articlesData = [
   new ArticleDataPoint({
+    title: "How To Build an End-to-End Medical Deep Learning Project",
+    subtitle: "A walkthrough of my latest project: ClarityScan",
+    articleURL:
+      "https://medium.com/@raj.pulapakura/how-to-build-an-end-to-end-medical-deep-learning-project-11ad932b5a8f",
+    thumbnailURL:
+      "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*eKnn1w-aHTFi49fupznHlw.png",
+    tags: [
+      "Machine Learning",
+      "Deep Learning",
+      "Computer Vision",
+      "MLOps",
+      "MedTech",
+    ],
+    firstPara:
+      "There are 5 steps to build an end-to-end machine learning project: 🍎 Data Collection 🚆 Model Development 🪂 Model Deployment 🧑‍💻 Application Development 🚀 Application Deployment",
+    datePublished: "Mar 12, 2024",
+  }),
+  new ArticleDataPoint({
     title: "3 Lessons from My SWE Internship at a Startup",
     subtitle:
       "One month ago, I could have never anticipated the enormous growth I would experience as a software engineer, communicator, and problem-solver. These insights will be instrumental in my future corporate and personal ventures.",
