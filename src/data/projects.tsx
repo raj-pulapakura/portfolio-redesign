@@ -44,7 +44,7 @@ export const projectsData = [
     description:
       "An app that enables radiologists to enhance brain MRI scans and easily identify glioma tumors in the scans.",
     thumbnailURL:
-      "https://private-user-images.githubusercontent.com/87762282/311922849-e56b9135-0c65-42d7-910c-a7bc4ead6615.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTAyMTIwNjQsIm5iZiI6MTcxMDIxMTc2NCwicGF0aCI6Ii84Nzc2MjI4Mi8zMTE5MjI4NDktZTU2YjkxMzUtMGM2NS00MmQ3LTkxMGMtYTdiYzRlYWQ2NjE1LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAzMTIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMzEyVDAyNDkyNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTBiZjljNjkyZmRhYWVhMGY3OGQ4ODU2NDliNzkwZjIzNzk2NzExOTUyODAzNDY4ZTVjYjBmOWMwYzcyYWU3NWMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.4RVY0uK8qFOTXE5ACPDH6GOTMc8fAadJEv8V2hScH1U",
+      "https://github.com/raj-pulapakura/ClarityScan/assets/87762282/e56b9135-0c65-42d7-910c-a7bc4ead6615",
     githubURL: "https://github.com/raj-pulapakura/ClarityScan",
     videoURL: "https://www.youtube.com/watch?v=v9OmIxve9Zs",
     webURL: "http://clarityscan-447069715.us-east-1.elb.amazonaws.com/",
