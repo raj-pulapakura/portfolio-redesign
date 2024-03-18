@@ -36,6 +36,19 @@ export class ArticleDataPoint {
 
 export const articlesData = [
   new ArticleDataPoint({
+    title: "Bridging the Gap: From LLMs to Autonomous Agents",
+    subtitle:
+      "Exploring the limits of language-based representations and the role of hierarchical planning",
+    articleURL:
+      "https://medium.com/@raj.pulapakura/bridging-the-gap-from-llms-to-autonomous-agents-93a51b6afce0",
+    thumbnailURL:
+      "https://miro.medium.com/v2/resize:fit:720/format:webp/1*OVyj3dVRKEcf3ooxqipkzg.png",
+    tags: ["Artificial Intelligence", "Agents", "Cognition"],
+    firstPara:
+      "In this article, we examine the constraints of language in AI and analyse the role of hierarchical planning in developing autonomous AI.",
+    datePublished: "Mar 18, 2024",
+  }),
+  new ArticleDataPoint({
     title: "How To Build an End-to-End Medical Deep Learning Project",
     subtitle: "A walkthrough of my latest project: ClarityScan",
     articleURL:
