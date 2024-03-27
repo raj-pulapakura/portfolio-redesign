@@ -14,8 +14,8 @@ export default function DownloadResumeButton({
 
   const handleClick = () => {
     downloadPdf(
-      "/resumes/Raj Pulapakura - Machine Learning Engineer Resume.pdf",
-      "Raj Pulapakura - Machine Learning Engineer Resume.pdf"
+      "/resumes/Raj Pulapakura - Resume.pdf",
+      "Raj Pulapakura - Resume.pdf"
     );
   };
 
