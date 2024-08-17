@@ -1,9 +1,8 @@
-import { useDownloadFile } from "@/hooks/useDownloadFile";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ReactNode } from "react";
+import { useDownloadFile } from '@/hooks/useDownloadFile';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-type DownloadButtonProps = JSX.IntrinsicElements["button"];
+type DownloadButtonProps = JSX.IntrinsicElements['button'];
 
 export default function DownloadResumeButton({
   children,
@@ -14,8 +13,8 @@ export default function DownloadResumeButton({
 
   const handleClick = () => {
     downloadPdf(
-      "/resumes/Raj Pulapakura - Resume.pdf",
-      "Raj Pulapakura - Resume.pdf"
+      '/resumes/Raj Pulapakura - Resume.pdf',
+      'Raj Pulapakura - Resume.pdf'
     );
   };
 

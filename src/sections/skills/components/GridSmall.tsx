@@ -1,19 +1,18 @@
-import { mlskills, dataskills, fullstackskills } from "@/data/skills";
-import React from "react";
-import IconBar from "./IconBar";
-import SkillSection from "./SkillSection";
+import { mlskills, dataskills, fullstackskills } from '@/data/skills';
+import React from 'react';
+import IconBar from './IconBar';
+import SkillSection from './SkillSection';
 
 export default function GridSmall() {
   return (
     <div>
       <h1 className="text-2xl font-bold mx-3 text-center">
-        I love using Machine Learning and Full Stack technologies to solve
-        complex problems.
+        I love using AI and Full Stack technologies to solve complex problems.
       </h1>
       <IconBar className="my-14 mx-5" />
       <div className="grid grid-cols-1 grid-rows-3 md:grid-cols-2 md:grid-rows-2 gap-5">
         <SkillSection
-          title="Machine Learning"
+          title="AI & Machine Learning"
           skills={mlskills}
           className="col-span-1 "
         />

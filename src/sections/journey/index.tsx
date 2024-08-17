@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import React from "react";
-import { rockSalt } from "@/app/fonts";
-import CurvedTimeline from "./components/CurvedTimeline";
-import { timelineData } from "@/data/timeline";
-import VerticalTimeline from "./components/VerticalTimeline";
+import React from 'react';
+import { rockSalt } from '@/app/fonts';
+import CurvedTimeline from './components/CurvedTimeline';
+import { timelineData } from '@/data/timeline';
+import VerticalTimeline from './components/VerticalTimeline';
 
 export default function Journey() {
   return (
@@ -24,9 +24,9 @@ export default function Journey() {
       <div className="hidden lg:block xl:hidden">
         <CurvedTimeline
           dataRows={[
-            timelineData.slice(0, 3),
-            timelineData.slice(3, 8),
-            timelineData.slice(8, timelineData.length),
+            timelineData.slice(0, 4),
+            timelineData.slice(4, 9),
+            timelineData.slice(9, timelineData.length),
           ]}
           rowGap={200}
           bubbleGap={40}
@@ -39,8 +39,8 @@ export default function Journey() {
         <CurvedTimeline
           dataRows={[
             timelineData.slice(0, 4),
-            timelineData.slice(4, 8),
-            timelineData.slice(8, timelineData.length),
+            timelineData.slice(4, 9),
+            timelineData.slice(9, timelineData.length),
           ]}
           rowGap={170}
           bubbleGap={60}
@@ -53,8 +53,8 @@ export default function Journey() {
         <CurvedTimeline
           dataRows={[
             timelineData.slice(0, 4),
-            timelineData.slice(4, 8),
-            timelineData.slice(8, timelineData.length),
+            timelineData.slice(4, 9),
+            timelineData.slice(9, timelineData.length),
           ]}
           rowGap={180}
           bubbleGap={100}
@@ -67,11 +67,11 @@ export default function Journey() {
 }
 
 export const timelineItemColours = [
-  "bg-lime-400",
-  "bg-indigo-400",
-  "bg-yellow-400",
-  "bg-blue-400",
-  "bg-red-400",
+  'bg-lime-400',
+  'bg-indigo-400',
+  'bg-yellow-400',
+  'bg-blue-400',
+  'bg-red-400',
 ];
 
 export const numColors = timelineItemColours.length;

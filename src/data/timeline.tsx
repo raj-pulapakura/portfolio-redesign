@@ -1,6 +1,6 @@
-import UnderlinedLink from "@/shared/ui/UnderlinedLink";
-import Link from "next/link";
-import { ReactNode } from "react";
+import UnderlinedLink from '@/shared/ui/UnderlinedLink';
+import Link from 'next/link';
+import { ReactNode } from 'react';
 
 export class TimelineDataPoint {
   date: string;
@@ -28,29 +28,29 @@ export class TimelineDataPoint {
 
 export const timelineData = [
   new TimelineDataPoint({
-    date: "Jan 2021",
-    title: "Wrote my first line of code",
+    date: 'Jan 2021',
+    title: 'Wrote my first line of code',
     extraInformation:
-      "Discovered Python, and fell in love with programming because it enabled me to create.",
-    technologies: ["Python", "Django"],
+      'Discovered Python, and fell in love with programming because it enabled me to create.',
+    technologies: ['Python', 'Django'],
   }),
   new TimelineDataPoint({
-    date: "Jun 2021",
-    title: "Published my first app",
+    date: 'Jun 2021',
+    title: 'Published my first app',
     extraInformation: (
       <p>
         My first app was a simple and fun number guessing game. Check it out on
-        the Play Store:{" "}
+        the Play Store:{' '}
         <UnderlinedLink href="https://play.google.com/store/apps/details?id=com.numberpredictor.joyapps">
           Number Predictor
         </UnderlinedLink>
       </p>
     ),
-    technologies: ["Kotlin"],
+    technologies: ['Kotlin'],
   }),
   new TimelineDataPoint({
-    date: "Sep 2021",
-    title: "Built my first website",
+    date: 'Sep 2021',
+    title: 'Built my first website',
     extraInformation: (
       <p>
         Eager to continue building, I tapped into web development, learning
@@ -58,30 +58,30 @@ export const timelineData = [
       </p>
     ),
     technologies: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React.js",
-      "Docker",
-      "SQL",
-      "MongoDB",
-      "Docker",
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'React.js',
+      'Docker',
+      'SQL',
+      'MongoDB',
+      'Docker',
     ],
   }),
   new TimelineDataPoint({
-    date: "Mar 2022",
-    title: "Rebuilt my first app",
+    date: 'Mar 2022',
+    title: 'Rebuilt my first app',
     extraInformation: (
       <p>
         With the power of a Flutter, I rebuilt my first app with a new refershed
         look, incoporating a simple design language for optimal user experience.
       </p>
     ),
-    technologies: ["Flutter", "Dart"],
+    technologies: ['Flutter', 'Dart'],
   }),
   new TimelineDataPoint({
-    date: "Jun 2022",
-    title: "Discovered Machine Learning",
+    date: 'Jun 2022',
+    title: 'Discovered Machine Learning',
     extraInformation: (
       <div className="flex flex-col gap-2">
         <p>
@@ -94,11 +94,11 @@ export const timelineData = [
         </p>
       </div>
     ),
-    technologies: ["TensorFlow", "PyTorch", "NumPy", "Pandas", "OpenCV"],
+    technologies: ['TensorFlow', 'PyTorch', 'NumPy', 'Pandas', 'OpenCV'],
   }),
   new TimelineDataPoint({
-    date: "Jan 2023",
-    title: "Dived into Deep Learning",
+    date: 'Jan 2023',
+    title: 'Dived into Deep Learning',
     extraInformation: (
       <p>
         Going deeper (pun intended) into Machine Learning, I learned about
@@ -107,11 +107,11 @@ export const timelineData = [
         including object detection and siamese networks.
       </p>
     ),
-    technologies: ["TensorFlow", "PyTorch", "NumPy", "Pandas", "OpenCV"],
+    technologies: ['TensorFlow', 'PyTorch', 'NumPy', 'Pandas', 'OpenCV'],
   }),
   new TimelineDataPoint({
-    date: "Jul 2023",
-    title: "Taught myself Calculus",
+    date: 'Jul 2023',
+    title: 'Taught myself Calculus',
     extraInformation: (
       <div className="flex flex-col gap-2">
         <p>
@@ -127,11 +127,11 @@ export const timelineData = [
         </p>
       </div>
     ),
-    technologies: ["TensorFlow", "NumPy"],
+    technologies: ['TensorFlow', 'NumPy'],
   }),
   new TimelineDataPoint({
-    date: "Aug 2023",
-    title: "TensorFlow Developer Exam",
+    date: 'Aug 2023',
+    title: 'TensorFlow Developer Exam',
     extraInformation: (
       <div className="flex flex-col gap-2">
         <p>
@@ -145,11 +145,11 @@ export const timelineData = [
         </p>
       </div>
     ),
-    technologies: ["TensorFlow"],
+    technologies: ['TensorFlow'],
   }),
   new TimelineDataPoint({
-    date: "Sep 2023",
-    title: "Course and Certs",
+    date: 'Sep 2023',
+    title: 'Course and Certs',
     extraInformation: (
       <div className="flex flex-col gap-2">
         <p>Improving my skills and knowledge by taking 4 courses:</p>
@@ -161,11 +161,11 @@ export const timelineData = [
         </ul>
       </div>
     ),
-    technologies: ["IBM", "TensorFlow", "NumPy", "Google Cloud", "MySQL"],
+    technologies: ['IBM', 'TensorFlow', 'NumPy', 'Google Cloud', 'MySQL'],
   }),
   new TimelineDataPoint({
-    date: "Dec 2023",
-    title: "Dropped out of school",
+    date: 'Dec 2023',
+    title: 'Dropped out of school',
     extraInformation: (
       <div className="flex flex-col gap-2">
         <p>
@@ -182,12 +182,12 @@ export const timelineData = [
     ),
   }),
   new TimelineDataPoint({
-    date: "Jan 2024",
-    title: "Landed my first internship!",
+    date: 'Jan 2024',
+    title: 'Landed my first internship!',
     extraInformation: (
       <div>
         <p className="mb-3">
-          For this internship, I worked for an{" "}
+          For this internship, I worked for an{' '}
           <span className="font-bold">Agritech</span> climate risk and analysis
           startup called <span>A.I.GORITHM</span>, where my primary focus was
           building A.I.GORITHM's Property Report Tool:
@@ -195,22 +195,22 @@ export const timelineData = [
         <ul className="flex flex-col gap-2">
           <li>
             • Developed and deployed a Property Report Generation Tool which
-            enables farmers to get detailed{" "}
+            enables farmers to get detailed{' '}
             <span className="font-bold">agricultural reports</span> pertaining
             to their geographical AOI (area of interest).
           </li>
           <li>
-            • Pooled and organized{" "}
+            • Pooled and organized{' '}
             <span className="font-bold">geospatial data</span> from several APIs
             and data sources to provide agricultural analytics to farmers.
           </li>
           <li>
-            • Employed{" "}
+            • Employed{' '}
             <span className="font-bold">microservices architecture</span> to
             develop APIs/services and a user-facing website.
           </li>
           <li>
-            • Automated deployment via GitHub Actions{" "}
+            • Automated deployment via GitHub Actions{' '}
             <span className="font-bold">CI/CD pipeline</span> and Terraform IaC
             (Infrastructure as Code), to provision AWS resources.
           </li>
@@ -218,22 +218,22 @@ export const timelineData = [
       </div>
     ),
     technologies: [
-      "Next.JS",
-      "TypeScript",
-      "Tailwind CSS",
-      "Python",
-      "NumPy",
-      "Pandas",
-      "GeoPandas",
-      "SendGrid",
-      "Terraform",
-      "Docker",
-      "AWS",
+      'Next.JS',
+      'TypeScript',
+      'Tailwind CSS',
+      'Python',
+      'NumPy',
+      'Pandas',
+      'GeoPandas',
+      'SendGrid',
+      'Terraform',
+      'Docker',
+      'AWS',
     ],
   }),
   new TimelineDataPoint({
-    date: "Feb 2024",
-    title: "Finished my internship",
+    date: 'Feb 2024',
+    title: 'Finished my internship',
     extraInformation: (
       <div className="flex flex-col gap-2">
         <p>
@@ -257,12 +257,12 @@ export const timelineData = [
     ),
   }),
   new TimelineDataPoint({
-    date: "Mar 2024",
-    title: "ClarityScan: Medical Deep Learning",
+    date: 'Mar 2024',
+    title: 'ClarityScan: Medical Deep Learning',
     extraInformation: (
       <div className="flex flex-col gap-5">
         <p>
-          For the past month, I have been building{" "}
+          For the past month, I have been building{' '}
           <UnderlinedLink href="http://clarityscan-447069715.us-east-1.elb.amazonaws.com/">
             <em>ClarityScan</em>
           </UnderlinedLink>
@@ -273,31 +273,44 @@ export const timelineData = [
           <p>📚 Here are all the resources for the project:</p>
           <ul>
             <li>
-              • 🔗{" "}
+              • 🔗{' '}
               <UnderlinedLink href="http://clarityscan-447069715.us-east-1.elb.amazonaws.com/">
                 ClarityScan website
               </UnderlinedLink>
             </li>
             <li>
-              • 📽️{" "}
+              • 📽️{' '}
               <UnderlinedLink href="https://www.youtube.com/watch?v=v9OmIxve9Zs">
                 YT Project demo
               </UnderlinedLink>
             </li>
             <li>
-              • 📽️{" "}
+              • 📽️{' '}
               <UnderlinedLink href="https://www.youtube.com/watch?v=SvfRLuvJyn8">
                 YT Technical walkthrough
               </UnderlinedLink>
             </li>
             <li>
-              • 📝{" "}
+              • 📝{' '}
               <UnderlinedLink href="https://medium.com/@raj.pulapakura/how-to-build-an-end-to-end-medical-deep-learning-project-11ad932b5a8f">
                 Project write-up
               </UnderlinedLink>
             </li>
           </ul>
         </section>
+      </div>
+    ),
+  }),
+  new TimelineDataPoint({
+    date: 'April 2024',
+    title: 'Job: Time Under Tension',
+    extraInformation: (
+      <div className="flex flex-col gap-5">
+        <p>
+          I am currently working as an AI Engineer at Time Under Tension, a
+          Generative AI consultancy. My work primarily involves developing
+          full-stack Generative AI applications.
+        </p>
       </div>
     ),
   }),

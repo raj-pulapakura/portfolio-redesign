@@ -1,17 +1,16 @@
-import { mlskills, dataskills, fullstackskills } from "@/data/skills";
-import React from "react";
-import IconCircle from "./IconCircle";
-import SkillSection from "./SkillSection";
+import { mlskills, dataskills, fullstackskills } from '@/data/skills';
+import React from 'react';
+import IconCircle from './IconCircle';
+import SkillSection from './SkillSection';
 
 export default function GridXLarge() {
   return (
     <div className="grid grid-cols-3 grid-rows-2 gap-x-8 gap-y-0">
       <h1 className="text-left col-start-1 col-end-2 row-start-1 row-end-2 text-3xl font-bold  h-fit">
-        I love using Machine Learning and Full Stack technologies to solve
-        complex problems.
+        I love using AI and Full Stack technologies to solve complex problems.
       </h1>
       <SkillSection
-        title="Machine Learning"
+        title="AI & Machine Learning"
         skills={mlskills}
         className="col-start-1 col-end-2 row-start-2 row-end-3 "
         align="text-left"

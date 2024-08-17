@@ -3,15 +3,15 @@ import {
   faGithub,
   faYoutube,
   faMedium,
-} from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import React from "react";
-import SocialItem from "../SocialItem";
+} from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import React from 'react';
+import SocialItem from '../SocialItem';
 
 export default function HeroLinks() {
   return (
     <div className="w-fit flex flex-col gap-2 md:gap-3 lg:gap-4 xl:gap-5 2xl:gap-6">
-      <SocialItem icon={faEnvelope} text="raj.pulapakura@gmail.com" />
+      <SocialItem icon={faEnvelope} text="rajedwinpulapakura@gmail.com" />
       <SocialItem
         icon={faLinkedin}
         text="raj-pulapakura"
@@ -25,7 +25,7 @@ export default function HeroLinks() {
       <SocialItem
         icon={faYoutube}
         text="@rajpulapakura9119"
-        url="https://www.youtube.com/@rajpulapakura9119"
+        url="https://www.youtube.com/@rajpulapakura001"
       />
       <SocialItem
         icon={faMedium}
