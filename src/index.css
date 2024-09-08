@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 * {
-  color: black;
   font-family: Noto Sans, sans-serif;
   margin: 0;
 }

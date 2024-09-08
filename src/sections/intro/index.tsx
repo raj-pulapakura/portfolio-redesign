@@ -17,8 +17,8 @@ export default function Intro() {
     >
       <ProfileBlock />
       <TitleBlock />
-      <LinksBlock />
       <LocationBlock />
+      <LinksBlock />
       <NavBlock />
     </motion.div>
   );

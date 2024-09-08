@@ -1,35 +1,78 @@
-import IconCircle from './IconCircle';
 import SkillSection from './SkillSection';
 import { mlskills, dataskills, fullstackskills } from '../../../data/skills';
+import CertificationContainer from './CertificationContainer';
 
 export default function GridLarge() {
   return (
-    <div className="grid grid-cols-2 grid-rows-3 gap-5">
-      <h1 className=" text-left col-start-1 col-end-2 row-start-1 row-end-2 text-3xl font-bold">
-        I love using AI and Full Stack technologies to solve complex problems.
+    <div className="grid grid-cols-8 gap-x-10 gap-y-20 ">
+      <h1 className="text-center font-bold text-3xl text-cream col-span-8">
+        / SKILLS & CERTS
       </h1>
-      <IconCircle
-        className="col-start-2 col-end-3 row-start-1 row-end-3 m-auto "
-        radiusInPixels={200}
-        itemSizeInPixels={40}
-      />
+
+      <CertificationContainer>
+        <a
+          href="https://learn.microsoft.com/en-us/users/rajpulapakura-2404/credentials/f37ed11bbc74f2d"
+          target="_blank"
+        >
+          <img
+            className="rounded-lg grayscale"
+            src="/certifications/azure-ai-fundamentals.png"
+          />
+        </a>
+      </CertificationContainer>
+
+      <CertificationContainer>
+        <a
+          href="https://www.credential.net/de2045b4-0766-49ad-8035-a197846bca6b"
+          target="_blank"
+        >
+          <img
+            className="w-52 grayscale"
+            src="/certifications/tensorflow-developer-certificate.png"
+          />
+        </a>
+      </CertificationContainer>
+
+      <CertificationContainer>
+        <a
+          href="https://www.credly.com/badges/87092f70-1635-41e6-86aa-79654f1303b5/"
+          target="_blank"
+        >
+          <img
+            className="w-52  grayscale"
+            src="/certifications/aws-machine-learning-specialty.png"
+          />
+        </a>
+      </CertificationContainer>
+
+      <CertificationContainer>
+        <a
+          href="https://learn.microsoft.com/en-us/users/rajpulapakura-2404/credentials/1268f0982a05a191"
+          target="_blank"
+        >
+          <img
+            className="rounded-lg grayscale"
+            src="/certifications/azure-fundamentals.png"
+          />
+        </a>
+      </CertificationContainer>
 
       <SkillSection
+        className="col-span-3"
         title="AI & Machine Learning"
         skills={mlskills}
-        className="col-start-1 col-end-2 row-start-2 row-end-3 "
         align="text-left"
       />
       <SkillSection
-        title="Data, Cloud and Infra"
-        skills={dataskills}
-        className="col-start-1 col-end-2 row-start-3 row-end-4 "
-        align="text-left"
-      />
-      <SkillSection
+        className="col-span-3"
         title="Full Stack Dev"
         skills={fullstackskills}
-        className="col-start-2 col-end-3 row-start-3 row-end-4 "
+        align="text-left"
+      />
+      <SkillSection
+        className="col-span-2"
+        title="Data, Cloud and Infra"
+        skills={dataskills}
         align="text-left"
       />
     </div>

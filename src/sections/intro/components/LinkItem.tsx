@@ -13,11 +13,15 @@ export default function LinkItem({
   url: string;
 }) {
   return (
-    <a href={url} target="_blank" rel="noreferrer">
-      <div className="flex items-center gap-10 ">
-        <FontAwesomeIcon icon={icon} size="2x" />
-        <p className="text-xl font-bold text-cream">{text}</p>
-      </div>
+    <a
+      className="flex justify-center items-center"
+      href={url}
+      target="_blank"
+      rel="noreferrer"
+    >
+      {/* <div className="flex items-center gap-10 "> */}
+      <FontAwesomeIcon className="text-cream" icon={icon} size="5x" />
+      {/* </div> */}
     </a>
   );
 }

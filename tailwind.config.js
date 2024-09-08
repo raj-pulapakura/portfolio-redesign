@@ -6,6 +6,7 @@ export default {
       colors: {
         cream: '#FFFDD0',
         dark: '#161616',
+        black: '#0F0F0F ',
         brown: '#664C43',
       },
       keyframes: {
