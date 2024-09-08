@@ -42,8 +42,17 @@ export default function CurvedTimeline({
           connectOnSide="right"
         >
           <TimelineEndNode {...timelineEndNodeProps}>Start</TimelineEndNode>
-          {dataRow.map((tdp) => (
+          {dataRow.map((tdp, itemIndex) => (
             <TimelineItem
+              index={dataRows.reduce((acc, curr, i) => {
+                if (i < index) {
+                  return acc + curr.length;
+                } else if (i === index) {
+                  return acc + itemIndex;
+                } else {
+                  return acc;
+                }
+              }, 0)}
               key={tdp.title}
               bubbleColour={timelineItemColours[colourIndex++ % numColors]}
               timelineDataPointTitle={tdp.title}
@@ -59,8 +68,17 @@ export default function CurvedTimeline({
           leftToRight={index % 2 == 0}
           connectOnSide="none"
         >
-          {dataRow.map((tdp) => (
+          {dataRow.map((tdp, itemIndex) => (
             <TimelineItem
+              index={dataRows.reduce((acc, curr, i) => {
+                if (i < index) {
+                  return acc + curr.length;
+                } else if (i === index) {
+                  return acc + itemIndex;
+                } else {
+                  return acc;
+                }
+              }, 0)}
               key={tdp.title}
               {...timelineItemProps}
               bubbleColour={timelineItemColours[colourIndex++ % numColors]}
@@ -76,8 +94,17 @@ export default function CurvedTimeline({
           leftToRight={index % 2 == 0}
           connectOnSide={index % 2 === 0 ? 'right' : 'left'}
         >
-          {dataRow.map((tdp) => (
+          {dataRow.map((tdp, itemIndex) => (
             <TimelineItem
+              index={dataRows.reduce((acc, curr, i) => {
+                if (i < index) {
+                  return acc + curr.length;
+                } else if (i === index) {
+                  return acc + itemIndex;
+                } else {
+                  return acc;
+                }
+              }, 0)}
               key={tdp.title}
               {...timelineItemProps}
               bubbleColour={timelineItemColours[colourIndex++ % numColors]}

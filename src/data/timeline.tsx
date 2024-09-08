@@ -27,14 +27,14 @@ export class TimelineDataPoint {
 
 export const timelineData = [
   new TimelineDataPoint({
-    date: 'Jan 2021',
+    date: "Jan '21",
     title: 'Wrote my first line of code',
     extraInformation:
       'Discovered Python, and fell in love with programming because it enabled me to create.',
     technologies: ['Python', 'Django'],
   }),
   new TimelineDataPoint({
-    date: 'Jun 2021',
+    date: "Jun '21",
     title: 'Published my first app',
     extraInformation: (
       <p>
@@ -48,7 +48,7 @@ export const timelineData = [
     technologies: ['Kotlin'],
   }),
   new TimelineDataPoint({
-    date: 'Sep 2021',
+    date: "Sep '21",
     title: 'Built my first website',
     extraInformation: (
       <p>
@@ -68,7 +68,7 @@ export const timelineData = [
     ],
   }),
   new TimelineDataPoint({
-    date: 'Mar 2022',
+    date: "Mar '22",
     title: 'Rebuilt my first app',
     extraInformation: (
       <p>
@@ -79,7 +79,7 @@ export const timelineData = [
     technologies: ['Flutter', 'Dart'],
   }),
   new TimelineDataPoint({
-    date: 'Jun 2022',
+    date: "Jun '22",
     title: 'Discovered Machine Learning',
     extraInformation: (
       <div className="flex flex-col gap-2">
@@ -96,7 +96,7 @@ export const timelineData = [
     technologies: ['TensorFlow', 'PyTorch', 'NumPy', 'Pandas', 'OpenCV'],
   }),
   new TimelineDataPoint({
-    date: 'Jan 2023',
+    date: "Jan '23",
     title: 'Dived into Deep Learning',
     extraInformation: (
       <p>
@@ -109,7 +109,7 @@ export const timelineData = [
     technologies: ['TensorFlow', 'PyTorch', 'NumPy', 'Pandas', 'OpenCV'],
   }),
   new TimelineDataPoint({
-    date: 'Jul 2023',
+    date: "Jul '23",
     title: 'Taught myself Calculus',
     extraInformation: (
       <div className="flex flex-col gap-2">
@@ -129,7 +129,7 @@ export const timelineData = [
     technologies: ['TensorFlow', 'NumPy'],
   }),
   new TimelineDataPoint({
-    date: 'Aug 2023',
+    date: "Aug '23",
     title: 'TensorFlow Developer Exam',
     extraInformation: (
       <div className="flex flex-col gap-2">
@@ -147,7 +147,7 @@ export const timelineData = [
     technologies: ['TensorFlow'],
   }),
   new TimelineDataPoint({
-    date: 'Sep 2023',
+    date: "Sep '23",
     title: 'Course and Certs',
     extraInformation: (
       <div className="flex flex-col gap-2">
@@ -163,7 +163,7 @@ export const timelineData = [
     technologies: ['IBM', 'TensorFlow', 'NumPy', 'Google Cloud', 'MySQL'],
   }),
   new TimelineDataPoint({
-    date: 'Dec 2023',
+    date: "Dec '23",
     title: 'Dropped out of school',
     extraInformation: (
       <div className="flex flex-col gap-2">
@@ -181,8 +181,8 @@ export const timelineData = [
     ),
   }),
   new TimelineDataPoint({
-    date: 'Jan 2024',
-    title: 'Landed my first internship!',
+    date: "Jan '24",
+    title: 'First Internship: A.I.GORITHM',
     extraInformation: (
       <div>
         <p className="mb-3">
@@ -231,8 +231,8 @@ export const timelineData = [
     ],
   }),
   new TimelineDataPoint({
-    date: 'Feb 2024',
-    title: 'Finished my internship',
+    date: "Feb '24",
+    title: 'Concluded internship at A.I.GORITHM',
     extraInformation: (
       <div className="flex flex-col gap-2">
         <p>
@@ -251,12 +251,11 @@ export const timelineData = [
           personal projects. Also currently working towards the AWS Machine
           Learning Specialty Certificate.
         </p>
-        <p>🔥 Let's keep grinding.</p>
       </div>
     ),
   }),
   new TimelineDataPoint({
-    date: 'Mar 2024',
+    date: "Mar '24",
     title: 'ClarityScan: Medical Deep Learning',
     extraInformation: (
       <div className="flex flex-col gap-5">
@@ -301,14 +300,27 @@ export const timelineData = [
     ),
   }),
   new TimelineDataPoint({
-    date: 'April 2024',
-    title: 'Job: Time Under Tension',
+    date: "Apr '24",
+    title: 'Full-time AI Engineer: Time Under Tension',
     extraInformation: (
       <div className="flex flex-col gap-5">
         <p>
           I am currently working as an AI Engineer at Time Under Tension, a
           Generative AI consultancy. My work primarily involves developing
           full-stack Generative AI applications.
+        </p>
+      </div>
+    ),
+  }),
+  new TimelineDataPoint({
+    date: "May '24 -",
+    title: 'AWS & Azure Certifications',
+    extraInformation: (
+      <div className="flex flex-col gap-5">
+        <p>
+          I have achieved the AWS Certified Machine Learning Specialty, the
+          Azure AZ-900 (Fundamentals) and the Azure A1-900 (AI Fundamentals)
+          certifications.
         </p>
       </div>
     ),

@@ -3,14 +3,16 @@
 import { useState } from 'react';
 import TimelineItemInfoModal from './TimelineItemInfoModal';
 import { timelineData } from '../../../../data/timeline';
+import { HTMLMotionProps, motion } from 'framer-motion';
 
-export type TimelineItemProps = JSX.IntrinsicElements['div'] & {
+export type TimelineItemProps = HTMLMotionProps<'div'> & {
   bubbleHeight: number;
   bubbleColour?: string;
   useRandomColour?: boolean;
   connectorHeight: number;
   connectorWidth: number;
   timelineDataPointTitle: string;
+  index: number;
 };
 
 export default function TimelineItem({
@@ -32,7 +34,13 @@ export default function TimelineItem({
   }
 
   return (
-    <div
+    <motion.div
+      // motion props
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1, delay: props.index * 0.1 }}
+      // other props
       style={{ height: bubbleHeight + 'px', ...style }}
       className={`hover:cursor-zoom-in relative w-full ${className}`}
       onClick={() => setOnModal(true)}
@@ -98,6 +106,6 @@ export default function TimelineItem({
           </h1>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
