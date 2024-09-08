@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import TimelineItemInfoModal from './TimelineItemInfoModal';
 import { timelineData } from '../../../../data/timeline';
 
@@ -42,15 +42,30 @@ export default function TimelineItem({
     >
       {/* bubble */}
       <div
-        style={{ height: bubbleHeight + 'px', width: bubbleHeight + 'px' }}
-        className={`${bubbleColour} z-30  rounded-full absolute left-1/2 -translate-x-1/2`}
+        style={{
+          height: bubbleHeight + 'px',
+          width: bubbleHeight + 'px',
+          backgroundColor: bubbleColour.startsWith('bg-')
+            ? undefined
+            : bubbleColour,
+        }}
+        className={`${
+          bubbleColour.startsWith('bg-') ? bubbleColour : ''
+        } z-30  rounded-full absolute left-1/2 -translate-x-1/2`}
         onMouseEnter={() => setOnModal(true)}
         onMouseLeave={() => setOnModal(false)}
       >
         {onModal && (
           <TimelineItemInfoModal
             timelineDataPoint={tdp}
-            className={`${bubbleColour}`}
+            style={
+              bubbleColour.startsWith('bg-')
+                ? {}
+                : {
+                    backgroundColor: bubbleColour,
+                  }
+            }
+            className={`${bubbleColour.startsWith('bg-') ? bubbleColour : ''}`}
           />
         )}
       </div>

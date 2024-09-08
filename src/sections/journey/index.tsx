@@ -7,16 +7,12 @@ import VerticalTimeline from './components/VerticalTimeline';
 export default function Journey() {
   return (
     <section className="bg-black py-20">
-      <div className="flex gap-10 justify-center lg:justify-normal items-center">
-        <h1
-          className={`text-5xl text-white text-center lg:text-left mx-20 leading-loose`}
-        >
-          MY JOURNEY
-        </h1>
-      </div>
+      <h1 className="text-center font-bold text-3xl text-cream mb-52">
+        / JOURNEY
+      </h1>
 
       <div className="visible lg:hidden">
-        <VerticalTimeline className="m-4 mt-20" />
+        <VerticalTimeline className="m-4" />
       </div>
 
       <div className="hidden lg:block xl:hidden">
@@ -29,7 +25,7 @@ export default function Journey() {
           rowGap={200}
           bubbleGap={40}
           bubbleHeight={40}
-          className="mx-40 mt-32"
+          className="mx-40"
         />
       </div>
 
@@ -43,7 +39,7 @@ export default function Journey() {
           rowGap={170}
           bubbleGap={60}
           bubbleHeight={50}
-          className="mx-40 mt-32"
+          className="mx-40"
         />
       </div>
 
@@ -57,7 +53,7 @@ export default function Journey() {
           rowGap={180}
           bubbleGap={100}
           bubbleHeight={60}
-          className="mx-40 mt-32"
+          className="mx-40"
         />
       </div>
     </section>
@@ -65,11 +61,11 @@ export default function Journey() {
 }
 
 export const timelineItemColours = [
-  'bg-lime-400',
-  'bg-indigo-400',
-  'bg-yellow-400',
-  'bg-blue-400',
-  'bg-red-400',
+  'bg-cream',
+  'bg-brown',
+  '#2D93AD',
+  '#DE8F6E',
+  '#EBBAB9',
 ];
 
 export const numColors = timelineItemColours.length;

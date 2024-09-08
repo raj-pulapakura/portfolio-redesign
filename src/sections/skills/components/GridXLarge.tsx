@@ -5,7 +5,7 @@ import SkillSection from './SkillSection';
 export default function GridXLarge() {
   return (
     <div className="grid grid-cols-7 gap-x-10 gap-y-10">
-      <h1 className="text-center font-bold text-3xl text-cream col-span-7 mb-10">
+      <h1 className="text-center font-bold text-3xl text-cream col-span-7 mb-20">
         / SKILLS & CERTS
       </h1>
 
@@ -33,7 +33,7 @@ export default function GridXLarge() {
           target="_blank"
         >
           <img
-            className="rounded-lg grayscale"
+            className="rounded-lg"
             src="/certifications/azure-ai-fundamentals.png"
           />
         </a>
@@ -45,7 +45,7 @@ export default function GridXLarge() {
           target="_blank"
         >
           <img
-            className="w-52 grayscale"
+            className="w-52"
             src="/certifications/tensorflow-developer-certificate.png"
           />
         </a>
@@ -57,7 +57,7 @@ export default function GridXLarge() {
           target="_blank"
         >
           <img
-            className="w-52  grayscale"
+            className="w-52"
             src="/certifications/aws-machine-learning-specialty.png"
           />
         </a>
@@ -69,7 +69,7 @@ export default function GridXLarge() {
           target="_blank"
         >
           <img
-            className="rounded-lg grayscale"
+            className="rounded-lg"
             src="/certifications/azure-fundamentals.png"
           />
         </a>

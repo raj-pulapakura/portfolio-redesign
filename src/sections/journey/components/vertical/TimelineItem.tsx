@@ -26,7 +26,9 @@ export default function TimelineItem({
 }: TimelineItemProps) {
   const containerStyle = `hover:cursor-pointer flex items-center ${className}`;
   const dateStyle = `text-white text-sm  text-center`;
-  const circleStyle = `z-10 rounded-full ${circleColour}`;
+  const circleStyle = `z-10 rounded-full ${
+    circleColour.startsWith('bg-') ? circleColour : ``
+  }`;
   const connectorStyle = `bg-white`;
 
   const tdp = timelineData.find((tdp) => tdp.title === tdpTitle);
@@ -41,7 +43,13 @@ export default function TimelineItem({
         {tdp.date}
       </h1>
       <div
-        style={{ width: circleWidth, height: circleHeight }}
+        style={{
+          width: circleWidth,
+          height: circleHeight,
+          backgroundColor: circleColour.startsWith('bg-')
+            ? undefined
+            : circleColour,
+        }}
         className={circleStyle}
       ></div>
       <div
