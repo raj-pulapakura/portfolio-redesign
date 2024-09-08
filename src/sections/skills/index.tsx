@@ -6,7 +6,7 @@ import GridXLarge from './components/GridXLarge';
 
 export default function Skills() {
   return (
-    <section className="px-5 md:px-10 lg:px-16 py-10 md:py-24 lg:py-32 ">
+    <section className="w-full px-5 md:px-10 lg:px-16 py-10 md:py-24 lg:py-32 bg-dark">
       <div className="visible lg:hidden">
         <GridSmall />
       </div>

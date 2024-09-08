@@ -15,7 +15,7 @@ export default function SkillSection({
   return (
     <div className={`h-fit ${className}`}>
       <h1
-        className={`${align} tracking-widest uppercase text-blue-600 font-bold mb-4`}
+        className={`${align} tracking-widest uppercase text-cream font-bold mb-4 text-lg`}
       >
         {title}
       </h1>
