@@ -13,8 +13,8 @@ export default function LocationBlock() {
     >
       <FontAwesomeIcon className="text-cream" icon={faLocationDot} size="3x" />
       <div className="text-center">
-        <p className="font-bold text-cream text-xl">Melbourne,</p>
-        <p className="font-bold text-cream text-xl">Australia</p>
+        <p className="font-bold text-cream text-2xl">Melbourne,</p>
+        <p className="font-bold text-cream text-2xl">Australia</p>
       </div>
     </div>
   );

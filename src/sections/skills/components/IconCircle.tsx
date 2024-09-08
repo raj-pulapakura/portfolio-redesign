@@ -19,8 +19,6 @@ export default function IconCircle({
       ((radiusInPixels * 9) / 10) * Math.cos(angle) - itemSizeInPixels / 2;
     const y =
       ((radiusInPixels * 9) / 10) * Math.sin(angle) - itemSizeInPixels / 2;
-    // const x = radiusInPixels;
-    // const y = radiusInPixels;
 
     // Inline styles to position item
     const style = {
@@ -41,7 +39,7 @@ export default function IconCircle({
         width: radiusInPixels * 2 + 'px',
         height: radiusInPixels * 2 + 'px',
       }}
-      className={`relative w-[radiusInPixels] h-[radiusInPixels] animate-spin-slow rounded-full ${className}`}
+      className={`relative animate-spin-slow rounded-full ${className}`}
       {...props}
     >
       {items}

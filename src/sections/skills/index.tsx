@@ -1,22 +1,19 @@
 'use client';
 
-import GridSmall from './components/GridSmall';
-import GridLarge from './components/GridLarge';
 import GridXLarge from './components/GridXLarge';
+import IconCircle from './components/IconCircle';
 
 export default function Skills() {
   return (
-    <section className="w-full px-5 md:px-10 lg:px-16 py-10 md:py-24 lg:py-32 bg-black">
-      <div className="visible lg:hidden">
-        <GridSmall />
+    <section className="w-full relative px-10 pt-40 bg-black">
+      <div className="absolute  top-1/2 -translate-y-1/3 -translate-x-1/2">
+        <IconCircle itemSizeInPixels={50} radiusInPixels={300} />
       </div>
 
-      <div className="hidden lg:block 2xl:hidden">
-        <GridLarge />
-      </div>
+      <GridXLarge />
 
-      <div className="hidden 2xl:block">
-        <GridXLarge />
+      <div className="absolute top-1/2 right-0 -translate-y-1/3 translate-x-1/2">
+        <IconCircle itemSizeInPixels={50} radiusInPixels={300} />
       </div>
     </section>
   );

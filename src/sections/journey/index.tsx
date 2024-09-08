@@ -6,9 +6,9 @@ import VerticalTimeline from './components/VerticalTimeline';
 
 export default function Journey() {
   return (
-    <section className="bg-black py-20">
-      <h1 className="text-center font-bold text-3xl text-cream mb-52">
-        / JOURNEY
+    <section className="bg-black py-20 px-10">
+      <h1 className="text-center font-bold text-8xl text-cream my-52 rounded-lg">
+        JOURNEY
       </h1>
 
       <div className="visible lg:hidden">
