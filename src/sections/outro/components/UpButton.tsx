@@ -1,8 +1,6 @@
-"use client";
-
-import IconButton from "@/shared/buttons/IconButton";
-import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
-import React from "react";
+'use client';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import IconButton from '../../../shared/buttons/IconButton';
 
 export default function UpButton() {
   const handleClick = () => {

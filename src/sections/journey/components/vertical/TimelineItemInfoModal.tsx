@@ -1,5 +1,5 @@
-import { TimelineDataPoint } from "@/data/timeline";
-import React from "react";
+import React from 'react';
+import { TimelineDataPoint } from '../../../../data/timeline';
 
 export default function TimelineItemInfoModal({
   timelineDataPoint: tdp,

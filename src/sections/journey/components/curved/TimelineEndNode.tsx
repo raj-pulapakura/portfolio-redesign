@@ -1,6 +1,4 @@
-import React from "react";
-
-type TimelineEndNodeProps = JSX.IntrinsicElements["div"] & {
+type TimelineEndNodeProps = JSX.IntrinsicElements['div'] & {
   bubbleHeight: number;
 };
 
@@ -12,7 +10,7 @@ export default function TimelineEndNode({
 }: TimelineEndNodeProps) {
   return (
     <div
-      style={{ height: bubbleHeight + "px" }}
+      style={{ height: bubbleHeight + 'px' }}
       className={`z-0 px-8 uppercase align-middle bg-indigo-600 rounded-full flex ${className}`}
       {...props}
     >

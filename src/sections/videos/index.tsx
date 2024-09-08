@@ -1,18 +1,15 @@
-import { rockSalt } from "@/app/fonts";
-import React from "react";
-import EmblaCarousel from "@/shared/carousel/EmblaCarousel";
-import EmblaCarouselItem from "@/shared/carousel/EmblaCarouselItem";
-import VideoItem from "./components/VideoItem";
-import { getVideos } from "@/data/videos";
-import PaddedContainer from "@/shared/containers/PaddedContainer";
-import TitleSubtitleFlex from "@/shared/containers/TitleSubtitleFlex";
+import EmblaCarousel from '../../shared/carousel/EmblaCarousel';
+import EmblaCarouselItem from '../../shared/carousel/EmblaCarouselItem';
+import PaddedContainer from '../../shared/containers/PaddedContainer';
+import TitleSubtitleFlex from '../../shared/containers/TitleSubtitleFlex';
+import VideoItem from './components/VideoItem';
 
-export default async function Videos() {
-  const videos = await getVideos();
+export default function Videos() {
+  // const videos = await getVideos();
 
   return (
-    <PaddedContainer style={{ backgroundColor: "rgb(141,192,235)" }}>
-      <TitleSubtitleFlex
+    <PaddedContainer style={{ backgroundColor: 'rgb(141,192,235)' }}>
+      {/* <TitleSubtitleFlex
         title="VIDEOS"
         subtitle="Tech & project demos, and positive vibes."
       />
@@ -36,7 +33,7 @@ export default async function Videos() {
             <VideoItem playlistItemSnippet={pis.snippet} />
           </EmblaCarouselItem>
         ))}
-      </EmblaCarousel>
+      </EmblaCarousel> */}
     </PaddedContainer>
   );
 }

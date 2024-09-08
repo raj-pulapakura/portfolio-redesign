@@ -1,9 +1,7 @@
-import { colors } from '@/data/colors';
 import {
   FontAwesomeIcon,
   FontAwesomeIconProps,
 } from '@fortawesome/react-fontawesome';
-import React from 'react';
 
 export default function LinkItem({
   icon,
@@ -16,9 +14,9 @@ export default function LinkItem({
 }) {
   return (
     <a href={url} target="_blank" rel="noreferrer">
-      <div className="flex items-center gap-10 text-cream">
-        <FontAwesomeIcon icon={icon} color={colors['cream']} size="2x" />
-        <p className="text-xl font-bold">{text}</p>
+      <div className="flex items-center gap-10 ">
+        <FontAwesomeIcon icon={icon} size="2x" />
+        <p className="text-xl font-bold text-cream">{text}</p>
       </div>
     </a>
   );

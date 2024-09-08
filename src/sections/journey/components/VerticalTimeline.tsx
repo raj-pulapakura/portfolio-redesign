@@ -1,22 +1,21 @@
-"use client";
+'use client';
 
-import { timelineData } from "@/data/timeline";
-import React from "react";
-import TimelineItem from "./vertical/TimelineItem";
-import VerticalConnector from "./vertical/VerticalConnector";
-import { numColors, timelineItemColours } from "..";
+import TimelineItem from './vertical/TimelineItem';
+import VerticalConnector from './vertical/VerticalConnector';
+import { numColors, timelineItemColours } from '..';
+import { timelineData } from '../../../data/timeline';
 
-const dateColumnWidth = "20%";
-const circleWidth = "2rem";
-const circleHeight = "2rem";
-const circleToTextConnectorWidth = "1.25rem";
-const circleToTextConnectorHeight = "0.25rem";
-const verticalBarWidth = "0.25rem";
+const dateColumnWidth = '20%';
+const circleWidth = '2rem';
+const circleHeight = '2rem';
+const circleToTextConnectorWidth = '1.25rem';
+const circleToTextConnectorHeight = '0.25rem';
+const verticalBarWidth = '0.25rem';
 
 export default function VerticalTimeline({
   className,
   ...props
-}: JSX.IntrinsicElements["div"]) {
+}: JSX.IntrinsicElements['div']) {
   let colourIndex = 0;
 
   return (

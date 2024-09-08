@@ -1,10 +1,9 @@
-"use client";
+'use client';
 
-import { TimelineDataPoint, timelineData } from "@/data/timeline";
-import React from "react";
-import TimelineItemInfo from "./TimelineItemInfo";
+import { timelineData } from '../../../../data/timeline';
+import TimelineItemInfo from './TimelineItemInfo';
 
-export type TimelineItemProps = JSX.IntrinsicElements["div"] & {
+export type TimelineItemProps = JSX.IntrinsicElements['div'] & {
   dateColumnWidth?: string;
   circleWidth?: string;
   circleHeight?: string;
@@ -16,12 +15,12 @@ export type TimelineItemProps = JSX.IntrinsicElements["div"] & {
 
 export default function TimelineItem({
   timelineDataPointTitle: tdpTitle,
-  dateColumnWidth = "w-1/5",
-  circleWidth = "2rem",
-  circleHeight = "2rem",
-  circleColour = "bg-lime-400",
-  circleToTextConnectorHeight = "0.25rem",
-  circleToTextConnectorWidth = "1.25rem",
+  dateColumnWidth = 'w-1/5',
+  circleWidth = '2rem',
+  circleHeight = '2rem',
+  circleColour = 'bg-lime-400',
+  circleToTextConnectorHeight = '0.25rem',
+  circleToTextConnectorWidth = '1.25rem',
   className,
   ...props
 }: TimelineItemProps) {
@@ -33,7 +32,7 @@ export default function TimelineItem({
   const tdp = timelineData.find((tdp) => tdp.title === tdpTitle);
 
   if (!tdp) {
-    return;
+    return <div></div>;
   }
 
   return (

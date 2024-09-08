@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { timelineData } from "@/data/timeline";
-import React, { useState } from "react";
-import TimelineItemInfoModal from "./TimelineItemInfoModal";
+import React, { useState } from 'react';
+import TimelineItemInfoModal from './TimelineItemInfoModal';
+import { timelineData } from '../../../../data/timeline';
 
-export type TimelineItemInfoProps = JSX.IntrinsicElements["div"] & {
+export type TimelineItemInfoProps = JSX.IntrinsicElements['div'] & {
   timelineDataPointTitle: string;
 };
 
@@ -16,7 +16,7 @@ export default function TimelineItemInfo({
   const tdp = timelineData.find((tdp) => tdp.title == tdpTitle);
 
   if (!tdp) {
-    return;
+    return <div></div>;
   }
 
   return (

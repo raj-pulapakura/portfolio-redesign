@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { timelineData } from "@/data/timeline";
-import React, { useState } from "react";
-import TimelineItemInfoModal from "./TimelineItemInfoModal";
+import React, { useState } from 'react';
+import TimelineItemInfoModal from './TimelineItemInfoModal';
+import { timelineData } from '../../../../data/timeline';
 
-export type TimelineItemProps = JSX.IntrinsicElements["div"] & {
+export type TimelineItemProps = JSX.IntrinsicElements['div'] & {
   bubbleHeight: number;
   bubbleColour?: string;
   useRandomColour?: boolean;
@@ -18,7 +18,7 @@ export default function TimelineItem({
   bubbleHeight,
   connectorHeight,
   connectorWidth,
-  bubbleColour = "bg-lime-400",
+  bubbleColour = 'bg-lime-400',
   className,
   style,
   ...props
@@ -28,12 +28,12 @@ export default function TimelineItem({
   const tdp = timelineData.find((tdp) => tdp.title === tdpTitle);
 
   if (!tdp) {
-    return;
+    return <div></div>;
   }
 
   return (
     <div
-      style={{ height: bubbleHeight + "px", ...style }}
+      style={{ height: bubbleHeight + 'px', ...style }}
       className={`hover:cursor-zoom-in relative w-full ${className}`}
       onClick={() => setOnModal(true)}
       onMouseEnter={() => setOnModal(true)}
@@ -42,7 +42,7 @@ export default function TimelineItem({
     >
       {/* bubble */}
       <div
-        style={{ height: bubbleHeight + "px", width: bubbleHeight + "px" }}
+        style={{ height: bubbleHeight + 'px', width: bubbleHeight + 'px' }}
         className={`${bubbleColour} z-30  rounded-full absolute left-1/2 -translate-x-1/2`}
         onMouseEnter={() => setOnModal(true)}
         onMouseLeave={() => setOnModal(false)}
@@ -70,7 +70,7 @@ export default function TimelineItem({
 
       {/* bottom content */}
       <div
-        style={{ top: bubbleHeight + "px" }}
+        style={{ top: bubbleHeight + 'px' }}
         className="absolute left-1/2 -translate-x-1/2 w-full"
       >
         <div className="flex flex-col items-center">

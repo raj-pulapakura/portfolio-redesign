@@ -1,9 +1,8 @@
-"use client";
+'use client';
 
-import React from "react";
-import GridSmall from "./components/GridSmall";
-import GridLarge from "./components/GridLarge";
-import GridXLarge from "./components/GridXLarge";
+import GridSmall from './components/GridSmall';
+import GridLarge from './components/GridLarge';
+import GridXLarge from './components/GridXLarge';
 
 export default function Skills() {
   return (

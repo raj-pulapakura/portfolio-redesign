@@ -1,11 +1,9 @@
-import { rockSalt } from "@/app/fonts";
-import { projectsData } from "@/data/projects";
-import React from "react";
-import ProjectItem from "./components/ProjectItem";
-import EmblaCarousel from "@/shared/carousel/EmblaCarousel";
-import EmblaCarouselItem from "@/shared/carousel/EmblaCarouselItem";
-import PaddedContainer from "@/shared/containers/PaddedContainer";
-import TitleSubtitleFlex from "@/shared/containers/TitleSubtitleFlex";
+import { projectsData } from '../../data/projects';
+import EmblaCarousel from '../../shared/carousel/EmblaCarousel';
+import EmblaCarouselItem from '../../shared/carousel/EmblaCarouselItem';
+import PaddedContainer from '../../shared/containers/PaddedContainer';
+import TitleSubtitleFlex from '../../shared/containers/TitleSubtitleFlex';
+import ProjectItem from './components/ProjectItem';
 
 export default function Projects() {
   return (

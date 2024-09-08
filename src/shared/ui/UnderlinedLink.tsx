@@ -1,5 +1,4 @@
-import Link, { LinkProps } from "next/link";
-import React, { ReactNode } from "react";
+import React, { ReactNode } from 'react';
 
 export default function UnderlinedLink({
   className,
@@ -11,8 +10,8 @@ export default function UnderlinedLink({
   children?: ReactNode;
 }) {
   return (
-    <Link href={href} className={`underline underline-offset-2 ${className}`}>
+    <a href={href} className={`underline underline-offset-2 ${className}`}>
       {children}
-    </Link>
+    </a>
   );
 }

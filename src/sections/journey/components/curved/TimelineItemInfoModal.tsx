@@ -1,7 +1,6 @@
-import { TimelineDataPoint } from "@/data/timeline";
-import React from "react";
+import { TimelineDataPoint } from '../../../../data/timeline';
 
-type TimelineItemInfoModalProps = JSX.IntrinsicElements["div"] & {
+type TimelineItemInfoModalProps = JSX.IntrinsicElements['div'] & {
   timelineDataPoint: TimelineDataPoint;
 };
 

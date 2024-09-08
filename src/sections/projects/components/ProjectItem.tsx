@@ -1,12 +1,11 @@
-import { ProjectDataPoint } from "@/data/projects";
-import PaddedFlexContainer from "@/shared/containers/PaddedFlexContainer";
-import Chip from "@/shared/ui/Chip";
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
-import IconLink from "./IconLink";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
+import IconLink from './IconLink';
+import { ProjectDataPoint } from '../../../data/projects';
+import PaddedFlexContainer from '../../../shared/containers/PaddedFlexContainer';
+import Chip from '../../../shared/ui/Chip';
 
 export default function ProjectItem({
   projectDataPoint: pdp,
@@ -36,19 +35,19 @@ export default function ProjectItem({
         </div>
         <div className="flex gap-5">
           {pdp.githubURL && (
-            <Link href={pdp.githubURL}>
+            <a href={pdp.githubURL}>
               <IconLink icon={faGithub} />
-            </Link>
+            </a>
           )}
           {pdp.webURL && (
-            <Link href={pdp.webURL}>
+            <a href={pdp.webURL}>
               <IconLink icon={faLink} />
-            </Link>
+            </a>
           )}
           {pdp.videoURL && (
-            <Link href={pdp.videoURL}>
+            <a href={pdp.videoURL}>
               <IconLink icon={faYoutube} />
-            </Link>
+            </a>
           )}
         </div>
       </PaddedFlexContainer>

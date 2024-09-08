@@ -1,4 +1,3 @@
-import React from 'react';
 import ProfileBlock from './components/ProfileBlock';
 import LinksBlock from './components/LinksBlock';
 import TitleBlock from './components/TitleBlock';
@@ -12,10 +11,10 @@ export default function Intro() {
       style={{ gridTemplateColumns: 'repeat(14, minmax(0, 1fr))' }}
     >
       <ProfileBlock />
-      {/* <TitleBlock />
+      <TitleBlock />
       <LinksBlock />
       <LocationBlock />
-      <NavBlock /> */}
+      <NavBlock />
     </section>
   );
 }

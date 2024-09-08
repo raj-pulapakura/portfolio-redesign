@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function HeroSection() {
   return (
     <div className="relative w-full p-5 md:p-10 lg:p-15 xl:p-20 2xl:p-32">
@@ -11,6 +9,5 @@ export default function HeroSection() {
         about machine learning, data science, and software engineering.
       </h2>
     </div>
-    
   );
 }

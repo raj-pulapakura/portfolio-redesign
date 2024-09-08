@@ -1,7 +1,6 @@
-import { mlskills, dataskills, fullstackskills } from '@/data/skills';
-import React from 'react';
 import IconCircle from './IconCircle';
 import SkillSection from './SkillSection';
+import { mlskills, dataskills, fullstackskills } from '../../../data/skills';
 
 export default function GridLarge() {
   return (

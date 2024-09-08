@@ -1,13 +1,12 @@
-"use client";
+'use client';
 
-import { TimelineDataPoint, timelineData } from "@/data/timeline";
-import React from "react";
-import TimelineItem from "./curved/TimelineItem";
-import TimelineRow from "./curved/TimelineRow";
-import TimelineEndNode from "./curved/TimelineEndNode";
-import { timelineItemColours, numColors } from "..";
+import TimelineItem from './curved/TimelineItem';
+import TimelineRow from './curved/TimelineRow';
+import TimelineEndNode from './curved/TimelineEndNode';
+import { timelineItemColours, numColors } from '..';
+import { TimelineDataPoint } from '../../../data/timeline';
 
-type CurvedTimelineProps = JSX.IntrinsicElements["div"] & {
+type CurvedTimelineProps = JSX.IntrinsicElements['div'] & {
   rowGap: number;
   bubbleGap: number;
   bubbleHeight: number;
@@ -75,7 +74,7 @@ export default function CurvedTimeline({
         <TimelineRow
           {...timelineRowProps}
           leftToRight={index % 2 == 0}
-          connectOnSide={index % 2 === 0 ? "right" : "left"}
+          connectOnSide={index % 2 === 0 ? 'right' : 'left'}
         >
           {dataRow.map((tdp) => (
             <TimelineItem

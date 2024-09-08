@@ -1,6 +1,5 @@
-import UnderlinedLink from '@/shared/ui/UnderlinedLink';
-import Link from 'next/link';
 import { ReactNode } from 'react';
+import UnderlinedLink from '../shared/ui/UnderlinedLink';
 
 export class TimelineDataPoint {
   date: string;
@@ -240,12 +239,12 @@ export const timelineData = [
           Finished my first internship and learned lots about the agricultural
           space and geospatial data. Check out my full write-up of all the
           lessons I learned
-          <Link
+          <a
             className="font-bold"
             href="https://medium.com/@raj.pulapakura/3-lessons-from-my-swe-internship-at-a-startup-1896ad469555"
           >
             here.
-          </Link>
+          </a>
         </p>
         <p>
           As of now, I am going to continue upskilling myself and work on my

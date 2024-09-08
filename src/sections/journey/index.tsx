@@ -1,9 +1,7 @@
 'use client';
 
-import React from 'react';
-import { rockSalt } from '@/app/fonts';
+import { timelineData } from '../../data/timeline';
 import CurvedTimeline from './components/CurvedTimeline';
-import { timelineData } from '@/data/timeline';
 import VerticalTimeline from './components/VerticalTimeline';
 
 export default function Journey() {
@@ -11,7 +9,7 @@ export default function Journey() {
     <section className="bg-black py-20">
       <div className="flex gap-10 justify-center lg:justify-normal items-center">
         <h1
-          className={`${rockSalt.className} text-5xl text-white text-center lg:text-left mx-20 leading-loose`}
+          className={`text-5xl text-white text-center lg:text-left mx-20 leading-loose`}
         >
           MY JOURNEY
         </h1>

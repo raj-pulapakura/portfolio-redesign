@@ -1,5 +1,5 @@
-import { technologies } from "@/data/technologies";
-import React from "react";
+import React from 'react';
+import { technologies } from '../../../data/technologies';
 
 export default function IconCircle({
   radiusInPixels,
@@ -9,7 +9,7 @@ export default function IconCircle({
 }: {
   radiusInPixels: number;
   itemSizeInPixels: number;
-} & JSX.IntrinsicElements["div"]) {
+} & JSX.IntrinsicElements['div']) {
   const items = technologies.map((tech, index) => {
     // Calculate angle for this item
     const angle = (index / technologies.length) * (2 * Math.PI);
@@ -24,22 +24,22 @@ export default function IconCircle({
 
     // Inline styles to position item
     const style = {
-      position: "absolute",
+      position: 'absolute',
       transform: `translate(${x}px, ${y}px)`,
-      left: "50%",
-      top: "50%",
-      width: itemSizeInPixels + "px",
-      height: itemSizeInPixels + "px",
+      left: '50%',
+      top: '50%',
+      width: itemSizeInPixels + 'px',
+      height: itemSizeInPixels + 'px',
     } as React.CSSProperties;
 
-    return <img key={tech} style={style} src={"/icons/" + tech + ".svg"} />;
+    return <img key={tech} style={style} src={'/icons/' + tech + '.svg'} />;
   });
 
   return (
     <div
       style={{
-        width: radiusInPixels * 2 + "px",
-        height: radiusInPixels * 2 + "px",
+        width: radiusInPixels * 2 + 'px',
+        height: radiusInPixels * 2 + 'px',
       }}
       className={`relative w-[radiusInPixels] h-[radiusInPixels] animate-spin-slow rounded-full ${className}`}
       {...props}

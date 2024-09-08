@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import React, { ReactNode } from "react";
+import React, { ReactNode } from 'react';
 
 type TimelineRowProps = {
   rowGap: number;
   bubbleGap: number;
   bubbleHeight: number;
   leftToRight: boolean;
-  connectOnSide: "left" | "right" | "none";
+  connectOnSide: 'left' | 'right' | 'none';
   children?: ReactNode;
 };
 
@@ -19,15 +19,15 @@ export default function TimelineRow({
   connectOnSide,
   children,
 }: TimelineRowProps) {
-  const flexDirection = leftToRight ? "row" : "row-reverse";
+  const flexDirection = leftToRight ? 'row' : 'row-reverse';
 
   return (
     <div className="relative">
       <HorizontalConnector />
       <div
         style={{
-          marginBottom: rowGap + "px",
-          gap: bubbleGap + "px",
+          marginBottom: rowGap + 'px',
+          gap: bubbleGap + 'px',
           flexDirection,
         }}
         className="z-20 flex justify-between items-center"
@@ -56,21 +56,21 @@ function EndConnector({
 }: {
   rowGap: number;
   bubbleHeight: number;
-  connectOnSide: "left" | "right" | "none";
+  connectOnSide: 'left' | 'right' | 'none';
 }) {
-  if (connectOnSide === "none") {
-    return;
+  if (connectOnSide === 'none') {
+    return <div></div>;
   }
 
   const connectorHeight = rowGap + bubbleHeight + 4;
   const connectorWidth = connectorHeight / 2;
 
-  return connectOnSide === "left" ? (
+  return connectOnSide === 'left' ? (
     <div
       style={{
-        width: connectorWidth + "px",
-        height: connectorHeight + "px",
-        top: bubbleHeight / 2 - 2,
+        width: connectorWidth + 'px',
+        height: connectorHeight + 'px',
+      top: bubbleHeight / 2 - 2,
         transform: `translateX(-${connectorWidth - 2}px)`,
         left: 0,
       }}

@@ -1,26 +1,24 @@
-"use client";
+'use client';
 
-import { PlaylistItemSnippet } from "@/data/videos";
-import PaddedFlexContainer from "@/shared/containers/PaddedFlexContainer";
-import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from 'react';
+import PaddedFlexContainer from '../../../shared/containers/PaddedFlexContainer';
 
 export default function VideoItem({
   playlistItemSnippet: pis,
 }: {
-  playlistItemSnippet: PlaylistItemSnippet;
+  playlistItemSnippet: any;
 }) {
-  const date = new Date(pis.publishedAt!).toLocaleDateString("en-us", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    timeZone: "utc",
+  const date = new Date(pis.publishedAt!).toLocaleDateString('en-us', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: 'utc',
   });
 
   const [isHovering, setIsHovering] = useState(false);
 
   return (
-    <Link href={`https://www.youtube.com/watch?v=${pis?.resourceId?.videoId}`}>
+    <a href={`https://www.youtube.com/watch?v=${pis?.resourceId?.videoId}`}>
       <div
         className="bg-white rounded-lg h-full overflow-hidden"
         onMouseEnter={() => setIsHovering(true)}
@@ -28,7 +26,7 @@ export default function VideoItem({
       >
         <img
           className={`rounded-t-lg h-48 md:h-52 lg:h-56 xl:h-60 2xl:h-64 w-full object-cover ${
-            isHovering && "scale-110 transition duration-500"
+            isHovering && 'scale-110 transition duration-500'
           }`}
           src={pis.thumbnails.high.url}
         />
@@ -40,10 +38,10 @@ export default function VideoItem({
             {pis.title}
           </h1>
           <p className="relative fade-out-text text-md xl:text-lg mb-1">
-            {pis.description.slice(0, 120) + "..."}
+            {pis.description.slice(0, 120) + '...'}
           </p>
         </PaddedFlexContainer>
       </div>
-    </Link>
+    </a>
   );
 }

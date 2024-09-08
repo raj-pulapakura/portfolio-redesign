@@ -1,13 +1,12 @@
 import {
   FontAwesomeIcon,
   FontAwesomeIconProps,
-} from "@fortawesome/react-fontawesome";
-import React from "react";
+} from '@fortawesome/react-fontawesome';
 
 export default function IconLink({
   icon,
 }: {
-  icon: FontAwesomeIconProps["icon"];
+  icon: FontAwesomeIconProps['icon'];
 }) {
   return (
     <FontAwesomeIcon

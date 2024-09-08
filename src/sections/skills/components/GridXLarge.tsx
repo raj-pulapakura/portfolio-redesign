@@ -1,5 +1,4 @@
-import { mlskills, dataskills, fullstackskills } from '@/data/skills';
-import React from 'react';
+import { mlskills, dataskills, fullstackskills } from '../../../data/skills';
 import IconCircle from './IconCircle';
 import SkillSection from './SkillSection';
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import LinkItem from './LinkItem';
 import {
   faGithub,

@@ -1,7 +1,6 @@
-import Chip from "@/shared/ui/Chip";
-import React from "react";
+import Chip from '../../../shared/ui/Chip';
 
-export type SkillSectionProps = JSX.IntrinsicElements["div"] & {
+export type SkillSectionProps = JSX.IntrinsicElements['div'] & {
   title: string;
   skills: string[];
   align?: string;
@@ -10,7 +9,7 @@ export type SkillSectionProps = JSX.IntrinsicElements["div"] & {
 export default function SkillSection({
   title,
   skills,
-  align = "text-center",
+  align = 'text-center',
   className,
 }: SkillSectionProps) {
   return (

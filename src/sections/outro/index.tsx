@@ -1,25 +1,20 @@
-import { rockSalt } from "@/app/fonts";
-import React from "react";
-import Social from "./components/Social";
+import Social from './components/Social';
 import {
   faGithub,
   faLinkedin,
   faMedium,
   faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import PaddedFlexContainer from "@/shared/containers/PaddedFlexContainer";
-import UpButton from "./components/UpButton";
+} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import UpButton from './components/UpButton';
 
 export default function Outro() {
-  const iconSize = "3x";
+  const iconSize = '3x';
 
   return (
     <section className="bg-black py-20 lg:py-28 flex flex-col gap-10 px-10 relative">
       <div className="text-white text-center flex gap-5 lg:gap-10 2xl:gap-16 flex-col">
-        <h1
-          className={`${rockSalt.className} text-2xl lg:text-3xl 2xl:text-5xl leading-loose`}
-        >
+        <h1 className={`text-2xl lg:text-3xl 2xl:text-5xl leading-loose`}>
           LET'S CONNECT!
         </h1>
         <h2 className="text-2xl">

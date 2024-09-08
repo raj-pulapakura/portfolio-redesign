@@ -1,6 +1,4 @@
-"use client";
-
-import React, { useEffect } from "react";
+'use client';
 
 type VerticalConnectorProps = {
   dateColumnWidth: string;
@@ -11,7 +9,7 @@ type VerticalConnectorProps = {
 const remDivideBy = (rem: string, divideBy: number) => {
   const remValue = parseFloat(rem.slice(0, -3));
   const newRemValue = remValue / divideBy;
-  return newRemValue + "rem";
+  return newRemValue + 'rem';
 };
 
 export default function VerticalConnector({

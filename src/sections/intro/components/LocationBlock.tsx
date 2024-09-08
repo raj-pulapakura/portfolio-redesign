@@ -1,7 +1,6 @@
-import { colors } from '@/data/colors';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import { colors } from '../../../data/colors';
 
 export default function LocationBlock() {
   return (

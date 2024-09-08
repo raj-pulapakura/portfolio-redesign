@@ -1,5 +1,4 @@
-import Link from "next/link";
-import React, { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 export default function Social({
   icon,
@@ -8,5 +7,5 @@ export default function Social({
   icon: ReactNode;
   url: string;
 }) {
-  return <Link href={url}>{icon}</Link>;
+  return <a href={url}>{icon}</a>;
 }
