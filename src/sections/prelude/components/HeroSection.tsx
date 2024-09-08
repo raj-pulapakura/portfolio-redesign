@@ -11,5 +11,6 @@ export default function HeroSection() {
         about machine learning, data science, and software engineering.
       </h2>
     </div>
+    
   );
 }

@@ -1,18 +1,21 @@
 import React from 'react';
-import HeroSection from './components/hero/HeroSection';
-import ScrollDownIconButton from '../../shared/buttons/ScrollDownIconButton';
+import ProfileBlock from './components/ProfileBlock';
+import LinksBlock from './components/LinksBlock';
+import TitleBlock from './components/TitleBlock';
+import LocationBlock from './components/LocationBlock';
+import NavBlock from './components/NavBlock';
 
 export default function Intro() {
   return (
     <section
-      style={{
-        backgroundImage: "url('/photos/landscape1.jpg')",
-        backgroundSize: 'cover',
-      }}
-      className="relative min-h-screen max-h-fit w-full p-5 md:p-10"
+      className="relative min-h-screen max-h-screen w-full p-5 md:p-10 bg-black grid gap-6 grid-rows-2"
+      style={{ gridTemplateColumns: 'repeat(14, minmax(0, 1fr))' }}
     >
-      <HeroSection />
-      <ScrollDownIconButton className="animate-super-bounce absolute bottom-5 right-5 -translate-y-1/2" />
+      <ProfileBlock />
+      {/* <TitleBlock />
+      <LinksBlock />
+      <LocationBlock />
+      <NavBlock /> */}
     </section>
   );
 }
