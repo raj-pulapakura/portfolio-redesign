@@ -13,7 +13,7 @@ export interface RegularBlockProps {
 
 export default function Intro() {
   const profileBlockAnimationDuration = 2;
-  const otherBlockAnimationDuration = 0.75;
+  const otherBlockAnimationDuration = 1;
 
   const otherBlockProps: RegularBlockProps = {
     initial: { opacity: 0 },

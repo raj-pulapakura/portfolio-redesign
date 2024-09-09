@@ -43,7 +43,7 @@ export default function ProfileBlock({
         x: [xStart, xStart, xStart, 0, 0],
         y: [yStart, yStart, yStart, 0, 0],
       }}
-      transition={{ duration: animationDuration, ease: 'easeInOut' }}
+      transition={{ duration: animationDuration, ease: 'circOut' }}
     >
       <img
         src="/photos/profile-no-bg.png"
