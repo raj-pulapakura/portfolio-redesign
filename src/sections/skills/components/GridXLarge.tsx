@@ -1,12 +1,19 @@
 import { mlskills, dataskills, fullstackskills } from '../../../data/skills';
 import SkillSection from './SkillSection';
+import { motion } from 'framer-motion';
 
 export default function GridXLarge() {
   return (
     <div className="w-1/2 mx-auto gap-x-10 gap-y-10">
-      <h1 className="font-bold text-9xl text-cream col-span-3  rounded-lg w-full mb-20 font-display">
+      <motion.h1
+        initial={{ x: -50, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+        className="font-bold text-9xl text-cream col-span-3  rounded-lg w-full mb-20 font-display"
+      >
         Skills
-      </h1>
+      </motion.h1>
 
       <div className="flex flex-col gap-10 col-span-3 row-span-2 rounded-lg">
         <SkillSection
