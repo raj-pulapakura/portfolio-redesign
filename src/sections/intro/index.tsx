@@ -3,23 +3,37 @@ import LinksBlock from './components/LinksBlock';
 import TitleBlock from './components/TitleBlock';
 import LocationBlock from './components/LocationBlock';
 import NavBlock from './components/NavBlock';
-import { motion } from 'framer-motion';
+import { motion, MotionProps } from 'framer-motion';
+
+export interface RegularBlockProps {
+  initial: MotionProps['initial'];
+  animate: MotionProps['animate'];
+  transition?: MotionProps['transition'];
+}
 
 export default function Intro() {
+  const profileBlockAnimationDuration = 2;
+  const otherBlockAnimationDuration = 0.75;
+
+  const otherBlockProps: RegularBlockProps = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    transition: {
+      duration: otherBlockAnimationDuration,
+      delay: profileBlockAnimationDuration - 0.25,
+    },
+  };
+
   return (
     <motion.div
-      initial={{ opacity: 0, x: -10 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: 10 }}
-      transition={{ duration: 0.25 }}
       className="relative min-h-screen max-h-screen w-full p-5 md:p-10 bg-black grid gap-6 grid-rows-2"
       style={{ gridTemplateColumns: 'repeat(14, minmax(0, 1fr))' }}
     >
-      <ProfileBlock />
-      <TitleBlock />
-      <LocationBlock />
-      <LinksBlock />
-      <NavBlock />
+      <TitleBlock {...otherBlockProps} />
+      <ProfileBlock animationDuration={profileBlockAnimationDuration} />
+      <LocationBlock {...otherBlockProps} />
+      <NavBlock {...otherBlockProps} />
+      <LinksBlock {...otherBlockProps} />
     </motion.div>
   );
 }

@@ -1,3 +1,4 @@
+import { RegularBlockProps } from '..';
 import LinkItem from './LinkItem';
 import {
   faGithub,
@@ -5,10 +6,14 @@ import {
   faMedium,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
+import { motion } from 'framer-motion';
 
-export default function LinksBlock() {
+export default function LinksBlock(props: RegularBlockProps) {
   return (
-    <div className=" border-2 border-cream rounded-lg col-span-6 flex justify-center items-center">
+    <motion.div
+      {...props}
+      className=" border-2 border-cream rounded-lg col-span-6 flex justify-center items-center"
+    >
       <div className="grid grid-cols-2 w-fit gap-10">
         <LinkItem
           icon={faLinkedin}
@@ -34,6 +39,6 @@ export default function LinksBlock() {
           url="https://medium.com/@raj.pulapakura"
         />
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -1,9 +1,12 @@
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { RegularBlockProps } from '..';
+import { motion } from 'framer-motion';
 
-export default function LocationBlock() {
+export default function LocationBlock(props: RegularBlockProps) {
   return (
-    <div
+    <motion.div
+      {...props}
       style={{
         backgroundImage: "url('/photos/landscape3.jpg')",
         backgroundSize: 'cover',
@@ -16,6 +19,6 @@ export default function LocationBlock() {
         <p className="font-bold text-cream text-2xl">Melbourne,</p>
         <p className="font-bold text-cream text-2xl">Australia</p>
       </div>
-    </div>
+    </motion.div>
   );
 }
