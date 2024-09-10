@@ -37,13 +37,15 @@ export default function ProfileBlock({
         opacity: 0,
         x: xStart,
         y: yStart,
+        scale: 1.2,
       }}
       animate={{
         opacity: [0, 1, 1, 1, 1],
         x: [xStart, xStart, xStart, 0, 0],
         y: [yStart, yStart, yStart, 0, 0],
+        scale: [1.2, 1.2, 1.2, 1, 1],
       }}
-      transition={{ duration: animationDuration, ease: 'circOut' }}
+      transition={{ duration: animationDuration }}
     >
       <img
         src="/photos/profile-no-bg.png"
