@@ -5,7 +5,7 @@ import CertificationContainer from './CertificationContainer';
 export default function GridSmall() {
   return (
     <div className="grid grid-cols-8 gap-x-10 gap-y-20 ">
-      <h1 className="text-center font-bold text-3xl text-cream col-span-8">
+      <h1 className="text-center font-bold text-3xl text-primary col-span-8">
         / SKILLS & CERTS
       </h1>
 

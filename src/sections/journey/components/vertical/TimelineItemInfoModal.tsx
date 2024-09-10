@@ -17,7 +17,7 @@ export default function TimelineItemInfoModal({
     <>
       <div
         onClick={handleClick}
-        className="bg-black opacity-50 fixed top-0 left-0 w-full h-full z-20"
+        className="bg-background opacity-50 fixed top-0 left-0 w-full h-full z-20"
       ></div>
       <div className="bg-white p-5 fixed w-3/4 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-30 rounded-md">
         <h1 className="tracking-widest uppercase mb-3 text-blue-600">

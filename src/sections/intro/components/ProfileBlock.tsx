@@ -32,7 +32,7 @@ export default function ProfileBlock({
   return (
     <motion.div
       ref={profileRef}
-      className="bg-cream col-span-3 rounded-lg p-6"
+      className="bg-primary col-span-3 rounded-lg p-6"
       initial={{
         opacity: 0,
         x: xStart,

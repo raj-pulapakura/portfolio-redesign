@@ -7,7 +7,7 @@ import ProjectItem from './components/ProjectItem';
 
 export default function Projects() {
   return (
-    <PaddedContainer className="bg-black">
+    <PaddedContainer className="bg-background">
       <TitleSubtitleFlex
         title="PROJECTS"
         subtitle="I like building cool stuff."

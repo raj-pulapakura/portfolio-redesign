@@ -1,4 +1,33 @@
 /** @type {import('tailwindcss').Config} */
+
+const tangColors = {
+  primary: '#FF934F',
+  background: '#342A21',
+  accent: '#EFECCA',
+  accent2: '#EFECCA',
+};
+
+const pinkColors = {
+  primary: '#F42272',
+  background: '#F397D6',
+  accent: '#D7B8F3',
+  accent2: '#B8B8F3',
+};
+
+const seaMossColors = {
+  primary: '#157A6E',
+  background: '#77B28C',
+  accent: '#C2C5BB',
+  accent2: '#499F68',
+};
+
+const forestColors = {
+  primary: '#0A2E36',
+  background: '#FBCAEF',
+  accent: '#EABE7C',
+  accent2: '#F85A3E',
+};
+
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -7,12 +36,7 @@ export default {
       display: ['Playball'],
     },
     extend: {
-      colors: {
-        cream: '#FFFDD0',
-        dark: '#161616',
-        black: '#0F0F0F ',
-        brown: '#664C43',
-      },
+      colors: forestColors,
       keyframes: {
         spin: {
           from: { transform: 'rotate(0deg)' },

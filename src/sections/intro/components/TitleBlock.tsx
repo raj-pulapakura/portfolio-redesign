@@ -32,14 +32,14 @@ export default function TitleBlock(props: RegularBlockProps) {
     <motion.div
       {...props}
       ref={containerRef}
-      className="bg-dark rounded-lg col-span-7 px-16 py-8 overflow-hidden"
+      className="bg-accent rounded-lg col-span-7 px-16 py-8 overflow-hidden"
     >
       {containerRef.current && (
         <motion.div {...contentAnimation}>
-          <h1 className="text-8xl font-bold text-cream font-display">AI /</h1>
-          <h1 className="text-8xl font-bold text-cream">Software</h1>
-          <h1 className="text-8xl font-bold text-cream">Engineer</h1>
-          <p className="mt-8 text-cream">
+          <h1 className="text-8xl font-bold text-primary font-display">AI /</h1>
+          <h1 className="text-8xl font-bold text-primary">Software</h1>
+          <h1 className="text-8xl font-bold text-primary">Engineer</h1>
+          <p className="mt-8 text-primary">
             Currently working @ Time Under Tension
           </p>
         </motion.div>

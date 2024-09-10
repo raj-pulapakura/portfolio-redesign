@@ -1,5 +1,5 @@
 export const colors = {
-  cream: '#FFFDD0',
-  dark: '#161616',
-  brown: '#664C43',
+  primary: '#FFFDD0',
+  accent: '#161616',
+  accent2: '#664C43',
 };

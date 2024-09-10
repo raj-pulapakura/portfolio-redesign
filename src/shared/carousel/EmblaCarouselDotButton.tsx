@@ -3,8 +3,8 @@ import React, {
   useCallback,
   useEffect,
   useState,
-} from "react";
-import { EmblaCarouselType } from "embla-carousel";
+} from 'react';
+import { EmblaCarouselType } from 'embla-carousel';
 
 type UseDotButtonType = {
   selectedIndex: number;
@@ -39,9 +39,9 @@ export const useDotButton = (
 
     onInit(emblaApi);
     onSelect(emblaApi);
-    emblaApi.on("reInit", onInit);
-    emblaApi.on("reInit", onSelect);
-    emblaApi.on("select", onSelect);
+    emblaApi.on('reInit', onInit);
+    emblaApi.on('reInit', onSelect);
+    emblaApi.on('select', onSelect);
   }, [emblaApi, onInit, onSelect]);
 
   return {
@@ -51,12 +51,12 @@ export const useDotButton = (
   };
 };
 
-type DotButtonProps = JSX.IntrinsicElements["button"] & { selected: boolean };
+type DotButtonProps = JSX.IntrinsicElements['button'] & { selected: boolean };
 
 export function DotButton({ selected, ...props }: DotButtonProps) {
   const className = selected
-    ? "border-2 border-black w-3 h-3 rounded-full"
-    : "border-2 border-gray-700 w-3 h-3 rounded-full";
+    ? 'border-2 border-background w-3 h-3 rounded-full'
+    : 'border-2 border-gray-700 w-3 h-3 rounded-full';
 
   return <button className={className} {...props}></button>;
 }

@@ -9,34 +9,42 @@ import {
 import { motion, MotionProps } from 'framer-motion';
 
 export default function LinksBlock(props: RegularBlockProps) {
+  const animTransition: MotionProps['transition'] = {
+    delay: 2,
+    duration: 0.5,
+    type: 'spring',
+    dampness: 10,
+    stiffness: 100,
+  };
+
   const animation1: MotionProps = {
     initial: { opacity: 0, y: -50 },
     animate: { opacity: 1, y: 0 },
-    transition: { delay: 2, duration: 0.5 },
+    transition: { ...animTransition },
   };
 
   const animation2: MotionProps = {
     initial: { opacity: 0, x: 50 },
     animate: { opacity: 1, x: 0 },
-    transition: { delay: 2, duration: 0.5 },
+    transition: { ...animTransition },
   };
 
   const animation3: MotionProps = {
     initial: { opacity: 0, y: 50 },
     animate: { opacity: 1, y: 0 },
-    transition: { delay: 2, duration: 0.5 },
+    transition: { ...animTransition },
   };
 
   const animation4: MotionProps = {
     initial: { opacity: 0, x: -50 },
     animate: { opacity: 1, x: 0 },
-    transition: { delay: 2, duration: 0.5 },
+    transition: { ...animTransition },
   };
 
   return (
     <motion.div
       {...props}
-      className=" border-2 border-cream rounded-lg col-span-6 flex justify-center items-center"
+      className=" border-2 border-primary rounded-lg col-span-6 flex justify-center items-center"
     >
       <div className="grid grid-cols-2 w-fit gap-10">
         <motion.div {...animation1}>

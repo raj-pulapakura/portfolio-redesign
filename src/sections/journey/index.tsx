@@ -6,8 +6,8 @@ import VerticalTimeline from './components/VerticalTimeline';
 
 export default function Journey() {
   return (
-    <section className="bg-black py-20 px-10">
-      <h1 className="text-center font-bold text-8xl text-cream my-52 rounded-lg font-display">
+    <section className="bg-background py-20 px-10">
+      <h1 className="text-center font-bold text-8xl text-primary my-52 rounded-lg font-display">
         MY JOURNEY
       </h1>
 
@@ -61,8 +61,8 @@ export default function Journey() {
 }
 
 export const timelineItemColours = [
-  'bg-cream',
-  'bg-brown',
+  'bg-primary',
+  'bg-accent2',
   '#2D93AD',
   '#DE8F6E',
   '#EBBAB9',

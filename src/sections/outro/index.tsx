@@ -12,7 +12,7 @@ export default function Outro() {
   const iconSize = '3x';
 
   return (
-    <section className="bg-black py-20 lg:py-28 flex flex-col gap-10 px-10 relative">
+    <section className="bg-background py-20 lg:py-28 flex flex-col gap-10 px-10 relative">
       <div className="text-white text-center flex gap-5 lg:gap-10 2xl:gap-16 flex-col">
         <h1 className={`text-2xl lg:text-3xl 2xl:text-5xl leading-loose`}>
           LET'S CONNECT!

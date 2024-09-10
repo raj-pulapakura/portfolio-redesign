@@ -10,7 +10,7 @@ export default function GridXLarge() {
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="font-bold text-9xl text-cream col-span-3  rounded-lg w-full mb-20 font-display"
+        className="font-bold text-9xl text-primary col-span-3  rounded-lg w-full mb-20 font-display"
       >
         Skills
       </motion.h1>

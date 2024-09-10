@@ -23,10 +23,12 @@ const HoverImage = () => {
       onMouseMove={handleMouseMove}
       onMouseOut={handleMouseLeave}
     >
+      {/* Colorful image on the bottom */}
       <img
         src="/photos/landscape3.jpg"
         className="absolute rounded-lg object-cover w-full h-full"
       />
+      {/* Grayscale image on top */}
       <img
         src="/photos/landscape3.jpg"
         className="absolute grayscale rounded-lg object-cover w-full h-full"
@@ -35,11 +37,11 @@ const HoverImage = () => {
           transition: 'filter 0.5s',
           WebkitMaskImage:
             maskPosition.x != null
-              ? `radial-gradient(circle 100px at ${maskPosition.x}px ${maskPosition.y}px, transparent 100%, black 0%)`
+              ? `radial-gradient(circle 100px at ${maskPosition.x}px ${maskPosition.y}px, transparent 100%, background 0%)`
               : undefined,
           maskImage:
             maskPosition.y != null
-              ? `radial-gradient(circle 100px at ${maskPosition.x}px ${maskPosition.y}px, transparent 100%, black 0%)`
+              ? `radial-gradient(circle 100px at ${maskPosition.x}px ${maskPosition.y}px, transparent 100%, background 0%)`
               : undefined,
         }}
       />

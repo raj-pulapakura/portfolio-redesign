@@ -16,7 +16,7 @@ export default function SkillSection({
   return (
     <div className={`h-fit ${className}`}>
       <motion.h1
-        className={`${align} tracking-widest uppercase text-cream font-bold mb-4 text-lg`}
+        className={`${align} tracking-widest uppercase text-primary font-bold mb-4 text-lg`}
         initial={{ x: -50, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}

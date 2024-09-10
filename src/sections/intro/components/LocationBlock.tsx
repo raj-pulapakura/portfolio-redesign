@@ -12,13 +12,13 @@ export default function LocationBlock(props: RegularBlockProps) {
     >
       <HoverImage />
       <FontAwesomeIcon
-        className="text-cream z-10"
+        className="text-accent z-10"
         icon={faLocationDot}
         size="3x"
       />
       <div className="text-center z-10">
-        <p className="font-bold text-cream text-2xl">Melbourne,</p>
-        <p className="font-bold text-cream text-2xl">Australia</p>
+        <p className="font-bold text-accent text-2xl">Melbourne,</p>
+        <p className="font-bold text-accent text-2xl">Australia</p>
       </div>
     </motion.div>
   );

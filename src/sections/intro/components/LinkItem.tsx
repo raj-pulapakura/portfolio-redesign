@@ -20,7 +20,7 @@ export default function LinkItem({
       rel="noreferrer"
     >
       {/* <div className="flex items-center gap-10 "> */}
-      <FontAwesomeIcon className="text-cream" icon={icon} size="5x" />
+      <FontAwesomeIcon className="text-primary" icon={icon} size="5x" />
       {/* </div> */}
     </a>
   );
