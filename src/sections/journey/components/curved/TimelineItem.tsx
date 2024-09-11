@@ -36,8 +36,8 @@ export default function TimelineItem({
   return (
     <motion.div
       // motion props
-      initial={{ scale: 2, opacity: 0 }}
-      whileInView={{ scale: 1, opacity: 1 }}
+      initial={{ scale: 2, opacity: 0, y: -60 }}
+      whileInView={{ scale: 1, opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{
         duration: 1,
