@@ -33,10 +33,10 @@ export default {
   theme: {
     fontFamily: {
       sans: ['Noto Sans'],
-      display: ['Playball'],
+      display: ['Prata'],
     },
     extend: {
-      colors: forestColors,
+      colors: tangColors,
       keyframes: {
         spin: {
           from: { transform: 'rotate(0deg)' },

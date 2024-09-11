@@ -13,6 +13,8 @@ export const mlskills = [
   'Seaborn',
   'ChromaDB',
   'Langchain',
+  'AWS SageMaker',
+  'Azure AI Services',
 ];
 
 export const dataskills = [
@@ -31,6 +33,7 @@ export const dataskills = [
   'MySQL',
   'PostgreSQL',
   'MongoDB',
+  'Redis',
 ];
 
 export const fullstackskills = [
