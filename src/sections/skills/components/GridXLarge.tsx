@@ -26,23 +26,47 @@ export default function GridXLarge() {
     whileInView: { scale: 1, opacity: 1, rotate: 45 },
     transition: {
       duration: 1,
-      delay: 0,
+      delay: 1,
     },
     viewport: { once: true },
   };
 
   return (
     <div className="w-10/12 mx-auto gap-x-10 gap-y-10">
-      <div id="skills" className="w-full h-10"></div>
-
-      <motion.h1
-        {...titleAnimation}
-        className="font-bold text-8xl text-primary col-span-3 rounded-lg w-full mb-20 font-display text-center"
-      >
-        Skills
-      </motion.h1>
-
       <div className="flex flex-row gap-32 items-center">
+        <div className="w-1/3">
+          <motion.h1
+            {...titleAnimation}
+            className="font-bold text-8xl text-primary col-span-3 rounded-lg w-full mb-20 font-display text-left"
+          >
+            Skills ➜
+          </motion.h1>
+
+          <motion.div
+            {...leadContentAnimation}
+            className="border-primary border-2 h-fit p-10 relative rounded-lg"
+          >
+            <p className="text-accent font-display opacity-80 text-5xl">
+              See how I apply these skills in real-world projects
+            </p>
+
+            <div className="flex justify-end">
+              <button className="border-2 border-accent rounded-full p-3 mt-4 ml-auto">
+                <FontAwesomeIcon
+                  icon={faArrowDown}
+                  className="text-accent w-8 h-8"
+                  size="2x"
+                />
+              </button>
+            </div>
+
+            <div className="absolute -top-5 -right-5 w-10 h-10 border-b-2 border-l-2 border-primary rounded-bl-lg"></div>
+            <div className="absolute -bottom-5 -left-5 w-10 h-10 border-t-2 border-r-2 border-primary rounded-tr-lg"></div>
+            <div className="absolute -top-5 -left-5 w-10 h-10 border-b-2 border-r-2 border-primary rounded-br-lg"></div>
+            <div className="absolute -bottom-5 -right-5 w-10 h-10 border-t-2 border-l-2 border-primary rounded-tl-lg"></div>
+          </motion.div>
+        </div>
+
         <div className="w-2/3 flex flex-col gap-10 col-span-3 row-span-2 rounded-lg bg-accent p-10 overflow-hidden relative shadow-2xl">
           <SkillSection
             title="AI & Machine Learning"
@@ -85,28 +109,6 @@ export default function GridXLarge() {
             className="absolute bottom-3 right-3 w-2 h-2 bg-accent rounded-sm"
           ></motion.div>
         </div>
-
-        <motion.div
-          {...leadContentAnimation}
-          className="w-1/3 border-primary border-2 h-fit p-10 relative rounded-lg"
-        >
-          <p className="text-accent font-display opacity-80 text-5xl">
-            See how I apply these skills in real-world projects
-          </p>
-
-          <button className="border-2 border-accent rounded-full p-3 mt-4 float-end">
-            <FontAwesomeIcon
-              icon={faArrowDown}
-              className="text-accent w-8 h-8"
-              size="2x"
-            />
-          </button>
-
-          <div className="absolute -top-5 -right-5 w-10 h-10 border-b-2 border-l-2 border-primary rounded-bl-lg"></div>
-          <div className="absolute -bottom-5 -left-5 w-10 h-10 border-t-2 border-r-2 border-primary rounded-tr-lg"></div>
-          <div className="absolute -top-5 -left-5 w-10 h-10 border-b-2 border-r-2 border-primary rounded-br-lg"></div>
-          <div className="absolute -bottom-5 -right-5 w-10 h-10 border-t-2 border-l-2 border-primary rounded-tl-lg"></div>
-        </motion.div>
       </div>
     </div>
   );

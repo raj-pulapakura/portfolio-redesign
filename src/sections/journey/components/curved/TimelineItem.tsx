@@ -36,10 +36,17 @@ export default function TimelineItem({
   return (
     <motion.div
       // motion props
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      initial={{ scale: 2, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 1, delay: props.index * 0.1 }}
+      transition={{
+        duration: 1,
+        delay: 1,
+        ease: 'easeInOut',
+        type: 'spring',
+        damping: 10,
+        stiffness: 50,
+      }}
       // other props
       style={{ height: bubbleHeight + 'px', ...style }}
       className={`hover:cursor-zoom-in relative w-full ${className}`}
@@ -81,9 +88,15 @@ export default function TimelineItem({
       {/* top content */}
       <div className="z-20 absolute left-1/2 -translate-x-1/2 -translate-y-full w-full">
         <div className="flex  flex-col items-center">
-          <h1 className="text-white text-center font-bold text-xl">
+          <motion.h1
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 2, ease: 'easeInOut' }}
+            viewport={{ once: true }}
+            className="text-white text-center font-bold text-xl"
+          >
             {tdp.date}
-          </h1>
+          </motion.h1>
           <div
             style={{ height: connectorHeight, width: connectorWidth }}
             className="bg-white"
@@ -101,9 +114,15 @@ export default function TimelineItem({
             style={{ height: connectorHeight, width: connectorWidth }}
             className="bg-white mb-1"
           ></div>
-          <h1 className="text-white text-center leading-5 text-xs lg:text-sm xl:text-md">
+          <motion.h1
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 2.5, ease: 'easeInOut' }}
+            viewport={{ once: true }}
+            className="text-white text-center leading-5 text-xs lg:text-sm xl:text-md"
+          >
             {tdp.title}
-          </h1>
+          </motion.h1>
         </div>
       </div>
     </motion.div>
