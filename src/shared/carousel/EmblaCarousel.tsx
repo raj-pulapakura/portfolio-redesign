@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import React, { ReactNode } from "react";
-import useEmblaCarousel from "embla-carousel-react";
+import React, { ReactNode } from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
 import {
   PrevButton,
   NextButton,
   usePrevNextButtons,
-} from "./EmblaCarouselArrowButtons";
-import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
+} from './EmblaCarouselArrowButtons';
+import { DotButton, useDotButton } from './EmblaCarouselDotButton';
 
-export type EmblaCarouselProps = JSX.IntrinsicElements["section"] & {
+export type EmblaCarouselProps = JSX.IntrinsicElements['section'] & {
   children?: ReactNode;
 };
 
@@ -21,9 +21,6 @@ export default function EmblaCarousel({
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
   });
-
-  const { selectedIndex, scrollSnaps, onDotButtonClick } =
-    useDotButton(emblaApi);
 
   const {
     prevBtnDisabled,
@@ -39,13 +36,13 @@ export default function EmblaCarousel({
       </div>
       {!prevBtnDisabled && (
         <PrevButton
-          className="z-50 absolute top-1/2 -left-3 md:-left-5 lg:-left-7 xl:-left-9 2xl:-left-11 -translate-y-1/2"
+          className="z-50 absolute top-1/2 -translate-x-full right -translate-y-1/2"
           onClick={onPrevButtonClick}
         />
       )}
       {!nextBtnDisabled && (
         <NextButton
-          className="z-50 absolute top-1/2 -right-3 md:-right-5 lg:-right-7 xl:-right-9 2xl:-right-11 -translate-y-1/2"
+          className="z-50 absolute top-1/2 right-0 translate-x-full -translate-y-1/2"
           onClick={onNextButtonClick}
         />
       )}

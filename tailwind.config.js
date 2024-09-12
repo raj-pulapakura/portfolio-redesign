@@ -4,7 +4,7 @@ const tangColors = {
   primary: '#FF934F',
   background: '#342A21',
   accent: '#EFECCA',
-  accent2: '#EFECCA',
+  accent2: '#665648',
 };
 
 const pinkColors = {

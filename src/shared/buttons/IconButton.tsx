@@ -1,12 +1,11 @@
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import {
   FontAwesomeIcon,
   FontAwesomeIconProps,
-} from "@fortawesome/react-fontawesome";
-import React from "react";
+} from '@fortawesome/react-fontawesome';
 
-export type IconButtonProps = Omit<FontAwesomeIconProps, "icon"> & {
-  icon?: FontAwesomeIconProps["icon"];
+export type IconButtonProps = Omit<FontAwesomeIconProps, 'icon'> & {
+  icon?: FontAwesomeIconProps['icon'];
 };
 
 export default function IconButton({
@@ -16,7 +15,7 @@ export default function IconButton({
 }: IconButtonProps) {
   return (
     <FontAwesomeIcon
-      className={`bg-white rounded-full  ${className}`}
+      className={`bg-transparent border-accent border-2 text-accent rounded-full  ${className}`}
       icon={icon}
       {...props}
     />

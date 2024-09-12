@@ -61,7 +61,6 @@ export function PrevButton({
 }: Parameters<typeof IconButton>[0]) {
   return (
     <IconButton
-      style={{ boxShadow: '8px 8px 12px 0 rgba(0, 0, 0, 0.3)' }}
       className={`p-2 md:p-3 lg:p-4 xl:p-5 2xl:p-6 w-6 h-6 md:w-8 md:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 hover:cursor-pointer ${className}`}
       icon={faChevronLeft}
       {...props}
@@ -75,9 +74,6 @@ export function NextButton({
 }: Parameters<typeof IconButton>[0]) {
   return (
     <IconButton
-      style={{
-        boxShadow: iconButtonBoxShadow,
-      }}
       className={`p-2 md:p-3 lg:p-4 xl:p-5 2xl:p-6 w-6 h-6 md:w-8 md:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 hover:cursor-pointer  ${className}`}
       icon={faChevronRight}
       {...props}
