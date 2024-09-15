@@ -7,7 +7,7 @@ import VerticalTimeline from './components/VerticalTimeline';
 
 export default function Journey() {
   return (
-    <section className="bg-primary px-10 py-20">
+    <section className="bg-gray-900 px-10 pb-20">
       <div id="journey" className="w-full h-20"></div>
 
       <motion.h1
@@ -22,7 +22,7 @@ export default function Journey() {
           damping: 10,
           stiffness: 50,
         }}
-        className="text-center font-bold text-8xl text-accent mb-40 rounded-lg font-display"
+        className="text-center font-bold text-7xl text-accent mb-40 rounded-lg font-display"
       >
         MY JOURNEY
       </motion.h1>
@@ -66,7 +66,7 @@ export default function Journey() {
             timelineData.slice(5, 10),
             timelineData.slice(10, timelineData.length),
           ]}
-          rowGap={180}
+          rowGap={170}
           bubbleGap={100}
           bubbleHeight={60}
           className="mx-40"
@@ -77,10 +77,10 @@ export default function Journey() {
 }
 
 export const timelineItemColours = [
-  'bg-background',
-  '#FAC8CD',
-  'bg-accent2',
-  '#C46BAE',
+  'bg-pink-400',
+  'bg-teal-400',
+  'bg-amber-400',
+  'bg-rose-500',
 ];
 
 export const numColors = timelineItemColours.length;

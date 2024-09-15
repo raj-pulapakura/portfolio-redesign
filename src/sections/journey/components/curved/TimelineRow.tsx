@@ -68,24 +68,24 @@ function EndConnector({
   return connectOnSide === 'left' ? (
     <div
       style={{
-        width: connectorWidth + 'px',
-        height: connectorHeight + 'px',
-      top: bubbleHeight / 2 - 2,
+        width: connectorWidth * 2,
+        height: connectorHeight,
+        top: bubbleHeight / 2 - 2,
         transform: `translateX(-${connectorWidth - 2}px)`,
         left: 0,
       }}
-      className="absolute border-t-4 border-b-4 rounded-l-full border-white"
+      className="absolute border-4 border-r-0 rounded-l-full border-white"
     ></div>
   ) : (
     <div
       style={{
-        width: connectorWidth,
+        width: connectorWidth * 2,
         height: connectorHeight,
         top: bubbleHeight / 2 - 2,
         transform: `translateX(${connectorWidth - 2}px)`,
         right: 0,
       }}
-      className="absolute border-t-4 border-b-4 rounded-r-full border-white"
+      className="absolute border-4 border-l-0 rounded-r-full border-white"
     ></div>
   );
 }

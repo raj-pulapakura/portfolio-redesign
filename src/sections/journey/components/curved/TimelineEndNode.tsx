@@ -11,7 +11,7 @@ export default function TimelineEndNode({
   return (
     <div
       style={{ height: bubbleHeight + 'px' }}
-      className={`z-0 px-8 uppercase align-middle bg-primary rounded-full flex ${className}`}
+      className={`z-0 px-8 uppercase align-middle bg-gray-900  rounded-full flex ${className}`}
       {...props}
     >
       <h1 className="text-xl font-bold text-accent m-auto">{children}</h1>

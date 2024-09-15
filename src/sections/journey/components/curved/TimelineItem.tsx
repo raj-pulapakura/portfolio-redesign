@@ -66,21 +66,14 @@ export default function TimelineItem({
         }}
         className={`${
           bubbleColour.startsWith('bg-') ? bubbleColour : ''
-        } z-30  rounded-full absolute left-1/2 -translate-x-1/2 border-4 border-white`}
+        } z-30  rounded-full absolute left-1/2 -translate-x-1/2 border-4 border-white shadow-2xl shadow-gray-400`}
         onMouseEnter={() => setOnModal(true)}
         onMouseLeave={() => setOnModal(false)}
       >
         {onModal && (
           <TimelineItemInfoModal
             timelineDataPoint={tdp}
-            style={
-              bubbleColour.startsWith('bg-')
-                ? {}
-                : {
-                    backgroundColor: bubbleColour,
-                  }
-            }
-            className={`${bubbleColour.startsWith('bg-') ? bubbleColour : ''}`}
+            className="bg-background"
           />
         )}
       </div>
@@ -99,7 +92,7 @@ export default function TimelineItem({
           </motion.h1>
           <div
             style={{ height: connectorHeight, width: connectorWidth }}
-            className="bg-white"
+            className="bg-white mt-2"
           ></div>
         </div>
       </div>
@@ -112,7 +105,7 @@ export default function TimelineItem({
         <div className="flex flex-col items-center">
           <div
             style={{ height: connectorHeight, width: connectorWidth }}
-            className="bg-white mb-1"
+            className="bg-white mb-2"
           ></div>
           <motion.h1
             initial={{ x: -50, opacity: 0 }}

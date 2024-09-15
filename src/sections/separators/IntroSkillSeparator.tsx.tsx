@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Separator() {
+export default function IntroSkillSeparator() {
   return (
     <svg
       data-name="Layer 1"
