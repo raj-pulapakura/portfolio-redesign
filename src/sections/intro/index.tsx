@@ -38,10 +38,10 @@ export default function Intro() {
       <div className="col-span-4">
         <LinksBlock {...otherBlockProps} />
       </div>
-      <div className="col-span-8">
+      <div className="col-span-4">
         <NavBlock {...otherBlockProps} />
       </div>
-      <div className="col-span-6">
+      <div className="col-span-10">
         <LocationBlock {...otherBlockProps} />
       </div>
     </motion.div>

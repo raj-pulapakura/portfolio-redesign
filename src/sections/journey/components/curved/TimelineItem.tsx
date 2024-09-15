@@ -66,7 +66,7 @@ export default function TimelineItem({
         }}
         className={`${
           bubbleColour.startsWith('bg-') ? bubbleColour : ''
-        } z-30  rounded-full absolute left-1/2 -translate-x-1/2`}
+        } z-30  rounded-full absolute left-1/2 -translate-x-1/2 border-4 border-white`}
         onMouseEnter={() => setOnModal(true)}
         onMouseLeave={() => setOnModal(false)}
       >

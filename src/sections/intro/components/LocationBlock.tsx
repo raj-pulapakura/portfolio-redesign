@@ -29,8 +29,12 @@ export default function LocationBlock(props: RegularBlockProps) {
           icon={faLocationDot}
           size="3x"
         />
-        <p className="font-bold text-background text-2xl">Melbourne,</p>
-        <p className="font-bold text-background text-2xl">Australia</p>
+        <p className="font-bold text-background text-2xl  font-display">
+          Melbourne,
+        </p>
+        <p className="font-bold text-background text-2xl font-display">
+          Australia
+        </p>
       </motion.div>
     </motion.div>
   );
