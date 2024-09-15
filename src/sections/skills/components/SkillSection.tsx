@@ -36,7 +36,7 @@ export default function SkillSection({
       }}
     >
       <motion.h1
-        className={`${align} tracking-widest uppercase text-primary font-bold font-display mb-6 text-lg`}
+        className={`${align} tracking-widest uppercase text-accent font-bold mb-6 text-2xl`}
       >
         {title}
       </motion.h1>

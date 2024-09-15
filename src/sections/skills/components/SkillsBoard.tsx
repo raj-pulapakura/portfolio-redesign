@@ -14,7 +14,7 @@ export default function () {
   };
 
   return (
-    <div className="flex flex-col gap-10 col-span-3 row-span-2 rounded-lg border-2 border-primary  p-10 overflow-hidden relative">
+    <div className="flex flex-col gap-10 col-span-3 row-span-2 rounded-lg p-10 overflow-hidden relative shadow-2xl ">
       <SkillSection
         title="AI & Machine Learning"
         skills={mlskills}
@@ -34,7 +34,7 @@ export default function () {
         animation="left"
       />
 
-      <div className="absolute top-2 left-2 w-4 h-4 bg-background rounded-full"></div>
+      {/* <div className="absolute top-2 left-2 w-4 h-4 bg-background rounded-full"></div>
       <div className="absolute bottom-2 left-2 w-4 h-4 bg-background rounded-full"></div>
       <div className="absolute top-2 right-2 w-4 h-4 bg-background rounded-full"></div>
       <div className="absolute bottom-2 right-2 w-4 h-4 bg-background rounded-full"></div>
@@ -54,7 +54,7 @@ export default function () {
       <motion.div
         {...screwAnimation}
         className="absolute bottom-3 right-3 w-2 h-2 bg-accent rounded-sm"
-      ></motion.div>
+      ></motion.div> */}
     </div>
   );
 }

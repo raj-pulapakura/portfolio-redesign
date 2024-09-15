@@ -8,7 +8,7 @@ const tangColors = {
 };
 
 const tangColors2 = {
-  primary: '#324376',
+  primary: '#233878',
   background: '#93C5FD',
   accent: '#EFECCA',
   accent2: '#665648',

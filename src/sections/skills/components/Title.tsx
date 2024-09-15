@@ -11,9 +11,9 @@ export default function Title() {
   return (
     <motion.h1
       {...titleAnimation}
-      className="font-bold text-8xl text-primary col-span-3 rounded-lg w-full mb-20 font-display text-left"
+      className="font-bold text-8xl text-accent col-span-3 rounded-lg w-full mb-20 font-display text-left"
     >
-      Skills ➜
+      Skills
     </motion.h1>
   );
   ``;
