@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const HoverImage = () => {
   const [maskPosition, setMaskPosition] = useState<{
@@ -18,8 +19,11 @@ const HoverImage = () => {
   };
 
   return (
-    <div
-      className="absolute top-0 left-0 w-full h-full"
+    <motion.div
+      initial={{ top: 0, right: '-100%' }}
+      animate={{ top: 0, right: 0 }}
+      transition={{ delay: 2.5, duration: 1, ease: 'easeInOut' }}
+      className="absolute top-0 w-full h-full"
       onMouseMove={handleMouseMove}
       onMouseOut={handleMouseLeave}
     >
@@ -31,7 +35,7 @@ const HoverImage = () => {
       {/* Grayscale image on top */}
       <img
         src="/photos/landscape3.jpg"
-        className="absolute grayscale rounded-lg object-cover w-full h-full"
+        className="absolute grayscale rounded-lg object-cover w-full h-full opacity-50"
         style={{
           filter: 'grayscale(100%)',
           transition: 'filter 0.5s',
@@ -45,7 +49,7 @@ const HoverImage = () => {
               : undefined,
         }}
       />
-    </div>
+    </motion.div>
   );
 };
 

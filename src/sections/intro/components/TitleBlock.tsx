@@ -32,11 +32,13 @@ export default function TitleBlock(props: RegularBlockProps) {
     <motion.div
       {...props}
       ref={containerRef}
-      className="bg-accent rounded-lg col-span-7 px-16 py-8 overflow-hidden"
+      className="shadow-2xl rounded-lg px-16 py-8 overflow-hidden w-full h-full"
     >
       {containerRef.current && (
         <motion.div {...contentAnimation}>
-          <h1 className="text-8xl font-bold text-primary font-display">AI /</h1>
+          <h1 className="text-8xl font-bold text-primary font-display italic">
+            AI /
+          </h1>
           <h1 className="text-8xl font-bold text-primary">Software</h1>
           <h1 className="text-8xl font-bold text-primary">Engineer</h1>
           <p className="mt-8 text-primary">

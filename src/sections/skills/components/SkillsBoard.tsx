@@ -14,7 +14,7 @@ export default function () {
   };
 
   return (
-    <div className="flex flex-col gap-10 col-span-3 row-span-2 rounded-lg bg-accent p-10 overflow-hidden relative shadow-2xl">
+    <div className="flex flex-col gap-10 col-span-3 row-span-2 rounded-lg border-2 border-primary  p-10 overflow-hidden relative">
       <SkillSection
         title="AI & Machine Learning"
         skills={mlskills}

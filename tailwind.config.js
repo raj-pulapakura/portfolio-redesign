@@ -2,7 +2,14 @@
 
 const tangColors = {
   primary: '#FF934F',
-  background: '#342A21',
+  background: '#04090E',
+  accent: '#EFECCA',
+  accent2: '#665648',
+};
+
+const tangColors2 = {
+  primary: '#324376',
+  background: '#93C5FD',
   accent: '#EFECCA',
   accent2: '#665648',
 };
@@ -28,6 +35,13 @@ const forestColors = {
   accent2: '#F85A3E',
 };
 
+const blueColors = {
+  background: '#011627',
+  primary: '#F3F9D2',
+  accent: '#3E78B2',
+  accent2: '#E88D67',
+};
+
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -36,7 +50,7 @@ export default {
       display: ['Prata'],
     },
     extend: {
-      colors: tangColors,
+      colors: tangColors2,
       keyframes: {
         spin: {
           from: { transform: 'rotate(0deg)' },

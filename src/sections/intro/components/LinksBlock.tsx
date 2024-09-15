@@ -44,7 +44,7 @@ export default function LinksBlock(props: RegularBlockProps) {
   return (
     <motion.div
       {...props}
-      className=" border-2 border-primary rounded-lg col-span-6 flex justify-center items-center"
+      className=" shadow-2xl rounded-lg flex justify-center items-center w-full h-full"
     >
       <div className="grid grid-cols-2 w-fit gap-10">
         <motion.div {...animation1}>

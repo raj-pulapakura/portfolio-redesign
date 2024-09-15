@@ -8,18 +8,30 @@ export default function LocationBlock(props: RegularBlockProps) {
   return (
     <motion.div
       {...props}
-      className="rounded-lg col-span-4 flex flex-col justify-center items-center gap-10 relative "
+      className="shadow-2xl rounded-lg flex flex-col justify-center items-center relative w-full h-full overflow-hidden"
     >
       <HoverImage />
-      <FontAwesomeIcon
-        className="text-accent z-10"
-        icon={faLocationDot}
-        size="3x"
-      />
-      <div className="text-center z-10">
-        <p className="font-bold text-accent text-2xl">Melbourne,</p>
-        <p className="font-bold text-accent text-2xl">Australia</p>
-      </div>
+
+      <motion.div
+        initial={{ y: -1000 }}
+        animate={{ y: 0 }}
+        transition={{
+          delay: 3.5,
+          duration: 1,
+          type: 'spring',
+          damping: 10,
+          stiffness: 100,
+        }}
+        className="text-center z-10"
+      >
+        <FontAwesomeIcon
+          className="text-background z-10 mb-5"
+          icon={faLocationDot}
+          size="3x"
+        />
+        <p className="font-bold text-background text-2xl">Melbourne,</p>
+        <p className="font-bold text-background text-2xl">Australia</p>
+      </motion.div>
     </motion.div>
   );
 }
