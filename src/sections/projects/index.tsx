@@ -13,11 +13,10 @@ export default function Projects() {
       <TitleSubtitleFlex
         title="PROJECTS"
         subtitle="I like building cool stuff."
-        className="text-white"
       />
 
       <div className="w-10/12 mx-auto">
-        <EmblaCarousel>
+        <EmblaCarousel buttonClassName="text-blue-900">
           {projectsData.map((pdp) => (
             <EmblaCarouselItem key={pdp.description}>
               <ProjectItem projectDataPoint={pdp} />

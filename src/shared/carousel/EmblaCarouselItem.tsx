@@ -14,7 +14,7 @@ export default function EmblaCarouselItem({
         flexGrow: 0,
         flexShrink: 0,
         minWidth: 0,
-        padding: '5rem',
+        padding: '1rem',
       }}
     >
       {children}

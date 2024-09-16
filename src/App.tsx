@@ -27,6 +27,11 @@ function App() {
       />
 
       <Projects />
+      <WaveSeparator
+        topFillColor="fill-background"
+        bottomBackgroundColor="bg-primary"
+      />
+
       <Articles />
       <Videos />
       <PreOutro />

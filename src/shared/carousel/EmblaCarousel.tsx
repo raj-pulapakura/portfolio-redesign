@@ -10,11 +10,13 @@ import {
 
 export type EmblaCarouselProps = JSX.IntrinsicElements['section'] & {
   children?: ReactNode;
+  buttonClassName?: string;
 };
 
 export default function EmblaCarousel({
   children,
   className,
+  buttonClassName,
   ...props
 }: EmblaCarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -32,7 +34,7 @@ export default function EmblaCarousel({
     <section className={`relative ${className}`} {...props}>
       {!prevBtnDisabled && (
         <PrevButton
-          className="z-50 absolute top-1/2 -translate-x-[calc(100%+20px)] -translate-y-1/2"
+          className={`z-50 absolute top-1/2 -translate-x-[calc(100%+20px)] -translate-y-1/2 ${buttonClassName}`}
           onClick={onPrevButtonClick}
         />
       )}
@@ -43,7 +45,7 @@ export default function EmblaCarousel({
 
       {!nextBtnDisabled && (
         <NextButton
-          className="z-50 absolute top-1/2 right-0 translate-x-[calc(100%+20px)] -translate-y-1/2"
+          className={`z-50 absolute top-1/2 right-0 translate-x-[calc(100%+20px)] -translate-y-1/2 ${buttonClassName}`}
           onClick={onNextButtonClick}
         />
       )}
