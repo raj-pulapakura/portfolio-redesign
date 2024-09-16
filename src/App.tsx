@@ -11,6 +11,8 @@ import Skills from './sections/skills';
 function App() {
   return (
     <main>
+      <div className="h-10 w-10 absolute bottom-0 right-0 bg-violet-500 md:bg-indigo-500 lg:bg-blue-500 xl:bg-green-500 2xl:bg-yellow-500 z-50"></div>
+
       <Intro />
       <MultiWaveSeparator />
 

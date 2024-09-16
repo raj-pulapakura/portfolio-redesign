@@ -30,14 +30,14 @@ export default function LinksBlock(props: RegularBlockProps) {
   };
 
   const animation3: MotionProps = {
-    initial: { opacity: 0, y: 50 },
-    animate: { opacity: 1, y: 0 },
+    initial: { opacity: 0, x: -50 },
+    animate: { opacity: 1, x: 0 },
     transition: { ...animTransition },
   };
 
   const animation4: MotionProps = {
-    initial: { opacity: 0, x: -50 },
-    animate: { opacity: 1, x: 0 },
+    initial: { opacity: 0, y: 50 },
+    animate: { opacity: 1, y: 0 },
     transition: { ...animTransition },
   };
 
@@ -46,7 +46,7 @@ export default function LinksBlock(props: RegularBlockProps) {
       {...props}
       className=" shadow-2xl rounded-lg flex justify-center items-center w-full h-full"
     >
-      <div className="grid grid-cols-2 w-fit gap-10">
+      <div className="grid grid-cols-2 w-fit gap-5 xl:gap-10 ">
         <motion.div {...animation1}>
           <LinkItem
             icon={faLinkedin}

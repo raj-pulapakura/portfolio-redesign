@@ -7,7 +7,7 @@ export default function Certifcations() {
   const divAnimation: MotionProps = {
     initial: { scale: 1.2, opacity: 0 },
     whileInView: { scale: 1, opacity: 1 },
-    transition: { duration: 1 },
+    transition: { duration: 0.5 },
   };
 
   const certificationPaths = [

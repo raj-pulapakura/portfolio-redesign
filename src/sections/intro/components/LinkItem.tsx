@@ -14,14 +14,18 @@ export default function LinkItem({
 }) {
   return (
     <a
-      className="flex justify-center items-center"
+      className="flex justify-center items-center "
       href={url}
       target="_blank"
       rel="noreferrer"
     >
-      {/* <div className="flex items-center gap-10 "> */}
-      <FontAwesomeIcon className="text-primary" icon={icon} size="5x" />
-      {/* </div> */}
+      <div className="hidden xl:block">
+        <FontAwesomeIcon className="text-primary" icon={icon} size="5x" />
+      </div>
+
+      <div className="block xl:hidden">
+        <FontAwesomeIcon className="text-primary" icon={icon} size="3x" />
+      </div>
     </a>
   );
 }
