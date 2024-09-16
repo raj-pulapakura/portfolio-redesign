@@ -7,7 +7,6 @@ import Projects from './sections/projects';
 import MultiWaveSeparator from './sections/separators/MultiWaveSeparator.tsx';
 import WaveSeparator from './sections/separators/WaveSeparator.tsx';
 import Skills from './sections/skills';
-import Videos from './sections/videos';
 
 function App() {
   return (
@@ -33,9 +32,12 @@ function App() {
       />
 
       <Articles />
-      <Videos />
-      <PreOutro />
-      <Outro />
+      <MultiWaveSeparator
+        backgroundColor="bg-[#669dd5]"
+        firstFillColor="fill-primary"
+        secondFillColor="fill-blue-700"
+        thirdFillColor="fill-indigo-600"
+      />
     </main>
   );
 }

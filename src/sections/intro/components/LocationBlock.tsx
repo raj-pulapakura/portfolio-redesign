@@ -17,10 +17,10 @@ export default function LocationBlock(props: RegularBlockProps) {
         animate={{ y: 0 }}
         transition={{
           delay: 3.5,
-          duration: 1,
+          duration: 0.25,
           type: 'spring',
           damping: 10,
-          stiffness: 100,
+          stiffness: 50,
         }}
         className="text-center z-10"
       >

@@ -69,13 +69,6 @@ export default function NavBlock(props: RegularBlockProps) {
         >
           / ARTICLES
         </motion.p>
-        <motion.p
-          {...animation1}
-          className={linkStyle}
-          onClick={() => goToElement('videos')}
-        >
-          / VIDEOS
-        </motion.p>
       </div>
     </motion.div>
   );

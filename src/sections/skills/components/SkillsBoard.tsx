@@ -1,4 +1,3 @@
-import { MotionProps } from 'framer-motion';
 import { mlskills, fullstackskills, dataskills } from '../../../data/skills';
 import SkillSection from './SkillSection';
 

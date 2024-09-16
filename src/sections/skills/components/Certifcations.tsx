@@ -5,9 +5,8 @@ import { motion, MotionProps } from 'framer-motion';
 export default function Certifcations() {
   const divStyle = 'p-3';
   const divAnimation: MotionProps = {
-    initial: { scale: 1.1, opacity: 0 },
+    initial: { scale: 1.2, opacity: 0 },
     whileInView: { scale: 1, opacity: 1 },
-    viewport: { once: true },
     transition: { duration: 1 },
   };
 
@@ -26,7 +25,7 @@ export default function Certifcations() {
           <img src={path} alt="certification" />
         </motion.div>
       ))}
-      <div className="p-5">
+      <motion.div className="p-5" {...divAnimation}>
         <button
           className="w-full h-full shadow-2xl rounded-full"
           onClick={() => {
@@ -41,7 +40,7 @@ export default function Certifcations() {
             size="2x"
           />
         </button>
-      </div>
+      </motion.div>
     </div>
   );
 }

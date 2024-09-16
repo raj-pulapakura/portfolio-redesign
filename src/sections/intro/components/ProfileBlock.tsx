@@ -45,11 +45,14 @@ export default function ProfileBlock({
         y: [yStart, yStart, yStart, 0, 0],
         scale: [1, 1.2, 1.2, 1, 1],
       }}
-      transition={{ duration: animationDuration }}
+      transition={{
+        duration: animationDuration,
+        ease: 'easeInOut',
+      }}
     >
       <img
         src="/photos/profile-no-bg.png"
-        className="w-full h-full object-contain "
+        className="w-full h-full object-contain"
       />
     </motion.div>
   );

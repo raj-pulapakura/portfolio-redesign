@@ -1,51 +1,31 @@
 import ArticleItem from './components/ArticleItem';
 import { articlesData } from '../../data/articles';
 import EmblaCarousel from '../../shared/carousel/EmblaCarousel';
-import EmblaCarouselItem from '../../shared/carousel/EmblaCarouselItem';
-import PaddedContainer from '../../shared/containers/PaddedContainer';
 import TitleSubtitleFlex from '../../shared/containers/TitleSubtitleFlex';
+import { faNewspaper } from '@fortawesome/free-solid-svg-icons';
 
 export default function Articles() {
   const buttonClassName = 'text-white';
 
   return (
-    <PaddedContainer className="bg-primary">
+    <div className="bg-primary pb-32">
+      <div id="articles" className="h-20 w-full"></div>
+
       <TitleSubtitleFlex
         title="ARTICLES"
         subtitle="Documenting my journey and cool tech."
-        className="flex-row-reverse text-white"
+        className="text-white mb-20"
+        icon={faNewspaper}
       />
 
       <EmblaCarousel
-        className="visible md:hidden"
+        className="w-10/12 mx-auto "
         buttonClassName={buttonClassName}
       >
         {articlesData.map((adp) => (
-          <EmblaCarouselItem key={adp.title}>
-            <ArticleItem articleDataPoint={JSON.parse(JSON.stringify(adp))} />
-          </EmblaCarouselItem>
+          <ArticleItem articleDataPoint={JSON.parse(JSON.stringify(adp))} />
         ))}
       </EmblaCarousel>
-      <EmblaCarousel
-        className="hidden md:block xl:hidden"
-        buttonClassName={buttonClassName}
-      >
-        {articlesData.map((adp) => (
-          <EmblaCarouselItem itemPctWidth="50%" key={adp.title}>
-            <ArticleItem articleDataPoint={JSON.parse(JSON.stringify(adp))} />
-          </EmblaCarouselItem>
-        ))}
-      </EmblaCarousel>
-      <EmblaCarousel
-        className="hidden xl:block w-10/12 mx-auto"
-        buttonClassName={buttonClassName}
-      >
-        {articlesData.map((adp) => (
-          <EmblaCarouselItem itemPctWidth="33.33%" key={adp.title}>
-            <ArticleItem articleDataPoint={JSON.parse(JSON.stringify(adp))} />
-          </EmblaCarouselItem>
-        ))}
-      </EmblaCarousel>
-    </PaddedContainer>
+    </div>
   );
 }

@@ -4,6 +4,7 @@ import IconLink from './IconLink';
 import { ProjectDataPoint } from '../../../data/projects';
 import Chip from '../../../shared/ui/Chip';
 import { useRef } from 'react';
+import { motion } from 'framer-motion';
 
 export default function ProjectItem({
   projectDataPoint: pdp,
@@ -13,36 +14,44 @@ export default function ProjectItem({
   const boundingRef = useRef<DOMRect | null>(null);
 
   return (
-    <div className="rounded-lg h-full flex gap-10">
-      <div className="w-2/3 [perspective:800px] ">
-        <img
+    <div className="flex gap-10 grow-0 shrink-0 basis-full p-20">
+      <div className="h-full w-2/3 [perspective:800px] z-50">
+        <motion.img
+          initial={{ scale: 0.9, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.25, ease: 'easeInOut' }}
           onMouseLeave={() => (boundingRef.current = null)}
           onMouseEnter={(ev) => {
             boundingRef.current = ev.currentTarget.getBoundingClientRect();
           }}
-          onMouseMove={(ev) => {
-            if (!boundingRef.current) return;
-            const x = ev.clientX - boundingRef.current.left;
-            const y = ev.clientY - boundingRef.current.top;
-            const xPct = x / boundingRef.current.width;
-            const yPct = y / boundingRef.current.height;
-            const xRotation = (xPct - 0.5) * 20;
-            const yRotation = (0.5 - yPct) * 20;
+          // onMouseMove={(ev) => {
+          //   if (!boundingRef.current) return;
+          //   const x = ev.clientX - boundingRef.current.left;
+          //   const y = ev.clientY - boundingRef.current.top;
+          //   const xPct = x / boundingRef.current.width;
+          //   const yPct = y / boundingRef.current.height;
+          //   const xRotation = (xPct - 0.5) * 20;
+          //   const yRotation = (0.5 - yPct) * 20;
 
-            ev.currentTarget.style.setProperty(
-              '--x-rotation',
-              `${yRotation}deg`
-            );
-            ev.currentTarget.style.setProperty(
-              '--y-rotation',
-              `${xRotation}deg`
-            );
-          }}
+          //   ev.currentTarget.style.setProperty(
+          //     '--x-rotation',
+          //     `${yRotation}deg`
+          //   );
+          //   ev.currentTarget.style.setProperty(
+          //     '--y-rotation',
+          //     `${xRotation}deg`
+          //   );
+          // }}
           className="rounded-lg shadow-2xl w-full h-full object-cover hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.05)] transition-transform ease-in-out duration-75"
           src={pdp.thumbnailURL}
         />
       </div>
-      <div className="w-1/3 p-10 bg-primary shadow-2xl rounded-lg">
+      <motion.div
+        initial={{ scale: 0.9, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.25, ease: 'easeInOut' }}
+        className="h-full w-1/3 p-10 bg-primary shadow-2xl rounded-lg"
+      >
         <h1 className="text-white font-sans text-lg xl:text-xl 2xl:text-2xl font-bold mb-2 lg:mb-4">
           {pdp.title}
         </h1>
@@ -76,7 +85,7 @@ export default function ProjectItem({
             </a>
           )}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

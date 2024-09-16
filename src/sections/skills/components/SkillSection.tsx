@@ -28,9 +28,6 @@ export default function SkillSection({
         x: 0,
         opacity: 1,
       }}
-      viewport={{
-        once: true,
-      }}
       transition={{
         duration: 1,
       }}
