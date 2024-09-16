@@ -1,8 +1,8 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 export default function EmblaCarouselItem({
   children,
-  itemPctWidth = "100%",
+  itemPctWidth = '100%',
 }: {
   children?: ReactNode;
   itemPctWidth?: string;
@@ -14,8 +14,7 @@ export default function EmblaCarouselItem({
         flexGrow: 0,
         flexShrink: 0,
         minWidth: 0,
-        paddingLeft: "1rem",
-        paddingRight: "1rem",
+        padding: '5rem',
       }}
     >
       {children}

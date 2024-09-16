@@ -1,4 +1,4 @@
-export default function SkillJourneySeparator() {
+export default function WaveSeparator() {
   return (
     <svg
       data-name="Layer 1"

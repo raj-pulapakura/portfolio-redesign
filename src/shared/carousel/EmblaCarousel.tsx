@@ -1,13 +1,12 @@
 'use client';
 
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import {
   PrevButton,
   NextButton,
   usePrevNextButtons,
 } from './EmblaCarouselArrowButtons';
-import { DotButton, useDotButton } from './EmblaCarouselDotButton';
 
 export type EmblaCarouselProps = JSX.IntrinsicElements['section'] & {
   children?: ReactNode;
@@ -31,18 +30,20 @@ export default function EmblaCarousel({
 
   return (
     <section className={`relative ${className}`} {...props}>
-      <div className="z-20 overflow-hidden" ref={emblaRef}>
-        <div className="flex touch-pan-y">{children}</div>
-      </div>
       {!prevBtnDisabled && (
         <PrevButton
-          className="z-50 absolute top-1/2 -translate-x-full right -translate-y-1/2"
+          className="z-50 absolute top-1/2 -translate-x-[calc(100%+20px)] -translate-y-1/2"
           onClick={onPrevButtonClick}
         />
       )}
+
+      <div className="z-20 overflow-hidden" ref={emblaRef}>
+        <div className="flex touch-pan-y">{children}</div>
+      </div>
+
       {!nextBtnDisabled && (
         <NextButton
-          className="z-50 absolute top-1/2 right-0 translate-x-full -translate-y-1/2"
+          className="z-50 absolute top-1/2 right-0 translate-x-[calc(100%+20px)] -translate-y-1/2"
           onClick={onNextButtonClick}
         />
       )}

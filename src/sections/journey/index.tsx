@@ -22,7 +22,7 @@ export default function Journey() {
           damping: 10,
           stiffness: 50,
         }}
-        className="text-center font-bold text-7xl text-accent mb-40 rounded-lg font-display"
+        className="text-center font-bold text-7xl text-accent mb-40 rounded-lg font-sans"
       >
         MY JOURNEY
       </motion.h1>

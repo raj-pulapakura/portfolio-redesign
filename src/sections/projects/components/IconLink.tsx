@@ -11,7 +11,7 @@ export default function IconLink({
   return (
     <FontAwesomeIcon
       className="hover:scale-110 transition duration-200"
-      color="grey"
+      color="white"
       icon={icon}
       size="2x"
     />

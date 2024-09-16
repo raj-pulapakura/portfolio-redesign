@@ -33,7 +33,7 @@ export default function NavBlock(props: RegularBlockProps) {
   };
 
   const linkStyle =
-    'text-primary font-display text-3xl font-bold hover:cursor-pointer';
+    'text-primary font-sans text-3xl font-bold hover:cursor-pointer';
 
   return (
     <motion.div

@@ -86,7 +86,7 @@ export default function TimelineItem({
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 2, ease: 'easeInOut' }}
             viewport={{ once: true }}
-            className="text-white text-center font-bold text-xl"
+            className="text-white text-center font-bold text-xl font-sans"
           >
             {tdp.date}
           </motion.h1>
@@ -112,7 +112,7 @@ export default function TimelineItem({
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 2.5, ease: 'easeInOut' }}
             viewport={{ once: true }}
-            className="text-white text-center leading-5 text-xs lg:text-sm xl:text-md"
+            className="text-white text-center leading-5 font-sans text-xs lg:text-sm xl:text-md"
           >
             {tdp.title}
           </motion.h1>

@@ -42,12 +42,13 @@ const blueColors = {
   accent2: '#E88D67',
 };
 
+const font = 'Montserrat';
+
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
-      sans: ['Noto Sans'],
-      display: ['Prata'],
+      sans: [font],
     },
     extend: {
       colors: tangColors2,

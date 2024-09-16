@@ -2,7 +2,6 @@ import { faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import IconLink from './IconLink';
 import { ProjectDataPoint } from '../../../data/projects';
-import PaddedFlexContainer from '../../../shared/containers/PaddedFlexContainer';
 import Chip from '../../../shared/ui/Chip';
 import { useRef } from 'react';
 
@@ -15,7 +14,7 @@ export default function ProjectItem({
 
   return (
     <div className="rounded-lg h-full flex gap-10">
-      <div className="w-1/2 [perspective:800px]">
+      <div className="w-2/3 [perspective:800px] ">
         <img
           onMouseLeave={() => (boundingRef.current = null)}
           onMouseEnter={(ev) => {
@@ -43,18 +42,18 @@ export default function ProjectItem({
           src={pdp.thumbnailURL}
         />
       </div>
-      <div className="p-10 w-1/2">
-        <h1 className="text-accent  text-lg xl:text-xl 2xl:text-2xl font-bold mb-2 lg:mb-4">
+      <div className="w-1/3 p-10 bg-primary shadow-2xl rounded-lg">
+        <h1 className="text-white font-sans text-lg xl:text-xl 2xl:text-2xl font-bold mb-2 lg:mb-4">
           {pdp.title}
         </h1>
-        <p className="text-accent text-md xl:text-lg mb-5 lg:mb-7">
+        <p className="text-white font-sans text-md xl:text-lg mb-5 lg:mb-7">
           {pdp.description}
         </p>
         <div className="mb-5 lg:mb-7">
           {pdp.technologiesUsed.map((tech) => (
             <Chip
               key={tech}
-              className="text-xs lg:text-sm mb-1 mr-1 lg:mb-2 lg:mr-2 lg:border-2"
+              className="border-none bg-white text-xs lg:text-sm mb-1 mr-1 lg:mb-2 lg:mr-2 lg:border-2"
             >
               {tech}
             </Chip>
