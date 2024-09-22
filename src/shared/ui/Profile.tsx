@@ -1,5 +1,3 @@
-import React from 'react';
-
 type ProfileProps = {
   useCircle?: boolean;
   useBorder?: boolean;

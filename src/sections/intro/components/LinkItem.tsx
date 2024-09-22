@@ -5,7 +5,6 @@ import {
 
 export default function LinkItem({
   icon,
-  text,
   url,
 }: {
   icon: FontAwesomeIconProps['icon'];

@@ -9,8 +9,8 @@ export default function ProfileBlock({
   const profileRef = useRef<HTMLDivElement>(null);
 
   // State to store the x and y values of the starting position of the profile block in the animation
-  const [xStart, setXStart] = useState<string | null>(null);
-  const [yStart, setYStart] = useState<string | null>(null);
+  const [xStart, setXStart] = useState<string>('0px');
+  const [yStart, setYStart] = useState<string>('0px');
 
   // Calculate the x and y values of the center of the viewport
   const xCenter = window.innerWidth / 2;

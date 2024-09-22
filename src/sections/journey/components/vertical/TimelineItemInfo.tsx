@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import TimelineItemInfoModal from './TimelineItemInfoModal';
 import { timelineData } from '../../../../data/timeline';
 

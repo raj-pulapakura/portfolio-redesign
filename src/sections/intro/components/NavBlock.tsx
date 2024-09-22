@@ -1,7 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { RegularBlockProps } from '..';
 import { motion, MotionProps } from 'framer-motion';
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 export default function NavBlock(props: RegularBlockProps) {
   const animation1: MotionProps = {
