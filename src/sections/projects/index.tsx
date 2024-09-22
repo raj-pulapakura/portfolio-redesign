@@ -15,7 +15,7 @@ export default function Projects() {
         icon={faCode}
       />
 
-      <div className="w-10/12 mx-auto">
+      <div className="w-full lg:w-10/12 mx-auto">
         <EmblaCarousel buttonClassName="text-blue-900">
           {projectsData.map((pdp) => (
             // <EmblaCarouselItem key={pdp.description}>

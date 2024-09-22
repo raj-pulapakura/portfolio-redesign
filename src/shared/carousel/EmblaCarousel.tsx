@@ -34,7 +34,7 @@ export default function EmblaCarousel({
     <section className={`relative ${className}`} {...props}>
       {!prevBtnDisabled && (
         <PrevButton
-          className={`z-50 absolute top-1/2 -translate-x-[calc(100%+20px)] -translate-y-1/2 ${buttonClassName}`}
+          className={`hidden lg:block z-50 absolute top-1/2 -translate-x-[calc(100%+20px)] -translate-y-1/2 ${buttonClassName}`}
           onClick={onPrevButtonClick}
         />
       )}
@@ -45,7 +45,7 @@ export default function EmblaCarousel({
 
       {!nextBtnDisabled && (
         <NextButton
-          className={`z-50 absolute top-1/2 right-0 translate-x-[calc(100%+20px)] -translate-y-1/2 ${buttonClassName}`}
+          className={`hidden lg:block z-50 absolute top-1/2 right-0 translate-x-[calc(100%+20px)] -translate-y-1/2 ${buttonClassName}`}
           onClick={onNextButtonClick}
         />
       )}

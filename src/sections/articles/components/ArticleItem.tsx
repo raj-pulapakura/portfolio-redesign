@@ -14,7 +14,7 @@ export default function ArticleItem({
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.25, ease: 'easeInOut' }}
       href={adp.articleURL}
-      className="grow-0 shrink-0 basis-1/3 p-5"
+      className="grow-0 shrink-0 basis-full md:basis-1/2 xl:basis-1/3 p-0 md:p-5"
     >
       <div className="bg-white rounded-lg shadow-lg h-full">
         <img

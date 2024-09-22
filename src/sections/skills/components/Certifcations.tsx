@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion, MotionProps } from 'framer-motion';
 
 export default function Certifcations() {
-  const divStyle = 'p-3';
   const divAnimation: MotionProps = {
     initial: { scale: 1.2, opacity: 0 },
     whileInView: { scale: 1, opacity: 1 },
@@ -19,10 +18,10 @@ export default function Certifcations() {
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-10">
+    <div className="grid grid-cols-3 gap-2 xl:grid-cols-2 xl:gap-10">
       {certificationPaths.map((path) => (
-        <motion.div className={divStyle} {...divAnimation}>
-          <img src={path} alt="certification" />
+        <motion.div className="p-3" {...divAnimation}>
+          <img className="w-full" src={path} alt="certification" />
         </motion.div>
       ))}
       <motion.div className="p-5" {...divAnimation}>

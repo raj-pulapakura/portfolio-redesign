@@ -76,6 +76,9 @@ export default {
         'super-bounce': 'bounce 2s ease infinite',
         'fade-in': 'fade-in 2s',
       },
+      gridColumn: {
+        'span-14': 'span 14 / span 14',
+      },
     },
   },
   plugins: [],

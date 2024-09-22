@@ -14,8 +14,8 @@ export default function ProjectItem({
   const boundingRef = useRef<DOMRect | null>(null);
 
   return (
-    <div className="flex gap-10 grow-0 shrink-0 basis-full p-20">
-      <div className="h-full w-2/3 [perspective:800px] z-50">
+    <div className="flex flex-col lg:flex-row gap-0 lg:gap-10 grow-0 shrink-0 basis-full p-10 lg:p-20">
+      <div className="h-full w-full lg:w-2/3 z-50">
         <motion.img
           initial={{ scale: 0.9, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
@@ -24,25 +24,7 @@ export default function ProjectItem({
           onMouseEnter={(ev) => {
             boundingRef.current = ev.currentTarget.getBoundingClientRect();
           }}
-          // onMouseMove={(ev) => {
-          //   if (!boundingRef.current) return;
-          //   const x = ev.clientX - boundingRef.current.left;
-          //   const y = ev.clientY - boundingRef.current.top;
-          //   const xPct = x / boundingRef.current.width;
-          //   const yPct = y / boundingRef.current.height;
-          //   const xRotation = (xPct - 0.5) * 20;
-          //   const yRotation = (0.5 - yPct) * 20;
-
-          //   ev.currentTarget.style.setProperty(
-          //     '--x-rotation',
-          //     `${yRotation}deg`
-          //   );
-          //   ev.currentTarget.style.setProperty(
-          //     '--y-rotation',
-          //     `${xRotation}deg`
-          //   );
-          // }}
-          className="rounded-lg shadow-2xl w-full h-full object-cover hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.05)] transition-transform ease-in-out duration-75"
+          className="rounded-t-lg lg:rounded-lg shadow-2xl w-full h-full object-cover hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.05)] transition-transform ease-in-out duration-75"
           src={pdp.thumbnailURL}
         />
       </div>
@@ -50,7 +32,7 @@ export default function ProjectItem({
         initial={{ scale: 0.9, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.25, ease: 'easeInOut' }}
-        className="h-full w-1/3 p-10 bg-primary shadow-2xl rounded-lg"
+        className="h-full w-full lg:w-1/3 p-10 bg-primary shadow-2xl rounded-b-lg lg:rounded-lg"
       >
         <h1 className="text-white font-sans text-lg xl:text-xl 2xl:text-2xl font-bold mb-2 lg:mb-4">
           {pdp.title}
