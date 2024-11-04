@@ -319,8 +319,8 @@ export const timelineData = [
       <div className="flex flex-col gap-5">
         <p>
           I have achieved the AWS Certified Machine Learning Specialty, the
-          Azure AZ-900 (Fundamentals) and the Azure A1-900 (AI Fundamentals)
-          certifications.
+          Azure AZ-900 (Fundamentals), the Azure A1-900 (AI Fundamentals)
+          certifications and the Azure AI-102 (AI Engineer Associate)
         </p>
       </div>
     ),
