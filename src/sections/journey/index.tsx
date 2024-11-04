@@ -34,9 +34,10 @@ export default function Journey() {
       <div className="hidden lg:block xl:hidden">
         <CurvedTimeline
           dataRows={[
-            timelineData.slice(0, 5),
-            timelineData.slice(5, 10),
-            timelineData.slice(10, timelineData.length),
+            timelineData.slice(0, 4),
+            timelineData.slice(4, 8),
+            timelineData.slice(8, 12),
+            timelineData.slice(12, timelineData.length),
           ]}
           rowGap={200}
           bubbleGap={40}
@@ -48,9 +49,10 @@ export default function Journey() {
       <div className="hidden xl:block 2xl:hidden">
         <CurvedTimeline
           dataRows={[
-            timelineData.slice(0, 5),
-            timelineData.slice(5, 10),
-            timelineData.slice(10, timelineData.length),
+            timelineData.slice(0, 4),
+            timelineData.slice(4, 8),
+            timelineData.slice(8, 12),
+            timelineData.slice(12, timelineData.length),
           ]}
           rowGap={170}
           bubbleGap={60}
@@ -62,9 +64,10 @@ export default function Journey() {
       <div className="hidden 2xl:block">
         <CurvedTimeline
           dataRows={[
-            timelineData.slice(0, 5),
-            timelineData.slice(5, 10),
-            timelineData.slice(10, timelineData.length),
+            timelineData.slice(0, 4),
+            timelineData.slice(4, 8),
+            timelineData.slice(8, 12),
+            timelineData.slice(12, timelineData.length),
           ]}
           rowGap={170}
           bubbleGap={100}

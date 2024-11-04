@@ -313,13 +313,37 @@ export const timelineData = [
     ),
   }),
   new TimelineDataPoint({
-    date: "May '24 -",
-    title: 'AWS & Azure Certifications',
+    date: "May '24",
+    title: "Won an AI Hackathon",
     extraInformation: (
       <div className="flex flex-col gap-5">
         <p>
-          I have achieved the AWS Certified Machine Learning Specialty, the
-          Azure AZ-900 (Fundamentals), the Azure A1-900 (AI Fundamentals)
+          I won the AI Hackathon hosted by MLAI Aus. My team and I built the most innovative
+          AI trading bot for predicting energy market prices.
+        </p>
+
+        <img src="/photos/hackathon.jpg" />
+      </div>
+    ),
+  }),
+  new TimelineDataPoint({
+    date: "Jun '24",
+    title: 'AWS Certified Machine Learning Specialty',
+    extraInformation: (
+      <div className="flex flex-col gap-5">
+        <p>
+          I have achieved the AWS Certified Machine Learning Specialty after taking a 3-hour exam.
+        </p>
+      </div>
+    ),
+  }),
+  new TimelineDataPoint({
+    date: "Jul to Sep '24",
+    title: 'Azure Certifications',
+    extraInformation: (
+      <div className="flex flex-col gap-5">
+        <p>
+          I have achieved the Azure AZ-900 (Fundamentals), the Azure A1-900 (AI Fundamentals)
           certifications and the Azure AI-102 (AI Engineer Associate)
         </p>
       </div>
