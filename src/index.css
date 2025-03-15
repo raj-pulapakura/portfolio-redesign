@@ -12,6 +12,7 @@ body {
   overflow-x: hidden;
 }
 
+
 /* Add root variables for colors */
 :root {
   --primary: #ff934f;
