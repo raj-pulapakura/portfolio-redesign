@@ -1,57 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 
-const tangColors = {
-  primary: '#FF934F',
-  background: '#04090E',
-  accent: '#EFECCA',
-  accent2: '#665648',
+const brandColors = {
+  background: '#050505',
+  surface: '#0B0B10',
+  muted: '#16161F',
+  border: '#23232F',
+  primary: '#F5F5F5',
+  secondary: '#9FA1AA',
+  accent: '#2FF5D3',
 };
 
-const tangColors2 = {
-  primary: '#233878',
-  background: '#93C5FD',
-  accent: '#EFECCA',
-  accent2: '#665648',
-};
-
-const pinkColors = {
-  primary: '#F42272',
-  background: '#F397D6',
-  accent: '#D7B8F3',
-  accent2: '#B8B8F3',
-};
-
-const seaMossColors = {
-  primary: '#157A6E',
-  background: '#77B28C',
-  accent: '#C2C5BB',
-  accent2: '#499F68',
-};
-
-const forestColors = {
-  primary: '#0A2E36',
-  background: '#FBCAEF',
-  accent: '#EABE7C',
-  accent2: '#F85A3E',
-};
-
-const blueColors = {
-  background: '#011627',
-  primary: '#F3F9D2',
-  accent: '#3E78B2',
-  accent2: '#E88D67',
-};
-
-const font = 'Montserrat';
+const font = ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'];
 
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
-      sans: [font],
+      sans: font,
     },
     extend: {
-      colors: tangColors2,
+      colors: brandColors,
       keyframes: {
         spin: {
           from: { transform: 'rotate(0deg)' },

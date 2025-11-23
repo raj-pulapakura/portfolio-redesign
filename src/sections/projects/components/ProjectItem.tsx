@@ -1,9 +1,8 @@
 import { faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faLink } from '@fortawesome/free-solid-svg-icons';
-import IconLink from './IconLink';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ProjectDataPoint } from '../../../data/projects';
 import Chip from '../../../shared/ui/Chip';
-import { useRef } from 'react';
 import { motion } from 'framer-motion';
 
 export default function ProjectItem({
@@ -11,63 +10,85 @@ export default function ProjectItem({
 }: {
   projectDataPoint: ProjectDataPoint;
 }) {
-  const boundingRef = useRef<DOMRect | null>(null);
-
   return (
-    <div className="flex flex-col lg:flex-row gap-0 lg:gap-10 grow-0 shrink-0 basis-full p-10 lg:p-20">
-      <div className="h-full w-full lg:w-2/3 z-50">
-        <motion.img
-          initial={{ scale: 0.9, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.25, ease: 'easeInOut' }}
-          onMouseLeave={() => (boundingRef.current = null)}
-          onMouseEnter={(ev) => {
-            boundingRef.current = ev.currentTarget.getBoundingClientRect();
-          }}
-          className="rounded-t-lg lg:rounded-lg shadow-2xl w-full h-full object-cover hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.05)] transition-transform ease-in-out duration-75"
+    <motion.article
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5 }}
+      className="glass-panel accent-outline rounded-[32px] overflow-hidden flex flex-col"
+    >
+      <div className="relative aspect-video overflow-hidden">
+        <img
           src={pdp.thumbnailURL}
+          alt={pdp.title}
+          className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
         />
+        <div className="absolute top-4 left-4 rounded-full bg-background/80 px-4 py-1 text-[10px] uppercase tracking-[0.5em] text-secondary">
+          {pdp.tags[0] || 'Project'}
+        </div>
       </div>
-      <motion.div
-        initial={{ scale: 0.9, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.25, ease: 'easeInOut' }}
-        className="h-full w-full lg:w-1/3 p-10 bg-primary shadow-2xl rounded-b-lg lg:rounded-lg"
-      >
-        <h1 className="text-white font-sans text-lg xl:text-xl 2xl:text-2xl font-bold mb-2 lg:mb-4">
-          {pdp.title}
-        </h1>
-        <p className="text-white font-sans text-md xl:text-lg mb-5 lg:mb-7">
-          {pdp.description}
-        </p>
-        <div className="mb-5 lg:mb-7">
+
+      <div className="flex flex-1 flex-col gap-5 p-6 lg:p-8">
+        <div className="space-y-2">
+          <p className="text-xs uppercase tracking-[0.4em] text-secondary">
+            {pdp.tags.slice(0, 3).join(' • ')}
+          </p>
+          <h3 className="text-2xl font-semibold text-primary">{pdp.title}</h3>
+          <p className="text-secondary text-sm leading-relaxed">
+            {pdp.description}
+          </p>
+        </div>
+
+        <div className="flex flex-wrap gap-2">
           {pdp.technologiesUsed.map((tech) => (
-            <Chip
-              key={tech}
-              className="border-none bg-white text-xs lg:text-sm mb-1 mr-1 lg:mb-2 lg:mr-2 lg:border-2"
-            >
+            <Chip key={`${pdp.title}-${tech}`} className="text-[0.6rem]">
               {tech}
             </Chip>
           ))}
         </div>
-        <div className="flex gap-5">
-          {pdp.githubURL && (
-            <a href={pdp.githubURL}>
-              <IconLink icon={faGithub} />
-            </a>
-          )}
-          {pdp.webURL && (
-            <a href={pdp.webURL}>
-              <IconLink icon={faLink} />
-            </a>
-          )}
-          {pdp.videoURL && (
-            <a href={pdp.videoURL}>
-              <IconLink icon={faYoutube} />
-            </a>
-          )}
+
+        <div className="mt-auto flex items-center justify-between">
+          <span className="text-xs uppercase tracking-[0.4em] text-secondary">
+            STACK
+          </span>
+          <div className="flex items-center gap-3">
+            {pdp.webURL && (
+              <a
+                href={pdp.webURL}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-white/10 p-2 text-secondary transition hover:border-accent hover:text-primary"
+                aria-label="View live site"
+              >
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+              </a>
+            )}
+            {pdp.githubURL && (
+              <a
+                href={pdp.githubURL}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-white/10 p-2 text-secondary transition hover:border-accent hover:text-primary"
+                aria-label="View source on GitHub"
+              >
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+            )}
+            {pdp.videoURL && (
+              <a
+                href={pdp.videoURL}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-white/10 p-2 text-secondary transition hover:border-accent hover:text-primary"
+                aria-label="Watch demo video"
+              >
+                <FontAwesomeIcon icon={faYoutube} />
+              </a>
+            )}
+          </div>
         </div>
-      </motion.div>
-    </div>
+      </div>
+    </motion.article>
   );
 }

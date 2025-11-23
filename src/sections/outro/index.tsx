@@ -1,61 +1,101 @@
-import Social from './components/Social';
 import {
   faGithub,
   faLinkedin,
   faMedium,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import UpButton from './components/UpButton';
+import SectionShell from '../../shared/primitives/SectionShell';
+import AccentDivider from '../../shared/primitives/AccentDivider';
+
+const socialLinks = [
+  {
+    label: 'LinkedIn',
+    icon: faLinkedin,
+    url: 'https://www.linkedin.com/in/rajpulapakura/',
+  },
+  {
+    label: 'GitHub',
+    icon: faGithub,
+    url: 'https://github.com/raj-pulapakura',
+  },
+  {
+    label: 'Medium',
+    icon: faMedium,
+    url: 'https://medium.com/@raj.pulapakura',
+  },
+  {
+    label: 'YouTube',
+    icon: faYoutube,
+    url: 'https://www.youtube.com/@rajpulapakura001',
+  },
+];
+
+const scrollToTop = () =>
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
 
 export default function Outro() {
-  const iconSize = '3x';
-
   return (
-    <section className="bg-background py-20 lg:py-28 flex flex-col gap-10 px-10 relative">
-      <div className="text-white text-center flex gap-5 lg:gap-10 2xl:gap-16 flex-col">
-        <h1 className={`text-2xl lg:text-3xl 2xl:text-5xl leading-loose`}>
-          LET'S CONNECT!
-        </h1>
-        <h2 className="text-2xl">
-          If you're a technologist based in Melbourne, let's meet IRL!
-        </h2>
+    <SectionShell
+      id="contact"
+      backgroundClassName="bg-surface"
+      className="py-24"
+    >
+      <div className="space-y-10 text-center">
+        <div className="space-y-4">
+          <p className="text-xs uppercase tracking-[0.6em] text-secondary">
+            Contact
+          </p>
+          <h2 className="text-4xl font-semibold text-primary">LET&apos;S CONNECT!</h2>
+          <p className="text-secondary max-w-2xl mx-auto">
+            If you&apos;re a technologist based in Melbourne, let&apos;s meet IRL.
+            Always keen to jam on AI products, ML systems, or ambitious ideas.
+          </p>
+        </div>
+
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          {socialLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.url}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-3 rounded-full border border-white/10 px-5 py-3 text-sm uppercase tracking-[0.3em] text-secondary transition hover:border-accent hover:text-primary"
+            >
+              <FontAwesomeIcon icon={link.icon} />
+              <span>{link.label}</span>
+            </a>
+          ))}
+        </div>
+
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="https://www.linkedin.com/in/rajpulapakura/"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-full border border-accent bg-accent/10 px-8 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-primary transition hover:bg-accent/20"
+          >
+            Message on LinkedIn
+          </a>
+          <button
+            onClick={scrollToTop}
+            className="flex items-center gap-2 rounded-full border border-white/10 px-6 py-3 text-sm uppercase tracking-[0.3em] text-secondary transition hover:border-accent hover:text-primary"
+          >
+            Back to top
+            <FontAwesomeIcon icon={faArrowUp} />
+          </button>
+        </div>
+
+        <AccentDivider />
+
+        <p className="text-xs uppercase tracking-[0.4em] text-secondary">
+          © {new Date().getFullYear()} Raj Pulapakura
+        </p>
       </div>
-      <div className="flex gap-10 mx-auto max-w-96 justify-between">
-        <Social
-          icon={
-            <FontAwesomeIcon
-              icon={faLinkedin}
-              color="rgb(1,122,181)"
-              size={iconSize}
-            />
-          }
-          url="https://www.linkedin.com/in/rajpulapakura/"
-        />
-        <Social
-          icon={
-            <FontAwesomeIcon
-              icon={faYoutube}
-              color="rgb(255,15,23)"
-              size={iconSize}
-            />
-          }
-          url="https://www.youtube.com/@rajpulapakura9119"
-        />
-        <Social
-          icon={
-            <FontAwesomeIcon icon={faMedium} color="white" size={iconSize} />
-          }
-          url="https://medium.com/@raj.pulapakura"
-        />
-        <Social
-          icon={
-            <FontAwesomeIcon icon={faGithub} color="white" size={iconSize} />
-          }
-          url="https://github.com/raj-pulapakura"
-        />
-      </div>
-      <UpButton />
-    </section>
+    </SectionShell>
   );
 }

@@ -2,88 +2,80 @@
 
 import { motion } from 'framer-motion';
 import { timelineData } from '../../data/timeline';
-import CurvedTimeline from './components/CurvedTimeline';
-import VerticalTimeline from './components/VerticalTimeline';
+import SectionShell from '../../shared/primitives/SectionShell';
+import AccentDivider from '../../shared/primitives/AccentDivider';
+import Chip from '../../shared/ui/Chip';
 
 export default function Journey() {
   return (
-    <section className="bg-gray-900 px-10 pb-20">
-      <div id="journey" className="w-full h-20"></div>
+    <SectionShell id="journey" className="py-24">
+      <div className="space-y-12">
+        <div className="space-y-4">
+          <p className="text-xs uppercase tracking-[0.6em] text-secondary">
+            Journey
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-semibold text-primary max-w-3xl">
+            From first lines of code to shipping AI products.
+          </h2>
+          <p className="text-secondary max-w-2xl">
+            Each chapter builds on the last — internships, hackathons, and
+            full-time work shaping the craft.
+          </p>
+        </div>
 
-      <motion.h1
-        initial={{ scale: 2, opacity: 0, y: -60 }}
-        whileInView={{ scale: 1, opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          duration: 1,
-          delay: 1,
-          ease: 'easeInOut',
-          type: 'spring',
-          damping: 10,
-          stiffness: 50,
-        }}
-        className="text-center font-bold text-7xl text-accent mb-20 lg:mb-40 rounded-lg font-sans"
-      >
-        MY JOURNEY
-      </motion.h1>
+        <AccentDivider />
 
-      <div className="visible lg:hidden">
-        <VerticalTimeline className="m-4" />
+        <div className="relative">
+          <div className="hidden sm:block absolute left-4 top-0 bottom-0">
+            <div className="w-px h-full bg-border" />
+          </div>
+          <div className="space-y-10">
+            {timelineData.map((entry, index) => (
+              <motion.article
+                key={`${entry.date}-${entry.title}`}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.4, delay: index * 0.03 }}
+                className="relative pl-8 sm:pl-16"
+              >
+                <div className="hidden sm:flex absolute -left-[7px] top-4 h-3 w-3 rounded-full border border-accent bg-background" />
+                <div className="glass-panel rounded-3xl border border-white/5 p-6 lg:p-8 space-y-4">
+                  <div className="flex flex-wrap items-center justify-between gap-3">
+                    <p className="text-xs uppercase tracking-[0.5em] text-secondary">
+                      {entry.date}
+                    </p>
+                    <div className="text-[10px] uppercase tracking-[0.5em] text-secondary/70">
+                      Node {index + 1}
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-semibold text-primary">
+                    {entry.title}
+                  </h3>
+                  <div className="text-secondary text-sm leading-relaxed space-y-4">
+                    {typeof entry.extraInformation === 'string'
+                      ? entry.extraInformation
+                      : entry.extraInformation}
+                  </div>
+                  {entry.technologies && entry.technologies.length > 0 && (
+                    <div className="flex flex-wrap gap-2 pt-2">
+                      {entry.technologies.map((tech) => (
+                        <Chip key={`${entry.title}-${tech}`} className="text-[0.6rem]">
+                          {tech}
+                        </Chip>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </div>
       </div>
-
-      <div className="hidden lg:block xl:hidden">
-        <CurvedTimeline
-          dataRows={[
-            timelineData.slice(0, 4),
-            timelineData.slice(4, 8),
-            timelineData.slice(8, 12),
-            timelineData.slice(12, timelineData.length),
-          ]}
-          rowGap={200}
-          bubbleGap={40}
-          bubbleHeight={40}
-          className="mx-40"
-        />
-      </div>
-
-      <div className="hidden xl:block 2xl:hidden">
-        <CurvedTimeline
-          dataRows={[
-            timelineData.slice(0, 4),
-            timelineData.slice(4, 8),
-            timelineData.slice(8, 12),
-            timelineData.slice(12, timelineData.length),
-          ]}
-          rowGap={170}
-          bubbleGap={60}
-          bubbleHeight={50}
-          className="mx-40"
-        />
-      </div>
-
-      <div className="hidden 2xl:block">
-        <CurvedTimeline
-          dataRows={[
-            timelineData.slice(0, 4),
-            timelineData.slice(4, 8),
-            timelineData.slice(8, 12),
-            timelineData.slice(12, timelineData.length),
-          ]}
-          rowGap={170}
-          bubbleGap={100}
-          bubbleHeight={60}
-          className="mx-40"
-        />
-      </div>
-    </section>
+    </SectionShell>
   );
 }
 
-export const timelineItemColours = [
-  'bg-pink-400',
-  'bg-teal-400',
-  'bg-amber-400',
-  'bg-rose-500',
-];
-
+// Legacy exports retained for backward compatibility with unused timeline components.
+export const timelineItemColours = ['bg-accent'];
 export const numColors = timelineItemColours.length;

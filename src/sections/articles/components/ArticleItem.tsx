@@ -2,6 +2,9 @@
 
 import { motion } from 'framer-motion';
 import { ArticleDataPoint } from '../../../data/articles';
+import Chip from '../../../shared/ui/Chip';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 export default function ArticleItem({
   articleDataPoint: adp,
@@ -10,28 +13,46 @@ export default function ArticleItem({
 }) {
   return (
     <motion.a
-      initial={{ scale: 0.9, opacity: 0 }}
-      whileInView={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 0.25, ease: 'easeInOut' }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.4 }}
       href={adp.articleURL}
-      className="grow-0 shrink-0 basis-full md:basis-1/2 xl:basis-1/3 p-0 md:p-5"
+      target="_blank"
+      rel="noreferrer"
+      className="flex flex-col gap-6 rounded-[32px] border border-white/5 bg-surface/60 p-6 transition hover:border-accent"
     >
-      <div className="bg-white rounded-lg shadow-lg h-full">
-        <img
-          className={`rounded-t-lg h-48 md:h-52 lg:h-56 xl:h-60 2xl:h-64 w-full object-cover`}
-          src={adp.thumbnailURL}
-        />
-        <div className="p-10">
-          <p className="text-sm lg:text-md tracking-widest text-primary font-bold mb-2 md:mb-3 lg:mb-4 2xl:mb-5 font-sans">
+      <div className="flex flex-col gap-4 md:flex-row">
+        <div className="md:w-1/3">
+          <div className="overflow-hidden rounded-2xl">
+            <img
+              src={adp.thumbnailURL}
+              alt={adp.title}
+              className="h-48 w-full object-cover transition-transform duration-700 hover:scale-105"
+            />
+          </div>
+        </div>
+        <div className="flex-1 space-y-3">
+          <p className="text-xs uppercase tracking-[0.5em] text-secondary">
             {adp.datePublished}
           </p>
-          <h1 className="text-md xl:text-lg 2xl:text-xl font-bold mb-3 md:mb-4 lg:mb-5 font-sans">
-            {adp.title}
-          </h1>
-          <p className="relative text-md xl:text-lg mb-1 font-sans">
-            {adp.firstPara.slice(0, 120) + '...'}
+          <h3 className="text-2xl font-semibold text-primary">{adp.title}</h3>
+          <p className="text-secondary text-sm leading-relaxed">
+            {adp.firstPara.slice(0, 160)}...
           </p>
+          <div className="flex flex-wrap gap-2">
+            {adp.tags.map((tag) => (
+              <Chip key={`${adp.title}-${tag}`} className="text-[0.6rem]">
+                {tag}
+              </Chip>
+            ))}
+          </div>
         </div>
+      </div>
+
+      <div className="flex items-center justify-between text-xs uppercase tracking-[0.4em] text-secondary">
+        <span>Read on Medium</span>
+        <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="text-accent" />
       </div>
     </motion.a>
   );
