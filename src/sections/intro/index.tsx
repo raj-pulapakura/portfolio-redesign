@@ -89,7 +89,7 @@ export default function Intro() {
             ))}
           </div>
           <p className="text-lg text-secondary font-medium">
-            Currently working @ Time Under Tension
+            Currently working @ Synogize
           </p>
           <div className="flex flex-wrap gap-4">
             <button
@@ -125,7 +125,7 @@ export default function Intro() {
         >
           <div className="relative rounded-3xl overflow-hidden bg-muted/60 border border-white/5 min-h-[320px] flex items-center justify-center">
             <img
-              src="/photos/profile-no-bg.png"
+              src="/photos/profile-square-mask.png"
               alt="Raj Pulapakura"
               className="w-full max-h-[360px] object-contain mix-blend-screen"
             />

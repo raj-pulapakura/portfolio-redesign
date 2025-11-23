@@ -30,137 +30,8 @@ export const timelineData = [
     date: "Jan '21",
     title: 'Wrote my first line of code',
     extraInformation:
-      'Discovered Python, and fell in love with programming because it enabled me to create.',
+      'Discovered Python, and fell in love with programming.',
     technologies: ['Python', 'Django'],
-  }),
-  new TimelineDataPoint({
-    date: "Jun '21",
-    title: 'Published my first app',
-    extraInformation: (
-      <p>
-        My first app was a simple and fun number guessing game. Check it out on
-        the Play Store:{' '}
-        <UnderlinedLink href="https://play.google.com/store/apps/details?id=com.numberpredictor.joyapps">
-          Number Predictor
-        </UnderlinedLink>
-      </p>
-    ),
-    technologies: ['Kotlin'],
-  }),
-  new TimelineDataPoint({
-    date: "Sep '21",
-    title: 'Built my first website',
-    extraInformation: (
-      <p>
-        Eager to continue building, I tapped into web development, learning
-        HTML, CSS, JavaScript, React.js, Docker, SQL, MongoDB, and Docker.
-      </p>
-    ),
-    technologies: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'React.js',
-      'Docker',
-      'SQL',
-      'MongoDB',
-      'Docker',
-    ],
-  }),
-  new TimelineDataPoint({
-    date: "Mar '22",
-    title: 'Rebuilt my first app',
-    extraInformation: (
-      <p>
-        With the power of a Flutter, I rebuilt my first app with a new refershed
-        look, incoporating a simple design language for optimal user experience.
-      </p>
-    ),
-    technologies: ['Flutter', 'Dart'],
-  }),
-  new TimelineDataPoint({
-    date: "Jun '22",
-    title: 'Discovered Machine Learning',
-    extraInformation: (
-      <div className="flex flex-col gap-2">
-        <p>
-          With the potential for AI to transform the world, I decided to focus
-          my efforts on Machine Learning.
-        </p>
-        <p>
-          Through online courses and tutorials, I discovered and learned core ML
-          technologies including TensorFlow, PyTorch, NumPy, Pandas and OpenCV.
-        </p>
-      </div>
-    ),
-    technologies: ['TensorFlow', 'PyTorch', 'NumPy', 'Pandas', 'OpenCV'],
-  }),
-  new TimelineDataPoint({
-    date: "Jan '23",
-    title: 'Dived into Deep Learning',
-    extraInformation: (
-      <p>
-        Going deeper (pun intended) into Machine Learning, I learned about
-        neural networks, back propagation, activation functions and various
-        other DL topics. I also took an interest in computer vision technologies
-        including object detection and siamese networks.
-      </p>
-    ),
-    technologies: ['TensorFlow', 'PyTorch', 'NumPy', 'Pandas', 'OpenCV'],
-  }),
-  new TimelineDataPoint({
-    date: "Jul '23",
-    title: 'Taught myself Calculus',
-    extraInformation: (
-      <div className="flex flex-col gap-2">
-        <p>
-          Realizing that a solid knowledge of calculus, linear algebra and
-          probability was necessary to truly understand machine learning, I
-          invested a month into learning the mathematics of ML.
-        </p>
-        <p>
-          Fuelled by my love for maths and desire for deep understanding, I
-          utilized Khan Academy courses and YouTube tutorials to teach myself
-          calculus, derivatives and the backprop algorithm. Then I implemented a
-          neural network from scratch.
-        </p>
-      </div>
-    ),
-    technologies: ['TensorFlow', 'NumPy'],
-  }),
-  new TimelineDataPoint({
-    date: "Aug '23",
-    title: 'TensorFlow Developer Exam',
-    extraInformation: (
-      <div className="flex flex-col gap-2">
-        <p>
-          After learning calculus and TensorFlow, I knew I was ready to pass the
-          TensorFlow Developer Exam, which is a 5 hour examination accredited by
-          TensorFlow, to validate your skills in Machine Learning.
-        </p>
-        <p>
-          I submitted my exam after 4 hours of starting, and a few minutes
-          later, I received an email that I had passed!
-        </p>
-      </div>
-    ),
-    technologies: ['TensorFlow'],
-  }),
-  new TimelineDataPoint({
-    date: "Sep '23",
-    title: 'Course and Certs',
-    extraInformation: (
-      <div className="flex flex-col gap-2">
-        <p>Improving my skills and knowledge by taking 4 courses:</p>
-        <ul>
-          <li>• IBM Machine Learning Professional Certificate</li>
-          <li>• Advanced Machine Learning on Google Cloud Certificate</li>
-          <li>• Deep Learning Specialization</li>
-          <li>• IBM Databases and SQL for Data Science with Python</li>
-        </ul>
-      </div>
-    ),
-    technologies: ['IBM', 'TensorFlow', 'NumPy', 'Google Cloud', 'MySQL'],
   }),
   new TimelineDataPoint({
     date: "Dec '23",
@@ -169,24 +40,18 @@ export const timelineData = [
       <div className="flex flex-col gap-2">
         <p>
           Having taught myself programming and machine learning for over 3
-          years, I am ready to get out into the market and add value to a tech
-          company with my skills.
+          years, I dropped out of school to pursue a career in software engineering.
         </p>
-        <p>
-          With the support of my parents, I dropped about of high school after
-          topping my Year 10 exams.
-        </p>
-        <p>Now the real journey begins.</p>
       </div>
     ),
   }),
   new TimelineDataPoint({
     date: "Jan '24",
-    title: 'First Internship: A.I.GORITHM',
+    title: 'Internship: A.I.GORITHM',
     extraInformation: (
       <div>
         <p className="mb-3">
-          For this internship, I worked for an{' '}
+          For this 1.5 month internship, I worked for an{' '}
           <span className="font-bold">Agritech</span> climate risk and analysis
           startup called <span>A.I.GORITHM</span>, where my primary focus was
           building A.I.GORITHM's Property Report Tool:
@@ -231,84 +96,26 @@ export const timelineData = [
     ],
   }),
   new TimelineDataPoint({
-    date: "Feb '24",
-    title: 'Concluded internship at A.I.GORITHM',
-    extraInformation: (
-      <div className="flex flex-col gap-2">
-        <p>
-          Finished my first internship and learned lots about the agricultural
-          space and geospatial data. Check out my full write-up of all the
-          lessons I learned
-          <a
-            className="font-bold"
-            href="https://medium.com/@raj.pulapakura/3-lessons-from-my-swe-internship-at-a-startup-1896ad469555"
-          >
-            here.
-          </a>
-        </p>
-        <p>
-          As of now, I am going to continue upskilling myself and work on my
-          personal projects. Also currently working towards the AWS Machine
-          Learning Specialty Certificate.
-        </p>
-      </div>
-    ),
-  }),
-  new TimelineDataPoint({
-    date: "Mar '24",
-    title: 'ClarityScan: Medical Deep Learning',
-    extraInformation: (
-      <div className="flex flex-col gap-5">
-        <p>
-          For the past month, I have been building{' '}
-          <UnderlinedLink href="http://clarityscan-447069715.us-east-1.elb.amazonaws.com/">
-            <em>ClarityScan</em>
-          </UnderlinedLink>
-          , which is an app that enables radiologists to enhance brain MRI
-          scans, and easily identify glioma tumors in the scans.
-        </p>
-        <section>
-          <p>📚 Here are all the resources for the project:</p>
-          <ul>
-            <li>
-              • 🔗{' '}
-              <UnderlinedLink href="http://clarityscan-447069715.us-east-1.elb.amazonaws.com/">
-                ClarityScan website
-              </UnderlinedLink>
-            </li>
-            <li>
-              • 📽️{' '}
-              <UnderlinedLink href="https://www.youtube.com/watch?v=v9OmIxve9Zs">
-                YT Project demo
-              </UnderlinedLink>
-            </li>
-            <li>
-              • 📽️{' '}
-              <UnderlinedLink href="https://www.youtube.com/watch?v=SvfRLuvJyn8">
-                YT Technical walkthrough
-              </UnderlinedLink>
-            </li>
-            <li>
-              • 📝{' '}
-              <UnderlinedLink href="https://medium.com/@raj.pulapakura/how-to-build-an-end-to-end-medical-deep-learning-project-11ad932b5a8f">
-                Project write-up
-              </UnderlinedLink>
-            </li>
-          </ul>
-        </section>
-      </div>
-    ),
-  }),
-  new TimelineDataPoint({
     date: "Apr '24",
     title: 'Full-time AI Engineer: Time Under Tension',
     extraInformation: (
       <div className="flex flex-col gap-5">
-        <p>
-          I am currently working as an AI Engineer at Time Under Tension, a
-          Generative AI consultancy. My work primarily involves developing
-          full-stack Generative AI applications.
-        </p>
+        <p>Time Under Tension is a Generative AI consultancy that helps businesses build AI-powered solutions.</p>
+        <ul>
+          <li>
+          • Built two flagship AI systems:
+            <ol>
+              <li><strong>1. RAG chat platform for a retail giant</strong> – reduced complex inquiry response times from 3+ hours to under 30 seconds.</li>
+              <li><strong>2. AI compliance app for a multinational</strong> – detects and auto-rewrites non-compliant product descriptions with 95% accuracy, cutting review times by 300%+.</li>
+            </ol>
+          </li>
+          <li>
+            • Delivered multiple AI/automation proof-of-concepts: voice/chat agent for aged care, Figma-to-code converter, and a text-to-PPT SaaS tool.
+          </li>
+          <li>
+            • Collaborated with technical and non-technical stakeholders through discovery calls, requirement gathering, progress updates, and live demos.
+          </li>
+        </ul>
       </div>
     ),
   }),
@@ -327,25 +134,11 @@ export const timelineData = [
     ),
   }),
   new TimelineDataPoint({
-    date: "Jun '24",
-    title: 'AWS Certified Machine Learning Specialty',
+    date: "Sep '25",
+    title: 'Full-time AI Engineer: Synogize',
     extraInformation: (
       <div className="flex flex-col gap-5">
-        <p>
-          I have achieved the AWS Certified Machine Learning Specialty after taking a 3-hour exam.
-        </p>
-      </div>
-    ),
-  }),
-  new TimelineDataPoint({
-    date: "Jul to Sep '24",
-    title: 'Azure Certifications',
-    extraInformation: (
-      <div className="flex flex-col gap-5">
-        <p>
-          I have achieved the Azure AZ-900 (Fundamentals), the Azure A1-900 (AI Fundamentals)
-          certifications and the Azure AI-102 (AI Engineer Associate)
-        </p>
+        <p>Synogize is a Data and AI agency, where I am currently working as an AI Engineer.</p>
       </div>
     ),
   }),
