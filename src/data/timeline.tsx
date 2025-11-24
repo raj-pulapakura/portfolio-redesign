@@ -1,6 +1,4 @@
 import { ReactNode } from 'react';
-import UnderlinedLink from '../shared/ui/UnderlinedLink';
-
 export class TimelineDataPoint {
   date: string;
   title: string;
