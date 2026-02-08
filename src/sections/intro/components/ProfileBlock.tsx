@@ -51,7 +51,7 @@ export default function ProfileBlock({
       }}
     >
       <img
-        src="/photos/profile-no-bg.png"
+        src="/photos/profile.png"
         className="w-full h-full object-contain"
       />
     </motion.div>

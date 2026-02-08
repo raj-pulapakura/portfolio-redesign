@@ -125,9 +125,9 @@ export default function Intro() {
         >
           <div className="relative rounded-3xl overflow-hidden bg-muted/60 border border-white/5 min-h-[320px] flex items-center justify-center">
             <img
-              src="/photos/profile-square-mask.png"
+              src="/photos/profile.png"
               alt="Raj Pulapakura"
-              className="w-full max-h-[360px] object-contain mix-blend-screen"
+              className="w-full max-h-[360px] object-contain"
             />
             <span className="absolute top-4 right-4 rounded-full border border-secondary/50 bg-background/80 px-4 py-1 text-xs uppercase tracking-[0.4em] text-secondary">
               AVAILABLE

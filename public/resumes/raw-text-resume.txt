@@ -1,0 +1,145 @@
+Raj Pulapakura
+
+Full Stack Software Engineer
+
+rajedwinpulapakura@gmail.com
+
+0469 766 823
+Cranbourne West, Melbourne, Victoria 3977 www.linkedin.com/in/rajpulapakura/ www.github.com/raj-pulapakura/
+
+
+TECHNICAL SKILLS
+
+Languages
+
+TypeScript, Python, Bash, JavaScript, HTML/CSS/SAAS
+
+Frontend and Backend
+
+React.js, Next.js, Nest.js, HTML, CSS, SaaS, Tailwind, Material UI, Redux, Zustand, Node.js, FastAPI, Flask, Express.js, GraphQL
+
+AI (ML + Generative AI + Data Science)
+
+OpenAI, Gemini, Claude (APIs), Unstructured.io, Pinecone DB (vector database), MCP
+
+Databases
+
+MongoDB, SQL, MySQL, PostgreSQL, Redis, Firebase, ChromaDB, Snowflake, Coalesce
+
+Cloud, CI/CD
+
+AWS certified (ECR, EKS, EC2, S3, IAM, DynamoDB, Lambda, Athena, Glue)
+Azure certified (Storage, AI Services, Function App, Cosmos DB, Entra ID)
+Terraform, Git, GitHub, Docker
+
+PROFESSIONAL EXPERIENCE
+
+
+AI Engineer
+
+Synogize (Data & AI agency)
+
+Sep 2025 - Present
+
+
+-            Product Delivery: Key contributor to PLATTII (AI-driven Snowflake marketplace product for data analysis intended for non-technical users). Contributed to slashing inference time by 50%, optimising frontend loading and session management. Led and participated in sprint planning and Agile workflows.
+
+-            Data Engineering & Consulting: Developed 10+ data models for an international automative company as part of modern data migration project. Contributed to requirements gathering discussions. Tools used: Snowflake, Coalesce, GitHub,
+
+-            Knowledge Sharing: Assisted in developing the company’s AI capability through Azure AI Foundry RAG demos and knowledge sharing.
+
+-            Tools used: Agile methodology, Next.js, FastAPI, TypeScript, Python, Azure, Snowflake, SQL, Generative AI APIs (OpenAI, Gemini, Claude), Git, GitHub Actions
+
+
+Software Engineer
+
+ 
+
+Time Under Tension (Generative AI B2B agency)
+
+April 2024 - Sep 2025
+
+
+-            Flagship Project: Developed a RAG chat system for a retail giant, connecting to their extensive product database. Cut customer service response time from 3+ hours to under 30 seconds for complex product inquiries. Tech stack: React.js, Nest.js, TypeScript, Azure (Cosmos DB, Web Apps, OpenAI, AI Search), Pinecone DB
+
+-            Flagship Project: Engineered an AI-powered app for the legal and compliance teams of a multinational corporation. App scans product database and detects non-compliant product descriptions using AI with 95% accuracy. AI system then auto revises descriptions as per user-provided guidelines, slashing review times by over 300%. Tech stack: Same as above
+
+-            Proof-of-concepts, R&D: Voice (and chat) agent for an age-care service provider; Tool that converts Figma files to code via Cursor + MCP; SaaS application that converts text documents into PPT presentations.
+
+-            Liaised with technical and non-technical client personnel to conduct discovery calls, gather requirements, discuss project progress, and conduct live demonstrations of deliverables.
+
+-            Technologies used: React.js, Nest.js, TypeScript, Python, Azure’s suite of AI and Compute services, Generative AI APIs (OpenAI, Gemini, Claude), Pinecone DB, Unstructured.io, Git, GitHub Actions
+
+
+Software Engineer, Intern
+
+A.I.GORITHM (AI Startup)
+
+Jan - Feb 2024
+
+
+-            Engineered a tool that enables farmers to gather detailed insights of their AOI (Area of Interest).
+
+o   Insights: Bushfire likelihood, precipitation rates, satellite imagery
+
+o   Tech stack:
+
+§  Python backend which solicited 6 geospatial third-party APIs.
+
+§  Next.js, TypeScript and Docker frontend.
+
+§  AWS (ECS, ECR, LB, S3, Athena and Glue) deployment. Stored several large-scale agricultural datasets (>1TB) in Apache Parquet and CSV.
+
+o   Conducted DevOps using Terraform and GitHub Actions.
+
+CERTIFICATIONS
+
+-            Microsoft Certified: Azure Developer Associate                                                 Jan 2026
+
+-            Microsoft Certified: Azure AI Associate Engineer                                              Sep 2024
+
+-            Microsoft Certified: Azure AI Fundamentals                                                      Aug 2024
+
+-            Microsoft Certified: Azure Fundamentals                                                              Jul 2024
+
+-            AWS Certified Machine Learning - Specialty                                                        Jun 2024
+
+-            IBM Professional Machine Learning Certificate, IBM                                       Sep 2023
+
+PERSONAL PROJECTS
+
+Personal Website: www.rajpulapakura.com (for additional information and projects)
+
+ClarityScan: Deep Learning for Tumour Diagnosis (code, video)                                            
+
+A medical analysis tool that enhances brain MRI scans and automatically identifies glioma tumours in the scans.
+
+-            Developed a web application so that radiologists can upload their MRI scans, denoise them, and automatically identify glioma tumors.
+
+-            Implemented 2 AI models using TensorFlow for Noise Removal and Tumor segmentation, reaching a Dice Coefficient of up to 91%.
+
+-            Deployed models to APIs with GPUs using FastAPI and Modal serverless functions, ensuring inference time during production was ~5 seconds.
+
+-            Technologies used: Next.JS, TypeScript, Tailwind CSS, Python, TensorFlow, NumPy, FastAPI, Modal, AWS ECS & LB, Git, GitHub, AWS ECS, AWS ECR, AWS EC2
+
+Computer Vision Search Engine (code, web, video)                                                                      
+
+An app for finding similar images based on images you already own.
+
+-            Employed a pre-trained MobileNetV3 neural network in PyTorch to compute image embeddings.
+
+-            Deployed the model through to a BentoML backend, hosted using AWS API Gateway and AWS Lambda.
+
+-            Developed a web interface with drag-and-drop functionality enabling users to find similar images.
+
+-            Technologies used: Python, PyTorch, REST API, BentoML, TerraForm, AWS API Gateway, AWS Lambda, Next.JS, TypeScript, Vercel, Tailwind CSS, Git, GitHub
+
+OTHER
+
+-            Passionate about AI agents, system architecture, and building enjoyable user experiences.
+
+-            Write a technical blog on Medium, sharing content on AI, machine learning, deep learning, computer vision, full-stack development, and software development.
+
+-            Post videos on my YouTube channel, demonstrating my projects and sharing knowledge on machine learning and data science, web/mobile development, and software engineering.
+
+-            Love to stay active by playing basketball, volleyball and swimming.
