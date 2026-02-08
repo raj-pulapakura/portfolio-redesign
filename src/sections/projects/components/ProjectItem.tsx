@@ -40,6 +40,16 @@ export default function ProjectItem({
           </p>
         </div>
 
+        {pdp.impactHighlights.length > 0 && (
+          <ul className="space-y-2 text-sm text-secondary">
+            {pdp.impactHighlights.slice(0, 3).map((highlight) => (
+              <li key={`${pdp.title}-${highlight}`} className="leading-relaxed">
+                • {highlight}
+              </li>
+            ))}
+          </ul>
+        )}
+
         <div className="flex flex-wrap gap-2">
           {pdp.technologiesUsed.map((tech) => (
             <Chip key={`${pdp.title}-${tech}`} className="text-[0.6rem]">

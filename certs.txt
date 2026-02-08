@@ -1,0 +1,6 @@
+dev associate: https://learn.microsoft.com/en-us/users/rajpulapakura-2404/credentials/878730d9b7900aa9?ref=https%3A%2F%2Fwww.linkedin.com%2F
+ai associate: https://learn.microsoft.com/en-us/users/rajpulapakura-2404/credentials/878730d9b7900aa9?ref=https%3A%2F%2Fwww.linkedin.com%2F
+ai fundamentals: https://learn.microsoft.com/en-us/users/rajpulapakura-2404/credentials/f37ed11bbc74f2d?ref=https%3A%2F%2Fwww.linkedin.com%2F
+azure fundamentals: https://learn.microsoft.com/en-us/users/rajpulapakura-2404/credentials/1268f0982a05a191?ref=https%3A%2F%2Fwww.linkedin.com%2F
+aws: https://www.credly.com/badges/87092f70-1635-41e6-86aa-79654f1303b5/linked_in_profile
+tensorflow dev: https://www.credential.net/de2045b4-0766-49ad-8035-a1a97846bca6b#acc.V0QCGTgk

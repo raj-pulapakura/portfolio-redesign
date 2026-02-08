@@ -33,12 +33,13 @@ export const timelineData = [
   }),
   new TimelineDataPoint({
     date: "Dec '23",
-    title: 'Dropped out of school',
+    title: 'Left high school to pursue building full-time',
     extraInformation: (
       <div className="flex flex-col gap-2">
         <p>
-          Having taught myself programming and machine learning for over 3
-          years, I dropped out of school to pursue a career in software engineering.
+          After years of self-directed software and ML learning, I left high
+          school to go all-in on building real products and pursuing software
+          engineering professionally.
         </p>
       </div>
     ),
@@ -49,38 +50,31 @@ export const timelineData = [
     extraInformation: (
       <div>
         <p className="mb-3">
-          For this 1.5 month internship, I worked for an{' '}
-          <span className="font-bold">Agritech</span> climate risk and analysis
-          startup called <span>A.I.GORITHM</span>, where my primary focus was
-          building A.I.GORITHM's Property Report Tool:
+          Built an agritech property-report system for farmers using geospatial
+          data pipelines and cloud infrastructure.
         </p>
         <ul className="flex flex-col gap-2">
           <li>
-            • Developed and deployed a Property Report Generation Tool which
-            enables farmers to get detailed{' '}
-            <span className="font-bold">agricultural reports</span> pertaining
-            to their geographical AOI (area of interest).
+            • Engineered a tool for AOI (Area of Interest) insights including
+            bushfire risk, precipitation, and satellite data layers.
           </li>
           <li>
-            • Pooled and organized{' '}
-            <span className="font-bold">geospatial data</span> from several APIs
-            and data sources to provide agricultural analytics to farmers.
+            • Integrated six geospatial third-party APIs and organized
+            large-scale datasets (&gt;1TB) in Parquet/CSV formats.
           </li>
           <li>
-            • Employed{' '}
-            <span className="font-bold">microservices architecture</span> to
-            develop APIs/services and a user-facing website.
+            • Shipped Python backend + Next.js frontend with Dockerized
+            services for consistent deployment.
           </li>
           <li>
-            • Automated deployment via GitHub Actions{' '}
-            <span className="font-bold">CI/CD pipeline</span> and Terraform IaC
-            (Infrastructure as Code), to provision AWS resources.
+            • Automated infrastructure provisioning and CI/CD through Terraform
+            and GitHub Actions on AWS.
           </li>
         </ul>
       </div>
     ),
     technologies: [
-      'Next.JS',
+      'Next.js',
       'TypeScript',
       'Tailwind CSS',
       'Python',
@@ -95,27 +89,43 @@ export const timelineData = [
   }),
   new TimelineDataPoint({
     date: "Apr '24",
-    title: 'Full-time AI Engineer: Time Under Tension',
+    title: 'Software Engineer: Time Under Tension',
     extraInformation: (
       <div className="flex flex-col gap-5">
-        <p>Time Under Tension is a Generative AI consultancy that helps businesses build AI-powered solutions.</p>
-        <ul>
+        <p>
+          Built client-facing Generative AI products for enterprise and
+          mid-market customers in retail, legal/compliance, and aged care.
+        </p>
+        <ul className="flex flex-col gap-2">
           <li>
-          • Built two flagship AI systems:
-            <ol>
-              <li><strong>1. RAG chat platform for a retail giant</strong> – reduced complex inquiry response times from 3+ hours to under 30 seconds.</li>
-              <li><strong>2. AI compliance app for a multinational</strong> – detects and auto-rewrites non-compliant product descriptions with 95% accuracy, cutting review times by 300%+.</li>
-            </ol>
+            • Built a RAG platform for a major retailer that reduced complex
+            inquiry response time from 3+ hours to under 30 seconds.
           </li>
           <li>
-            • Delivered multiple AI/automation proof-of-concepts: voice/chat agent for aged care, Figma-to-code converter, and a text-to-PPT SaaS tool.
+            • Engineered an AI compliance application with 95% detection
+            accuracy, auto-rewriting non-compliant descriptions and reducing
+            review time by 300%+.
           </li>
           <li>
-            • Collaborated with technical and non-technical stakeholders through discovery calls, requirement gathering, progress updates, and live demos.
+            • Delivered multiple AI proof-of-concepts including voice/chat
+            agents and internal automation tools.
+          </li>
+          <li>
+            • Partnered directly with technical and non-technical stakeholders
+            across discovery, requirements, demos, and iteration.
           </li>
         </ul>
       </div>
     ),
+    technologies: [
+      'React',
+      'Nest.js',
+      'TypeScript',
+      'Python',
+      'Azure OpenAI',
+      'Pinecone',
+      'Unstructured.io',
+    ],
   }),
   new TimelineDataPoint({
     date: "May '24",
@@ -133,11 +143,39 @@ export const timelineData = [
   }),
   new TimelineDataPoint({
     date: "Sep '25",
-    title: 'Full-time AI Engineer: Synogize',
+    title: 'AI Engineer: Synogize',
     extraInformation: (
       <div className="flex flex-col gap-5">
-        <p>Synogize is a Data and AI agency, where I am currently working as an AI Engineer.</p>
+        <p>
+          Working across AI product delivery, data engineering, and
+          consulting-led implementation for enterprise clients.
+        </p>
+        <ul className="flex flex-col gap-2">
+          <li>
+            • Key contributor to PLATTII (AI-driven Snowflake marketplace
+            product), helping cut inference time by 50% and improve frontend
+            session performance.
+          </li>
+          <li>
+            • Developed 10+ data models for a global automotive client as part
+            of a modern data migration project.
+          </li>
+          <li>
+            • Supported internal AI capability uplift via Azure AI Foundry RAG
+            demos and technical knowledge sharing.
+          </li>
+        </ul>
       </div>
     ),
+    technologies: [
+      'Next.js',
+      'FastAPI',
+      'TypeScript',
+      'Python',
+      'Azure',
+      'Snowflake',
+      'Coalesce',
+      'SQL',
+    ],
   }),
 ];

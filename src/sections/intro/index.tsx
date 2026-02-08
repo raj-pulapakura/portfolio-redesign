@@ -5,10 +5,23 @@ import {
   faMedium,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
-import { faArrowDownLong, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import {
+  faArrowDownLong,
+  faEnvelope,
+  faFileArrowDown,
+  faLocationDot,
+} from '@fortawesome/free-solid-svg-icons';
 import { motion, MotionProps } from 'framer-motion';
 import SectionShell from '../../shared/primitives/SectionShell';
 import AccentDivider from '../../shared/primitives/AccentDivider';
+import { EMAIL, EMAIL_HREF, RESUME_URL } from '../../data/profile';
+
+const navLinks = [
+  { label: '/ PROJECTS', target: 'projects' },
+  { label: '/ JOURNEY', target: 'journey' },
+  { label: '/ SKILLS', target: 'skills' },
+  { label: '/ CONTACT', target: 'contact' },
+];
 
 export interface RegularBlockProps {
   initial: MotionProps['initial'];
@@ -16,23 +29,11 @@ export interface RegularBlockProps {
   transition?: MotionProps['transition'];
 }
 
-const navLinks = [
-  { label: '/ SKILLS', target: 'skills' },
-  { label: '/ JOURNEY', target: 'journey' },
-  { label: '/ PROJECTS', target: 'projects' },
-  { label: '/ ARTICLES', target: 'articles' },
-];
-
 const socialLinks = [
   {
     label: 'LinkedIn',
     icon: faLinkedin,
     url: 'https://www.linkedin.com/in/rajpulapakura/',
-  },
-  {
-    label: 'YouTube',
-    icon: faYoutube,
-    url: 'https://www.youtube.com/@rajpulapakura001',
   },
   {
     label: 'GitHub',
@@ -44,9 +45,44 @@ const socialLinks = [
     icon: faMedium,
     url: 'https://medium.com/@raj.pulapakura',
   },
+  {
+    label: 'YouTube',
+    icon: faYoutube,
+    url: 'https://www.youtube.com/@rajpulapakura001',
+  },
 ];
 
-const titleLines = ['AI /', 'Software', 'Engineer'];
+const overviewCards = [
+  {
+    title: 'Now',
+    description: 'AI Engineer @ Synogize, building AI product and data solutions.',
+    actionLabel: 'View Journey',
+    actionType: 'scroll',
+    actionTarget: 'journey',
+  },
+  {
+    title: 'Recent',
+    description:
+      'PLATTII delivery, inference optimization, and enterprise data migration work.',
+    actionLabel: 'View Case Studies',
+    actionType: 'scroll',
+    actionTarget: 'projects',
+  },
+  {
+    title: 'Writing',
+    description: 'Technical deep dives on ML systems, LLM apps, and engineering.',
+    actionLabel: 'Read Articles',
+    actionType: 'scroll',
+    actionTarget: 'articles',
+  },
+  {
+    title: 'Connect',
+    description: 'Reach out on email or LinkedIn, or download the latest resume.',
+    actionLabel: 'Go to Contact',
+    actionType: 'scroll',
+    actionTarget: 'contact',
+  },
+] as const;
 
 const heroMotion = {
   initial: { opacity: 0, y: 32 },
@@ -78,34 +114,64 @@ export default function Intro() {
           <p className="text-xs uppercase tracking-[0.6em] text-secondary">
             Raj Pulapakura
           </p>
-          <div className="space-y-2">
-            {titleLines.map((line) => (
-              <h1
-                key={line}
-                className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-[1.05] text-primary"
-              >
-                {line}
-              </h1>
-            ))}
+          <div className="space-y-4">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-[1.05] text-primary">
+              AI Engineer building production LLM and ML systems.
+            </h1>
+            <p className="text-lg text-secondary font-medium max-w-3xl">
+              I design and ship full-stack AI products that reduce decision
+              latency, improve compliance quality, and make complex workflows
+              usable for non-technical teams.
+            </p>
           </div>
-          <p className="text-lg text-secondary font-medium">
-            Currently working @ Synogize
-          </p>
+
           <div className="flex flex-wrap gap-4">
+            <a
+              href={RESUME_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-accent/60 bg-accent/10 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary transition hover:bg-accent/20"
+            >
+              <FontAwesomeIcon icon={faFileArrowDown} />
+              Resume
+            </a>
             <button
               onClick={() => scrollTo('projects')}
-              className="rounded-full border border-accent/60 bg-accent/10 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary transition hover:bg-accent/20"
-            >
-              / PROJECTS
-            </button>
-            <button
-              onClick={() => scrollTo('articles')}
               className="rounded-full border border-secondary/40 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-secondary transition hover:text-primary hover:border-accent/60"
             >
-              / ARTICLES
+              Case Studies
+            </button>
+            <button
+              onClick={() => scrollTo('contact')}
+              className="rounded-full border border-secondary/40 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-secondary transition hover:text-primary hover:border-accent/60"
+            >
+              Contact
             </button>
           </div>
-          <AccentDivider className="my-6" />
+
+          <div className="grid gap-3 sm:grid-cols-2">
+            {overviewCards.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border border-white/10 bg-muted/50 px-4 py-4 space-y-3"
+              >
+                <p className="text-sm uppercase tracking-[0.25em] text-secondary">
+                  {item.title}
+                </p>
+                <p className="text-sm text-primary leading-relaxed">
+                  {item.description}
+                </p>
+                <button
+                  onClick={() => scrollTo(item.actionTarget)}
+                  className="text-xs uppercase tracking-[0.2em] text-accent transition hover:text-primary"
+                >
+                  {item.actionLabel}
+                </button>
+              </div>
+            ))}
+          </div>
+
+          <AccentDivider className="my-2" />
           <div className="flex flex-wrap gap-4 text-sm text-secondary uppercase tracking-[0.3em]">
             {navLinks.map((link) => (
               <button
@@ -130,23 +196,32 @@ export default function Intro() {
               className="w-full max-h-[360px] object-contain"
             />
             <span className="absolute top-4 right-4 rounded-full border border-secondary/50 bg-background/80 px-4 py-1 text-xs uppercase tracking-[0.4em] text-secondary">
-              AVAILABLE
+              AI + SOFTWARE ENGINEERING
             </span>
           </div>
 
-          <div className="flex items-start justify-between gap-4">
-            <div>
-              <p className="text-xs uppercase tracking-[0.4em] text-secondary">
-                Location
-              </p>
-              <p className="text-xl font-semibold text-primary">
-                Melbourne, Australia
-              </p>
+          <div className="space-y-4">
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <p className="text-xs uppercase tracking-[0.4em] text-secondary">
+                  Location
+                </p>
+                <p className="text-xl font-semibold text-primary">
+                  Melbourne, Australia
+                </p>
+              </div>
+              <FontAwesomeIcon
+                icon={faLocationDot}
+                className="text-accent text-3xl"
+              />
             </div>
-            <FontAwesomeIcon
-              icon={faLocationDot}
-              className="text-accent text-3xl"
-            />
+            <a
+              href={EMAIL_HREF}
+              className="inline-flex items-center gap-2 text-sm text-secondary transition hover:text-primary"
+            >
+              <FontAwesomeIcon icon={faEnvelope} className="text-accent" />
+              {EMAIL}
+            </a>
           </div>
 
           <AccentDivider />
@@ -172,23 +247,6 @@ export default function Intro() {
         <span>Scroll</span>
         <div className="h-px flex-1 bg-border" />
         <FontAwesomeIcon icon={faArrowDownLong} className="text-accent" />
-      </div>
-
-      <div className="hidden xl:flex flex-col items-center gap-6 absolute right-12 top-1/2 -translate-y-1/2">
-        <span className="text-[10px] uppercase tracking-[0.6em] text-secondary">
-          Navigate
-        </span>
-        {navLinks.map((link) => (
-          <button
-            key={`rail-${link.label}`}
-            onClick={() => scrollTo(link.target)}
-            className="group flex flex-col items-center gap-3 text-[10px] tracking-[0.4em] text-secondary transition hover:text-primary"
-          >
-            <span className="h-12 w-px bg-border group-hover:bg-accent" />
-            <span className="h-3 w-3 rounded-full border border-secondary group-hover:border-accent group-hover:bg-accent/20" />
-            <span>{link.label.replace('/', '').trim()}</span>
-          </button>
-        ))}
       </div>
     </SectionShell>
   );

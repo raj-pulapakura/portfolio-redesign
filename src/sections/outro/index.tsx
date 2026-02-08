@@ -4,10 +4,11 @@ import {
   faMedium,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUp, faEnvelope, faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SectionShell from '../../shared/primitives/SectionShell';
 import AccentDivider from '../../shared/primitives/AccentDivider';
+import { EMAIL, EMAIL_HREF, RESUME_URL } from '../../data/profile';
 
 const socialLinks = [
   {
@@ -50,10 +51,10 @@ export default function Outro() {
           <p className="text-xs uppercase tracking-[0.6em] text-secondary">
             Contact
           </p>
-          <h2 className="text-4xl font-semibold text-primary">LET&apos;S CONNECT!</h2>
+          <h2 className="text-4xl font-semibold text-primary">LET&apos;S CONNECT</h2>
           <p className="text-secondary max-w-2xl mx-auto">
-            If you&apos;re a technologist based in Melbourne, let&apos;s meet IRL.
-            Always keen to jam on AI products, ML systems, or ambitious ideas.
+            Based in Melbourne and building across AI and software engineering.
+            I usually respond within 24 hours.
           </p>
         </div>
 
@@ -74,12 +75,24 @@ export default function Outro() {
 
         <div className="flex flex-wrap items-center justify-center gap-4">
           <a
-            href="https://www.linkedin.com/in/rajpulapakura/"
+            href={RESUME_URL}
             target="_blank"
             rel="noreferrer"
             className="rounded-full border border-accent bg-accent/10 px-8 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-primary transition hover:bg-accent/20"
           >
-            Message on LinkedIn
+            <span className="inline-flex items-center gap-2">
+              <FontAwesomeIcon icon={faFileArrowDown} />
+              Download Resume
+            </span>
+          </a>
+          <a
+            href={EMAIL_HREF}
+            className="rounded-full border border-white/10 px-6 py-3 text-sm uppercase tracking-[0.3em] text-secondary transition hover:border-accent hover:text-primary"
+          >
+            <span className="inline-flex items-center gap-2">
+              <FontAwesomeIcon icon={faEnvelope} />
+              {EMAIL}
+            </span>
           </a>
           <button
             onClick={scrollToTop}

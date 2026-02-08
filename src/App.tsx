@@ -9,9 +9,9 @@ function App() {
   return (
     <main className="bg-background text-primary">
       <Intro />
-      <Skills />
-      <Journey />
       <Projects />
+      <Journey />
+      <Skills />
       <Articles />
       <Outro />
     </main>
