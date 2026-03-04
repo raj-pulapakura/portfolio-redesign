@@ -137,7 +137,7 @@ const featuredProjects = projectsData.slice(0, 3).map((project, index) => {
 const latestArticles = articlesData.slice(0, 6);
 const photoWheelItems: PhotoWheelItem[] = [
   {
-    src: '/photographs/046CFD25-4059-4CB3-A180-ACCD2314C796.JPG',
+    src: '/photographs/portrait.png',
     size: 'large',
     x: 18,
     y: 24,
@@ -145,7 +145,7 @@ const photoWheelItems: PhotoWheelItem[] = [
     depth: 0.82,
   },
   {
-    src: '/photographs/81421A88-895C-43A1-A4D4-4E05DDB846E4.JPG',
+    src: '/photographs/deakin.png',
     size: 'medium',
     x: 39,
     y: 18,
@@ -153,7 +153,7 @@ const photoWheelItems: PhotoWheelItem[] = [
     depth: 0.58,
   },
   {
-    src: '/photographs/934F3138-2B4F-4675-958E-9652E6DBC593.JPG',
+    src: '/photographs/monster-energy.png',
     size: 'small',
     x: 62,
     y: 17,
@@ -161,7 +161,7 @@ const photoWheelItems: PhotoWheelItem[] = [
     depth: 0.47,
   },
   {
-    src: '/photographs/9CD04AF1-7990-4C98-8AC4-5EC6B5502C71.JPG',
+    src: '/photographs/ramen.png',
     size: 'large',
     x: 82,
     y: 28,
@@ -169,7 +169,7 @@ const photoWheelItems: PhotoWheelItem[] = [
     depth: 0.72,
   },
   {
-    src: '/photographs/D16E1C06-13BA-467B-BA73-7775DA276498.JPG',
+    src: '/photographs/gym.png',
     size: 'medium',
     x: 22,
     y: 70,
@@ -177,15 +177,15 @@ const photoWheelItems: PhotoWheelItem[] = [
     depth: 0.66,
   },
   {
-    src: '/photographs/D206E354-3D7A-45EB-83BF-B77DA9CBE432.JPG',
-    size: 'small',
+    src: '/photographs/mates.png',
+    size: 'medium',
     x: 47,
     y: 74,
     rotation: -3,
     depth: 0.48,
   },
   {
-    src: '/photographs/D86E5C6B-7CB5-4C25-B32C-AD2944C50494.JPG',
+    src: '/photographs/shellfish.png',
     size: 'medium',
     x: 77,
     y: 68,
