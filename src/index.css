@@ -225,7 +225,6 @@ button:focus-visible,
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-  cursor: pointer;
 }
 
 .hero-profile img {
@@ -856,6 +855,12 @@ button:focus-visible,
 @media (max-width: 1023px) {
   .photo-wheel-overlay {
     display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-profile {
+    cursor: pointer;
   }
 }
 

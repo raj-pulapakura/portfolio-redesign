@@ -199,8 +199,27 @@ function App() {
   const [isPhotoWheelVisible, setIsPhotoWheelVisible] = useState(false);
   const [isPhotoWheelClosing, setIsPhotoWheelClosing] = useState(false);
   const photoWheelStageRef = useRef<HTMLDivElement | null>(null);
+  const preloadedPhotoRefs = useRef<HTMLImageElement[]>([]);
   const pointerTargetRef = useRef({ x: 0, y: 0 });
   const pointerCurrentRef = useRef({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const preloadTimeoutId = window.setTimeout(() => {
+      const uniquePhotoSources = [...new Set(photoWheelItems.map((item) => item.src))];
+
+      preloadedPhotoRefs.current = uniquePhotoSources.map((src) => {
+        const image = new Image();
+        image.decoding = 'async';
+        image.src = src;
+        return image;
+      });
+    }, 180);
+
+    return () => {
+      window.clearTimeout(preloadTimeoutId);
+      preloadedPhotoRefs.current = [];
+    };
+  }, []);
 
   const handleProfileHover = () => {
     if (isPhotoWheelVisible || isPhotoWheelClosing) {
