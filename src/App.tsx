@@ -39,7 +39,7 @@ const navItems = [
   { label: 'Projects', href: '#projects' },
   { label: 'Experience', href: '#experience' },
   { label: 'Capabilities', href: '#capabilities' },
-  { label: 'Writing', href: '#writing' },
+  { label: 'Blog', href: '#blog' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -589,15 +589,15 @@ function App() {
           </div>
         </section>
 
-        <section id="writing" className="section" aria-labelledby="writing-title">
+        <section id="blog" className="section" aria-labelledby="blog-title">
           <div className="site-shell">
             <div className="layout-grid section-intro">
-              <h2 id="writing-title" className="section-title col-12">
-                Writing
+              <h2 id="blog-title" className="section-title col-12">
+                Blog
               </h2>
             </div>
 
-            <ol className="article-list" aria-label="Recent articles">
+            <ol className="article-list" aria-label="Recent blog posts">
               {latestArticles.map((article, index) => (
                 <li key={article.title} className="layout-grid article-item">
                   <p className="article-index col-1">
