@@ -11,7 +11,7 @@ import { EMAIL, EMAIL_HREF, RESUME_URL } from './data/profile';
 import { dataskills, fullstackskills, mlskills } from './data/skills';
 
 type ProjectMeta = {
-  role: string;
+  contribution: string;
   year: string;
 };
 
@@ -44,9 +44,9 @@ const navItems = [
 ];
 
 const projectMeta: ProjectMeta[] = [
-  { role: 'AI Engineer', year: '2024' },
-  { role: 'ML Systems Engineer', year: '2024' },
-  { role: 'Full-Stack Engineer', year: '2023' },
+  { contribution: 'ML Modeling + Product Delivery', year: '2024' },
+  { contribution: 'Embedding Search + Cloud Deployment', year: '2024' },
+  { contribution: 'Real-Time CV + Gameplay Integration', year: '2023' },
 ];
 
 const projectVisualAssets: ProjectVisualAsset[] = [
@@ -114,14 +114,14 @@ const capabilityGroups = [
 ];
 
 const featuredProjects = projectsData.slice(0, 3).map((project, index) => {
-  const meta = projectMeta[index] ?? { role: 'Software Engineer', year: '2024' };
+  const meta = projectMeta[index] ?? { contribution: 'End-to-End Engineering', year: '2024' };
   const visualAsset = projectVisualAssets[index];
 
   return {
     index: String(index + 1).padStart(2, '0'),
     title: project.title,
     description: project.description,
-    role: meta.role,
+    contribution: meta.contribution,
     year: meta.year,
     technologies: project.technologiesUsed.slice(0, 5),
     approach: `Built with ${project.technologiesUsed.slice(0, 4).join(', ')} to keep delivery practical and production-oriented.`,
@@ -499,7 +499,7 @@ function App() {
           <div className="site-shell">
             <div className="layout-grid section-intro">
               <h2 id="projects-title" className="section-title col-12">
-                Selected Projects
+                Some Projects
               </h2>
             </div>
 
@@ -513,8 +513,8 @@ function App() {
                       <h3 className="project-title">{project.title}</h3>
                       <dl className="project-meta">
                         <div>
-                          <dt>Role</dt>
-                          <dd>{project.role}</dd>
+                          <dt>Contribution</dt>
+                          <dd>{project.contribution}</dd>
                         </div>
                         <div>
                           <dt>Year</dt>
