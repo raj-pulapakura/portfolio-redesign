@@ -583,6 +583,11 @@ button:focus-visible,
   align-content: start;
 }
 
+.project-header-top {
+  display: grid;
+  gap: var(--space-16);
+}
+
 .project-title {
   margin: 0;
   font-size: clamp(1.5rem, 2.4vw, 2.15rem);
@@ -616,7 +621,58 @@ button:focus-visible,
 .project-links {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-24);
+  gap: var(--space-8);
+}
+
+.project-link-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    border-color var(--transition-fast),
+    background var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.project-link-button:hover,
+.project-link-button:focus-visible {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.project-link-button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.project-summary {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-16);
+}
+
+.project-summary h4 {
+  margin: 0 0 var(--space-8);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.project-summary p {
+  margin: 0;
+  color: var(--color-text);
 }
 
 .project-visual {
@@ -693,6 +749,33 @@ button:focus-visible,
 .project-block p {
   margin: 0;
   color: var(--color-text);
+}
+
+.project-highlights {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--space-8);
+}
+
+.project-highlights li {
+  position: relative;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+.project-highlights li::before {
+  content: '';
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background: var(--color-accent);
+  transform: translateY(-50%);
 }
 
 .experience-list {

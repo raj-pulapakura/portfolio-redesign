@@ -1,5 +1,6 @@
 export class ProjectDataPoint {
   title: string;
+  year: string;
   description: string;
   impactHighlights: string[];
   thumbnailURL: string;
@@ -11,6 +12,7 @@ export class ProjectDataPoint {
 
   constructor({
     title,
+    year,
     description,
     impactHighlights,
     thumbnailURL,
@@ -21,6 +23,7 @@ export class ProjectDataPoint {
     technologiesUsed,
   }: {
     title: string;
+    year: string;
     description: string;
     impactHighlights: string[];
     thumbnailURL: string;
@@ -31,6 +34,7 @@ export class ProjectDataPoint {
     technologiesUsed: string[];
   }) {
     this.title = title;
+    this.year = year;
     this.description = description;
     this.impactHighlights = impactHighlights;
     this.thumbnailURL = thumbnailURL;
@@ -44,13 +48,49 @@ export class ProjectDataPoint {
 
 export const projectsData = [
   new ProjectDataPoint({
-    title: "ClarityScan: Deep Learning for Tumor Diagnosis",
+    title: 'Monti',
+    year: '2025',
     description:
-      "Medical imaging workflow that denoises MRI scans and segments glioma tumors through a production-ready web app.",
+      'Generate interactive learning experiences from a prompt. Hands-on learning!',
     impactHighlights: [
-      'Dice coefficient up to 91% on tumor segmentation.',
-      'Approx. 5-second inference pipeline with GPU-backed APIs.',
-      'End-to-end ownership across modeling, API deployment, and web delivery.',
+      'My first full-stack SaaS product! Billing, a credit system, and authentication!',
+    ],
+    thumbnailURL: '/projects/monti%20GIF.gif',
+    githubURL: 'https://github.com/raj-pulapakura/monti',
+    videoURL: '',
+    webURL: 'https://monti.up.railway.app',
+    tags: [
+      'nextjs',
+      'nestjs',
+      'supabase',
+      'postgresql',
+      'ai',
+      'openai',
+      'anthropic',
+      'google-ai',
+      'stripe',
+      'docker',
+      'education',
+      'interactive',
+    ],
+    technologiesUsed: [
+      'Next.js',
+      'NestJS',
+      'TypeScript',
+      'Supabase',
+      'PostgreSQL',
+      'Docker',
+      'Stripe',
+    ],
+  }),
+  new ProjectDataPoint({
+    title: "ClarityScan: Deep Learning for Tumor Diagnosis",
+    year: '2024',
+    description:
+      "A web workflow for cleaning MRI scans and segmenting glioma tumors.",
+    impactHighlights: [
+      'Reached up to a 91% Dice coefficient on tumor segmentation.',
+      'Powered by 2 deep learning models.',
     ],
     thumbnailURL:
       "https://github.com/raj-pulapakura/ClarityScan/assets/87762282/e56b9135-0c65-42d7-910c-a7bc4ead6615",
@@ -80,53 +120,13 @@ export const projectsData = [
     ],
   }),
   new ProjectDataPoint({
-    title: "Computer Vision-Powered Search Engine",
-    description:
-      'Similarity search application that converts uploaded images into embeddings and returns nearest visual matches.',
-    impactHighlights: [
-      'Implemented embedding retrieval with MobileNetV3 + PyTorch.',
-      'Deployed inference service via BentoML and AWS serverless infrastructure.',
-      'Shipped drag-and-drop UX with reproducible IaC deployment.',
-    ],
-    thumbnailURL:
-      "https://github.com/raj-pulapakura/Image-Search-Engine/assets/87762282/21702ad9-6cfe-4a5d-8385-cc65fad8eded",
-    githubURL: "https://github.com/raj-pulapakura/Image-Search-Engine/",
-    videoURL: "https://www.youtube.com/watch?v=loBZkPvn29c",
-    webURL: "https://image-search-pro.vercel.app",
-    tags: [
-      "aws",
-      "machine-learning",
-      "computer-vision",
-      "neural-network",
-      "responsive",
-      "nextjs",
-      "image-processing",
-      "pytorch",
-      "siamese-network",
-      "searchengine",
-      "resnet50",
-      "bentoml",
-      "mobilenetv3",
-      "vercel",
-    ],
-    technologiesUsed: [
-      "PyTorch",
-      "BentoML",
-      "AWS",
-      "Terraform",
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-    ],
-  }),
-  new ProjectDataPoint({
     title: "Real Time Gesture Detection Dino Game",
+    year: '2023',
     description:
-      'Computer vision game prototype where users control gameplay through real-time hand gestures.',
+      'A small computer vision experiment where your hand controls the Chrome Dino game.',
     impactHighlights: [
-      'Built real-time gesture detection loop with OpenCV + TensorFlow.',
-      'Connected model output to game controls in Pygame.',
-      'Demonstrated low-latency interaction for CV-based UI concepts.',
+      'Built the gesture detection loop with OpenCV and TensorFlow.',
+      'Mapped model output into Pygame controls.',
     ],
     thumbnailURL:
       "https://github.com/raj-pulapakura/Dino-Game-controlled-by-Gesture-Detection/assets/87762282/92b7e1e9-918a-4d7a-bc19-5f518aca820c",
@@ -150,12 +150,12 @@ export const projectsData = [
   }),
   new ProjectDataPoint({
     title: "UltraRide",
+    year: '2023',
     description:
-      'Full-stack ecommerce platform with payments, state management, and API orchestration.',
+      'A full-stack ecommerce build for browsing products, managing a cart, and checking out with Stripe. The goal was to understand the moving pieces behind a real commerce flow.',
     impactHighlights: [
-      'Implemented commerce flows across cart, checkout, and payment.',
-      'Integrated Stripe and GraphQL-based backend architecture.',
-      'Containerized local stack with Docker Compose for rapid setup.',
+      'Built cart, checkout, payment, and backend API flows.',
+      'Used Docker Compose to keep the local stack easy to run.',
     ],
     thumbnailURL:
       "https://github.com/raj-pulapakura/ultraride/assets/87762282/7165b700-6f2c-4ab6-9510-0aed381f67da",
@@ -195,12 +195,12 @@ export const projectsData = [
   }),
   new ProjectDataPoint({
     title: "Comment Toxicity Checker",
+    year: '2022',
     description:
-      'Web app that classifies user text for toxicity risk and provides immediate model feedback.',
+      'A small NLP app that checks text for toxicity and gives quick model feedback. It was an early project for making machine learning feel interactive in the browser.',
     impactHighlights: [
       'Integrated TensorFlow models into a responsive frontend flow.',
-      'Delivered interactive inference experience on Vercel deployment.',
-      'Packaged model + UX for practical NLP safety experimentation.',
+      'Deployed the experiment on Vercel for quick sharing.',
     ],
     thumbnailURL:
       "https://github.com/raj-pulapakura/Comment-Toxicity-Checker/assets/87762282/5e5ac56b-083f-4341-ac8a-a6ed9d04d304",

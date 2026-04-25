@@ -5,20 +5,13 @@ import {
   useRef,
   useState,
 } from 'react';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faArrowUpRightFromSquare, faPlay } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { articlesData } from './data/articles';
 import { projectsData } from './data/projects';
 import { EMAIL, EMAIL_HREF, RESUME_URL } from './data/profile';
 import { dataskills, fullstackskills, mlskills } from './data/skills';
-
-type ProjectMeta = {
-  contribution: string;
-  year: string;
-};
-
-type ProjectVisualAsset = {
-  src: string;
-  alt: string;
-};
 
 type ExperienceItem = {
   date: string;
@@ -41,27 +34,6 @@ const navItems = [
   { label: 'Capabilities', href: '#capabilities' },
   { label: 'Blog', href: '#blog' },
   { label: 'Contact', href: '#contact' },
-];
-
-const projectMeta: ProjectMeta[] = [
-  { contribution: 'ML Modeling + Product Delivery', year: '2024' },
-  { contribution: 'Embedding Search + Cloud Deployment', year: '2024' },
-  { contribution: 'Real-Time CV + Gameplay Integration', year: '2023' },
-];
-
-const projectVisualAssets: ProjectVisualAsset[] = [
-  {
-    src: '/projects/clarityscan-hero.png',
-    alt: 'ClarityScan project interface preview',
-  },
-  {
-    src: '/projects/image-search-hero.png',
-    alt: 'Computer vision image search interface preview',
-  },
-  {
-    src: '/projects/dino-hero.gif',
-    alt: 'Gesture detection Dino game animated preview',
-  },
 ];
 
 const experience: ExperienceItem[] = [
@@ -113,26 +85,20 @@ const capabilityGroups = [
   },
 ];
 
-const featuredProjects = projectsData.slice(0, 3).map((project, index) => {
-  const meta = projectMeta[index] ?? { contribution: 'End-to-End Engineering', year: '2024' };
-  const visualAsset = projectVisualAssets[index];
-
-  return {
-    index: String(index + 1).padStart(2, '0'),
-    title: project.title,
-    description: project.description,
-    contribution: meta.contribution,
-    year: meta.year,
-    technologies: project.technologiesUsed.slice(0, 5),
-    approach: `Built with ${project.technologiesUsed.slice(0, 4).join(', ')} to keep delivery practical and production-oriented.`,
-    result:
-      project.impactHighlights[0] ??
-      'Shipped a measurable end-to-end solution with clear technical ownership.',
-    githubURL: project.githubURL,
-    liveURL: project.webURL,
-    visualAsset,
-  };
-});
+const featuredProjects = projectsData.slice(0, 3).map((project, index) => ({
+  index: String(index + 1).padStart(2, '0'),
+  title: project.title,
+  description: project.description,
+  technologies: project.technologiesUsed.slice(0, 5),
+  highlights: project.impactHighlights.slice(0, 2),
+  githubURL: project.githubURL,
+  liveURL: project.webURL,
+  videoURL: project.videoURL,
+  visualAsset: {
+    src: project.thumbnailURL,
+    alt: `${project.title} project preview`,
+  },
+}));
 
 const latestArticles = articlesData.slice(0, 6);
 const photoWheelItems: PhotoWheelItem[] = [
@@ -510,41 +476,55 @@ function App() {
                     <p className="project-number col-1">{project.index}</p>
 
                     <header className="project-header col-5">
-                      <h3 className="project-title">{project.title}</h3>
-                      <dl className="project-meta">
-                        <div>
-                          <dt>Contribution</dt>
-                          <dd>{project.contribution}</dd>
-                        </div>
-                        <div>
-                          <dt>Year</dt>
-                          <dd>{project.year}</dd>
-                        </div>
-                        <div>
-                          <dt>Technologies</dt>
-                          <dd>{project.technologies.join(', ')}</dd>
-                        </div>
-                      </dl>
-                      <div className="project-links">
-                        <a
-                          href={project.githubURL}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-link"
-                        >
-                          GitHub
-                        </a>
-                        {project.liveURL ? (
+                      <div className="project-header-top">
+                        <h3 className="project-title">{project.title}</h3>
+                        <div className="project-links">
                           <a
-                            href={project.liveURL}
+                            href={project.githubURL}
                             target="_blank"
                             rel="noreferrer"
-                            className="text-link"
+                            className="project-link-button"
+                            aria-label={`Open ${project.title} GitHub repository`}
                           >
-                            Live Product
+                            <FontAwesomeIcon icon={faGithub} aria-hidden="true" />
+                            <span>GitHub</span>
                           </a>
-                        ) : null}
+                          {project.liveURL ? (
+                            <a
+                              href={project.liveURL}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="project-link-button"
+                              aria-label={`Open ${project.title} live site`}
+                            >
+                              <FontAwesomeIcon icon={faArrowUpRightFromSquare} aria-hidden="true" />
+                              <span>Live</span>
+                            </a>
+                          ) : null}
+                          {project.videoURL ? (
+                            <a
+                              href={project.videoURL}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="project-link-button"
+                              aria-label={`Watch ${project.title} demo video`}
+                            >
+                              <FontAwesomeIcon icon={faPlay} aria-hidden="true" />
+                              <span>Demo</span>
+                            </a>
+                          ) : null}
+                        </div>
                       </div>
+                      <div className="project-summary">
+                        <h4>In short</h4>
+                        <p>{project.description}</p>
+                      </div>
+                      <ul className="project-highlights" aria-label={`${project.title} highlights`}>
+                        {project.highlights.map((highlight) => (
+                          <li key={highlight}>{highlight}</li>
+                        ))}
+                        <li>Built with {project.technologies.join(', ')}.</li>
+                      </ul>
                     </header>
 
                     <div className="project-visual col-6">
@@ -568,20 +548,6 @@ function App() {
                       )}
                     </div>
 
-                    <section className="project-block col-4" aria-labelledby={`${project.index}-problem`}>
-                      <h4 id={`${project.index}-problem`}>Problem</h4>
-                      <p>{project.description}</p>
-                    </section>
-
-                    <section className="project-block col-4" aria-labelledby={`${project.index}-approach`}>
-                      <h4 id={`${project.index}-approach`}>Approach</h4>
-                      <p>{project.approach}</p>
-                    </section>
-
-                    <section className="project-block col-4" aria-labelledby={`${project.index}-result`}>
-                      <h4 id={`${project.index}-result`}>Result</h4>
-                      <p>{project.result}</p>
-                    </section>
                   </article>
                 </li>
               ))}
